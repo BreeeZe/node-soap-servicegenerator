@@ -4,8 +4,8 @@ var util = require("util");
 
 var options = {
     wsdl : "./test-wsdl/device_service.wsdl",
-    output : "service.js",
-    ignoredTypes : ["NetworkZeroConfigurationExtension"],
+    output : "./test-output/device_service.js",
+    ignoredTypes : "[NetworkZeroConfigurationExtension]",
     tab : "    ",
     maxrecursion : 25
 };
@@ -29,11 +29,19 @@ if (!options.output) {
     console.log("no options.output path provided");
     process.exit(1);
 }
+if (options.ignoredTypes[0] == "[" && options.ignoredTypes[options.ignoredTypes.length - 1] == "]") {
+    var it = options.ignoredTypes.substr(1, options.ignoredTypes.length - 2);
+    it=it.split(",");
+    options.ignoredTypes = util.format("[\"%s\"]", it.join("\""));
+} else if (options.ignoredTypes) {
+    console.log("options.ignoredTypes should be an array");
+    process.exit(1);
+}
 
 var wsdlPath = options.wsdl;
 var outputPath = options.output;
 var tab = options.tab || "    ";
-var ignoredTypes = options.ignoredTypes || [];
+var ignoredTypes = JSON.parse((options.ignoredTypes || "[]"));
 var maxrecursion = options.maxrecursion || 25;
 
 console.log("loading wsdl: %s", wsdlPath);
@@ -91,6 +99,34 @@ var generateMethod = function (name, method, indent) {
                        indent, "},\r\n\r\n"].join(''), input, name, output, method.output.$name);
 }
 
+var generateParameter = function (name, object, indent) {
+    var code = "";
+    
+    if (object.$lookupTypes[0])
+        object = WSDL.findParameterObject(object.$lookupTypes[0].$namespace || object.targetNamespace, object.$lookupTypes[0].$type || object.$lookupTypes[0].$name)
+    
+    var properties = findProperties(object);
+    var recursioncount = 0;
+    for (var c = 0; c < properties.length; c++)
+        code += generateProperties(properties[c], indent + tab, recursioncount, name);
+    return util.format("var %s = { %s};", name, (code ? ["\r\n", code, indent].join('') : ""));
+}
+
+var generateProperties = function (object, indent, recursioncount, path) {
+    var code = "";
+    if (recursioncount > maxrecursion) {
+        console.log("ABORTED !! Maximum recursion exceeded on generating property : '%s' of type : '%s', path : %s", object.name, object.type.$name, path);
+        process.exit(-1);
+    }
+    if (!object.type.$type && ignoredTypes.indexOf(object.type.$name) == -1) {
+        var properties = findProperties(object.type);
+        for (var c = 0; c < properties.length; c++)
+            code += generateProperties(properties[c], indent + tab, recursioncount++, path + ">" + object.name);
+        return util.format([indent, "%s : { %s},\r\n"].join(''), object.name, (code ? ["\r\n", code, "\r\n", indent].join('') : ""));
+    }
+    return util.format([indent, "%s : %s, \r\n"].join(''), object.name, (object.type.$type ? object.type.$type.substr(object.type.$type.indexOf(':') + 1) : "null"));
+}
+
 var findProperties = function (object) {
     var result = [];
     var itterate = function (o) {
@@ -107,32 +143,4 @@ var findProperties = function (object) {
     if (object)
         itterate(object);
     return result;
-}
-
-var generateParameter = function (name, object, indent) {
-    var code = "";
-    
-    if (object.$lookupTypes[0])
-        object = WSDL.findParameterObject(object.$lookupTypes[0].$namespace || object.targetNamespace, object.$lookupTypes[0].$type || object.$lookupTypes[0].$name)
-    
-    var properties = findProperties(object);
-    var recursioncount = 0;
-    for (var c = 0; c < properties.length; c++)
-        code += generateProperties(properties[c], indent + tab, recursioncount, name);
-    return util.format("var %s = { %s};", name, (code ? ["\r\n", code, indent].join('') : ""));
-}
-var generateProperties = function (object, indent, recursioncount, path) {
-    var code = "";
-    if (recursioncount > maxrecursion) {
-        console.log("ABORTED !! Maximum recursion exceeded on generating property : '%s' path : %s", object.name, path);
-        process.exit(-1);
-    }
-    if (!object.type.$type && ignoredTypes.indexOf(object.type.$name) == -1) {
-        var properties = findProperties(object.type);
-        for (var c = 0; c < properties.length; c++)
-            code += generateProperties(properties[c], indent + tab, recursioncount++, path + ">" + object.name);
-        return util.format([indent, "%s : { %s},\r\n"].join(''), object.name, (code ? ["\r\n", code, "\r\n", indent].join('') : ""));
-    }
-    return util.format([indent, "%s : %s, \r\n"].join(''), object.name, (object.type.$type ? object.type.$type.substr(object.type.$type.indexOf(':') + 1) : "null"));
-    
 }
