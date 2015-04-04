@@ -1,0 +1,12 @@
+{
+  "name": "node-soap-servicegenerator",
+  "version": "0.0.1",
+  "description": "node-soap-servicegenerator",
+  "main": "generate.js",
+  "author": {
+    "name": "Jeroen Versteege",
+    "email": "jeroen@versteege.com"
+  },  "dependencies": {
+      "soap" : "BreeeZe/node-soap"
+  }
+}
