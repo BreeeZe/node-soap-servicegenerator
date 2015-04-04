@@ -1,12 +1,17 @@
 {
-  "name": "node-soap-servicegenerator",
-  "version": "0.0.1",
-  "description": "node-soap-servicegenerator",
-  "main": "generate.js",
-  "author": {
-    "name": "Jeroen Versteege",
-    "email": "jeroen@versteege.com"
-  },  "dependencies": {
-      "soap" : "BreeeZe/node-soap"
-  }
+    "name": "node-soap-servicegenerator",
+    "version": "0.0.1",
+    "description": "node-soap-servicegenerator",
+    "main": "generate.js",
+    "author": {
+        "name": "Jeroen Versteege",
+        "email": "jeroen@versteege.com"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/BreeeZe/node-soap-servicegenerator.git"
+    },
+    "dependencies": {
+        "soap": "BreeeZe/node-soap"
+    }
 }

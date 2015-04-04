@@ -2,14 +2,19 @@
 var soap = require("soap");
 var util = require("util");
 
-
-var options = JSON.parse(process.argv[2] || "{}");
-options = {
+var options = {
     wsdl : "./test-wsdl/device_service.wsdl",
     output : "service.js",
     ignoredTypes : ["NetworkZeroConfigurationExtension"],
-    tab : "    "
+    tab : "    ",
+    maxrecursion : 25
 };
+
+args = process.argv.slice(2);
+for (var o = 0; o < args.length; o++) {
+    var a = args[o].split("=");
+    options[a[0]] = a[1];
+}
 
 if (!options) {
     console.log("no options provided");
@@ -29,6 +34,7 @@ var wsdlPath = options.wsdl;
 var outputPath = options.output;
 var tab = options.tab || "    ";
 var ignoredTypes = options.ignoredTypes || [];
+var maxrecursion = options.maxrecursion || 25;
 
 console.log("loading wsdl: %s", wsdlPath);
 var WSDL = new soap.WSDL(fs.readFileSync(wsdlPath, 'utf8'), wsdlPath, {});
@@ -110,16 +116,21 @@ var generateParameter = function (name, object, indent) {
         object = WSDL.findParameterObject(object.$lookupTypes[0].$namespace || object.targetNamespace, object.$lookupTypes[0].$type || object.$lookupTypes[0].$name)
     
     var properties = findProperties(object);
+    var recursioncount = 0;
     for (var c = 0; c < properties.length; c++)
-        code += generateProperties(properties[c], indent + tab);
+        code += generateProperties(properties[c], indent + tab, recursioncount, name);
     return util.format("var %s = { %s};", name, (code ? ["\r\n", code, indent].join('') : ""));
 }
-var generateProperties = function (object, indent) {
+var generateProperties = function (object, indent, recursioncount, path) {
     var code = "";
+    if (recursioncount > maxrecursion) {
+        console.log("ABORTED !! Maximum recursion exceeded on generating property : '%s' path : %s", object.name, path);
+        process.exit(-1);
+    }
     if (!object.type.$type && ignoredTypes.indexOf(object.type.$name) == -1) {
         var properties = findProperties(object.type);
         for (var c = 0; c < properties.length; c++)
-            code += generateProperties(properties[c], indent + tab);
+            code += generateProperties(properties[c], indent + tab, recursioncount++, path + ">" + object.name);
         return util.format([indent, "%s : { %s},\r\n"].join(''), object.name, (code ? ["\r\n", code, "\r\n", indent].join('') : ""));
     }
     return util.format([indent, "%s : %s, \r\n"].join(''), object.name, (object.type.$type ? object.type.$type.substr(object.type.$type.indexOf(':') + 1) : "null"));
