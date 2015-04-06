@@ -3,11 +3,12 @@ var soap = require("soap");
 var util = require("util");
 
 var options = {
-    wsdl : "./test-wsdl/media_service.wsdl",
-    output : "./test-output/media_service.js",
+    wsdl : "./test-wsdl/device_service.wsdl",
+    output : "./test-output/device_service.js",
     ignoredTypes : "[NetworkZeroConfigurationExtension,Transport]",
     tab : "    ",
-    maxdepth : "25"
+    maxdepth : "25",
+    throwFaults : "true"
 };
 
 args = process.argv.slice(2);
@@ -43,6 +44,7 @@ var outputPath = options.output;
 var tab = options.tab || "    ";
 var ignoredTypes = JSON.parse((options.ignoredTypes || "[]"));
 var maxdepth = parseInt(options.maxdepth || "25");
+var throwFauls = (options.throwFaults || "true").toLocaleLowerCase() == "true";
 
 console.log("loading wsdl: %s", wsdlPath);
 var WSDL = new soap.WSDL(fs.readFileSync(wsdlPath, 'utf8'), wsdlPath, {});
@@ -99,6 +101,7 @@ var generateMethod = function (name, method, indent) {
     var outputParameter = generateParameter(method.output.$name, method.output, "//" + indent + tab, 0);
     return util.format(["//", indent, "%s\r\n",
                        indent, "%s : function(args /*, cb, headers*/) {\r\n",
+                       (throwFauls ? indent + tab + "throw { Fault: { Code: { Value: \"soap:client\" }, Reason: { Text: \"Method not implemented\" } } };\r\n" : ""),
                        "//", indent, "%s\r\n",
                        "//", indent, tab, "return %s;\r\n",
                        indent, "},\r\n\r\n"].join(''), inputParameter, name, outputParameter, method.output.$name);

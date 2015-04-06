@@ -9,6 +9,7 @@ var DeviceService = {
 //            
 //            };
             GetServices : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetServicesResponse = { 
 //                    Service : { 
 //                        Namespace : { xs:anyURI},
@@ -26,6 +27,7 @@ var DeviceService = {
 
 //            var GetServiceCapabilities = { };
             GetServiceCapabilities : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetServiceCapabilitiesResponse = { 
 //                    Capabilities : { 
 //                        Network : { 
@@ -87,6 +89,7 @@ var DeviceService = {
 
 //            var GetDeviceInformation = { };
             GetDeviceInformation : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetDeviceInformationResponse = { 
 //                    Manufacturer : { xs:string},
 //                    Model : { xs:string},
@@ -119,12 +122,14 @@ var DeviceService = {
 //            
 //            };
             SetSystemDateAndTime : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetSystemDateAndTimeResponse = { };
 //                return SetSystemDateAndTimeResponse;
             },
 
 //            var GetSystemDateAndTime = { };
             GetSystemDateAndTime : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetSystemDateAndTimeResponse = { 
 //                    SystemDateAndTime : { 
 //                        DateTimeType : { xs:string},
@@ -168,6 +173,7 @@ var DeviceService = {
 //            
 //            };
             SetSystemFactoryDefault : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetSystemFactoryDefaultResponse = { };
 //                return SetSystemFactoryDefaultResponse;
             },
@@ -180,6 +186,7 @@ var DeviceService = {
 //            
 //            };
             UpgradeSystemFirmware : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var UpgradeSystemFirmwareResponse = { 
 //                    Message : { xs:string}
 //                
@@ -189,6 +196,7 @@ var DeviceService = {
 
 //            var SystemReboot = { };
             SystemReboot : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SystemRebootResponse = { 
 //                    Message : { xs:string}
 //                
@@ -207,12 +215,14 @@ var DeviceService = {
 //            
 //            };
             RestoreSystem : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RestoreSystemResponse = { };
 //                return RestoreSystemResponse;
             },
 
 //            var GetSystemBackup = { };
             GetSystemBackup : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetSystemBackupResponse = { 
 //                    BackupFiles : { 
 //                        Name : { xs:string},
@@ -231,6 +241,7 @@ var DeviceService = {
 //            
 //            };
             GetSystemLog : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetSystemLogResponse = { 
 //                    SystemLog : { 
 //                        Binary : { 
@@ -246,6 +257,7 @@ var DeviceService = {
 
 //            var GetSystemSupportInformation = { };
             GetSystemSupportInformation : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetSystemSupportInformationResponse = { 
 //                    SupportInformation : { 
 //                        Binary : { 
@@ -261,6 +273,7 @@ var DeviceService = {
 
 //            var GetScopes = { };
             GetScopes : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetScopesResponse = { 
 //                    Scopes : { 
 //                        ScopeDef : { xs:string},
@@ -276,6 +289,7 @@ var DeviceService = {
 //            
 //            };
             SetScopes : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetScopesResponse = { };
 //                return SetScopesResponse;
             },
@@ -285,6 +299,7 @@ var DeviceService = {
 //            
 //            };
             AddScopes : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var AddScopesResponse = { };
 //                return AddScopesResponse;
             },
@@ -294,6 +309,7 @@ var DeviceService = {
 //            
 //            };
             RemoveScopes : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RemoveScopesResponse = { 
 //                    ScopeItem : { xs:anyURI}
 //                
@@ -303,6 +319,7 @@ var DeviceService = {
 
 //            var GetDiscoveryMode = { };
             GetDiscoveryMode : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetDiscoveryModeResponse = { 
 //                    DiscoveryMode : { xs:string}
 //                
@@ -315,12 +332,14 @@ var DeviceService = {
 //            
 //            };
             SetDiscoveryMode : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetDiscoveryModeResponse = { };
 //                return SetDiscoveryModeResponse;
             },
 
 //            var GetRemoteDiscoveryMode = { };
             GetRemoteDiscoveryMode : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetRemoteDiscoveryModeResponse = { 
 //                    RemoteDiscoveryMode : { xs:string}
 //                
@@ -333,12 +352,14 @@ var DeviceService = {
 //            
 //            };
             SetRemoteDiscoveryMode : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetRemoteDiscoveryModeResponse = { };
 //                return SetRemoteDiscoveryModeResponse;
             },
 
 //            var GetDPAddresses = { };
             GetDPAddresses : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetDPAddressesResponse = { 
 //                    DPAddress : { 
 //                        Type : { xs:string},
@@ -363,12 +384,14 @@ var DeviceService = {
 //            
 //            };
             SetDPAddresses : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetDPAddressesResponse = { };
 //                return SetDPAddressesResponse;
             },
 
 //            var GetEndpointReference = { };
             GetEndpointReference : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetEndpointReferenceResponse = { 
 //                    GUID : { xs:string}
 //                
@@ -378,6 +401,7 @@ var DeviceService = {
 
 //            var GetRemoteUser = { };
             GetRemoteUser : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetRemoteUserResponse = { 
 //                    RemoteUser : { 
 //                        Username : { xs:string},
@@ -398,12 +422,14 @@ var DeviceService = {
 //            
 //            };
             SetRemoteUser : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetRemoteUserResponse = { };
 //                return SetRemoteUserResponse;
             },
 
 //            var GetUsers = { };
             GetUsers : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetUsersResponse = { 
 //                    User : { 
 //                        Username : { xs:string},
@@ -426,6 +452,7 @@ var DeviceService = {
 //            
 //            };
             CreateUsers : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var CreateUsersResponse = { };
 //                return CreateUsersResponse;
             },
@@ -435,6 +462,7 @@ var DeviceService = {
 //            
 //            };
             DeleteUsers : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var DeleteUsersResponse = { };
 //                return DeleteUsersResponse;
             },
@@ -449,12 +477,14 @@ var DeviceService = {
 //            
 //            };
             SetUser : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetUserResponse = { };
 //                return SetUserResponse;
             },
 
 //            var GetWsdlUrl = { };
             GetWsdlUrl : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetWsdlUrlResponse = { 
 //                    WsdlUrl : { xs:anyURI}
 //                
@@ -467,6 +497,7 @@ var DeviceService = {
 //            
 //            };
             GetCapabilities : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCapabilitiesResponse = { 
 //                    Capabilities : { 
 //                        Analytics : { 
@@ -611,6 +642,7 @@ var DeviceService = {
 
 //            var GetHostname = { };
             GetHostname : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetHostnameResponse = { 
 //                    HostnameInformation : { 
 //                        FromDHCP : { xs:boolean},
@@ -627,6 +659,7 @@ var DeviceService = {
 //            
 //            };
             SetHostname : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetHostnameResponse = { };
 //                return SetHostnameResponse;
             },
@@ -636,6 +669,7 @@ var DeviceService = {
 //            
 //            };
             SetHostnameFromDHCP : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetHostnameFromDHCPResponse = { 
 //                    RebootNeeded : { xs:boolean}
 //                
@@ -645,6 +679,7 @@ var DeviceService = {
 
 //            var GetDNS = { };
             GetDNS : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetDNSResponse = { 
 //                    DNSInformation : { 
 //                        FromDHCP : { xs:boolean},
@@ -677,12 +712,14 @@ var DeviceService = {
 //            
 //            };
             SetDNS : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetDNSResponse = { };
 //                return SetDNSResponse;
             },
 
 //            var GetNTP = { };
             GetNTP : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetNTPResponse = { 
 //                    NTPInformation : { 
 //                        FromDHCP : { xs:boolean},
@@ -719,12 +756,14 @@ var DeviceService = {
 //            
 //            };
             SetNTP : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetNTPResponse = { };
 //                return SetNTPResponse;
             },
 
 //            var GetDynamicDNS = { };
             GetDynamicDNS : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetDynamicDNSResponse = { 
 //                    DynamicDNSInformation : { 
 //                        Type : { xs:string},
@@ -744,12 +783,14 @@ var DeviceService = {
 //            
 //            };
             SetDynamicDNS : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetDynamicDNSResponse = { };
 //                return SetDynamicDNSResponse;
             },
 
 //            var GetNetworkInterfaces = { };
             GetNetworkInterfaces : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetNetworkInterfacesResponse = { 
 //                    NetworkInterfaces : { 
 
@@ -814,6 +855,7 @@ var DeviceService = {
 //            
 //            };
             SetNetworkInterfaces : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetNetworkInterfacesResponse = { 
 //                    RebootNeeded : { xs:boolean}
 //                
@@ -823,6 +865,7 @@ var DeviceService = {
 
 //            var GetNetworkProtocols = { };
             GetNetworkProtocols : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetNetworkProtocolsResponse = { 
 //                    NetworkProtocols : { 
 //                        Name : { xs:string},
@@ -845,12 +888,14 @@ var DeviceService = {
 //            
 //            };
             SetNetworkProtocols : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetNetworkProtocolsResponse = { };
 //                return SetNetworkProtocolsResponse;
             },
 
 //            var GetNetworkDefaultGateway = { };
             GetNetworkDefaultGateway : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetNetworkDefaultGatewayResponse = { 
 //                    NetworkGateway : { 
 //                        IPv4Address : { xs:token},
@@ -867,12 +912,14 @@ var DeviceService = {
 //            
 //            };
             SetNetworkDefaultGateway : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetNetworkDefaultGatewayResponse = { };
 //                return SetNetworkDefaultGatewayResponse;
             },
 
 //            var GetZeroConfiguration = { };
             GetZeroConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetZeroConfigurationResponse = { 
 //                    ZeroConfiguration : { 
 //                        InterfaceToken : { xs:string},
@@ -890,12 +937,14 @@ var DeviceService = {
 //            
 //            };
             SetZeroConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetZeroConfigurationResponse = { };
 //                return SetZeroConfigurationResponse;
             },
 
 //            var GetIPAddressFilter = { };
             GetIPAddressFilter : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetIPAddressFilterResponse = { 
 //                    IPAddressFilter : { 
 //                        Type : { xs:string},
@@ -930,6 +979,7 @@ var DeviceService = {
 //            
 //            };
             SetIPAddressFilter : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetIPAddressFilterResponse = { };
 //                return SetIPAddressFilterResponse;
             },
@@ -950,6 +1000,7 @@ var DeviceService = {
 //            
 //            };
             AddIPAddressFilter : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var AddIPAddressFilterResponse = { };
 //                return AddIPAddressFilterResponse;
             },
@@ -970,12 +1021,14 @@ var DeviceService = {
 //            
 //            };
             RemoveIPAddressFilter : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RemoveIPAddressFilterResponse = { };
 //                return RemoveIPAddressFilterResponse;
             },
 
 //            var GetAccessPolicy = { };
             GetAccessPolicy : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAccessPolicyResponse = { 
 //                    PolicyFile : { 
 //                        attributes : {
@@ -998,6 +1051,7 @@ var DeviceService = {
 //            
 //            };
             SetAccessPolicy : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetAccessPolicyResponse = { };
 //                return SetAccessPolicyResponse;
             },
@@ -1010,6 +1064,7 @@ var DeviceService = {
 //            
 //            };
             CreateCertificate : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var CreateCertificateResponse = { 
 //                    NvtCertificate : { 
 //                        CertificateID : { xs:token},
@@ -1027,6 +1082,7 @@ var DeviceService = {
 
 //            var GetCertificates = { };
             GetCertificates : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCertificatesResponse = { 
 //                    NvtCertificate : { 
 //                        CertificateID : { xs:token},
@@ -1044,6 +1100,7 @@ var DeviceService = {
 
 //            var GetCertificatesStatus = { };
             GetCertificatesStatus : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCertificatesStatusResponse = { 
 //                    CertificateStatus : { 
 //                        CertificateID : { xs:token},
@@ -1062,6 +1119,7 @@ var DeviceService = {
 //            
 //            };
             SetCertificatesStatus : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetCertificatesStatusResponse = { };
 //                return SetCertificatesStatusResponse;
             },
@@ -1071,6 +1129,7 @@ var DeviceService = {
 //            
 //            };
             DeleteCertificates : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var DeleteCertificatesResponse = { };
 //                return DeleteCertificatesResponse;
             },
@@ -1087,6 +1146,7 @@ var DeviceService = {
 //            
 //            };
             GetPkcs10Request : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetPkcs10RequestResponse = { 
 //                    Pkcs10Request : { 
 //                        attributes : {
@@ -1112,12 +1172,14 @@ var DeviceService = {
 //            
 //            };
             LoadCertificates : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var LoadCertificatesResponse = { };
 //                return LoadCertificatesResponse;
             },
 
 //            var GetClientCertificateMode = { };
             GetClientCertificateMode : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetClientCertificateModeResponse = { 
 //                    Enabled : { xs:boolean}
 //                
@@ -1130,12 +1192,14 @@ var DeviceService = {
 //            
 //            };
             SetClientCertificateMode : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetClientCertificateModeResponse = { };
 //                return SetClientCertificateModeResponse;
             },
 
 //            var GetRelayOutputs = { };
             GetRelayOutputs : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetRelayOutputsResponse = { 
 //                    RelayOutputs : { 
 
@@ -1158,6 +1222,7 @@ var DeviceService = {
 //            
 //            };
             SetRelayOutputSettings : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetRelayOutputSettingsResponse = { };
 //                return SetRelayOutputSettingsResponse;
             },
@@ -1168,6 +1233,7 @@ var DeviceService = {
 //            
 //            };
             SetRelayOutputState : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetRelayOutputStateResponse = { };
 //                return SetRelayOutputStateResponse;
             },
@@ -1177,6 +1243,7 @@ var DeviceService = {
 //            
 //            };
             SendAuxiliaryCommand : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SendAuxiliaryCommandResponse = { 
 //                    AuxiliaryCommandResponse : { xs:string}
 //                
@@ -1186,6 +1253,7 @@ var DeviceService = {
 
 //            var GetCACertificates = { };
             GetCACertificates : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCACertificatesResponse = { 
 //                    CACertificate : { 
 //                        CertificateID : { xs:token},
@@ -1220,6 +1288,7 @@ var DeviceService = {
 //            
 //            };
             LoadCertificateWithPrivateKey : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var LoadCertificateWithPrivateKeyResponse = { };
 //                return LoadCertificateWithPrivateKeyResponse;
             },
@@ -1229,6 +1298,7 @@ var DeviceService = {
 //            
 //            };
             GetCertificateInformation : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCertificateInformationResponse = { 
 //                    CertificateInformation : { 
 //                        CertificateID : { xs:token},
@@ -1264,6 +1334,7 @@ var DeviceService = {
 //            
 //            };
             LoadCACertificates : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var LoadCACertificatesResponse = { };
 //                return LoadCACertificatesResponse;
             },
@@ -1287,6 +1358,7 @@ var DeviceService = {
 //            
 //            };
             CreateDot1XConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var CreateDot1XConfigurationResponse = { };
 //                return CreateDot1XConfigurationResponse;
             },
@@ -1310,6 +1382,7 @@ var DeviceService = {
 //            
 //            };
             SetDot1XConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetDot1XConfigurationResponse = { };
 //                return SetDot1XConfigurationResponse;
             },
@@ -1319,6 +1392,7 @@ var DeviceService = {
 //            
 //            };
             GetDot1XConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetDot1XConfigurationResponse = { 
 //                    Dot1XConfiguration : { 
 //                        Dot1XConfigurationToken : { xs:string},
@@ -1342,6 +1416,7 @@ var DeviceService = {
 
 //            var GetDot1XConfigurations = { };
             GetDot1XConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetDot1XConfigurationsResponse = { 
 //                    Dot1XConfiguration : { 
 //                        Dot1XConfigurationToken : { xs:string},
@@ -1368,12 +1443,14 @@ var DeviceService = {
 //            
 //            };
             DeleteDot1XConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var DeleteDot1XConfigurationResponse = { };
 //                return DeleteDot1XConfigurationResponse;
             },
 
 //            var GetDot11Capabilities = { };
             GetDot11Capabilities : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetDot11CapabilitiesResponse = { 
 //                    Capabilities : { 
 //                        TKIP : { xs:boolean},
@@ -1392,6 +1469,7 @@ var DeviceService = {
 //            
 //            };
             GetDot11Status : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetDot11StatusResponse = { 
 //                    Status : { 
 //                        SSID : { xs:hexBinary},
@@ -1411,6 +1489,7 @@ var DeviceService = {
 //            
 //            };
             ScanAvailableDot11Networks : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var ScanAvailableDot11NetworksResponse = { 
 //                    Networks : { 
 //                        SSID : { xs:hexBinary},
@@ -1428,6 +1507,7 @@ var DeviceService = {
 
 //            var GetSystemUris = { };
             GetSystemUris : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetSystemUrisResponse = { 
 //                    SystemLogUris : { 
 //                        SystemLog : { 
@@ -1445,6 +1525,7 @@ var DeviceService = {
 
 //            var StartFirmwareUpgrade = { };
             StartFirmwareUpgrade : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var StartFirmwareUpgradeResponse = { 
 //                    UploadUri : { xs:anyURI},
 //                    UploadDelay : { xs:duration},
@@ -1456,6 +1537,7 @@ var DeviceService = {
 
 //            var StartSystemRestore = { };
             StartSystemRestore : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var StartSystemRestoreResponse = { 
 //                    UploadUri : { xs:anyURI},
 //                    ExpectedDownTime : { xs:duration}
@@ -1466,6 +1548,7 @@ var DeviceService = {
 
 //            var GetStorageConfigurations = { };
             GetStorageConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetStorageConfigurationsResponse = { 
 //                    StorageConfigurations : { 
 
@@ -1495,6 +1578,7 @@ var DeviceService = {
 //            
 //            };
             CreateStorageConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var CreateStorageConfigurationResponse = { 
 //                    Token : { xs:string}
 //                
@@ -1507,6 +1591,7 @@ var DeviceService = {
 //            
 //            };
             GetStorageConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetStorageConfigurationResponse = { 
 //                    StorageConfiguration : { 
 
@@ -1529,6 +1614,7 @@ var DeviceService = {
 //            
 //            };
             SetStorageConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetStorageConfigurationResponse = { };
 //                return SetStorageConfigurationResponse;
             },
@@ -1538,6 +1624,7 @@ var DeviceService = {
 //            
 //            };
             DeleteStorageConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var DeleteStorageConfigurationResponse = { };
 //                return DeleteStorageConfigurationResponse;
             },

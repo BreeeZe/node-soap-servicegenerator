@@ -6,6 +6,7 @@ var MediaService = {
         Media : {
 //            var GetServiceCapabilities = { };
             GetServiceCapabilities : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetServiceCapabilitiesResponse = { 
 //                    Capabilities : { 
 //                        attributes : {
@@ -34,6 +35,7 @@ var MediaService = {
 
 //            var GetVideoSources = { };
             GetVideoSources : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetVideoSourcesResponse = { 
 //                    VideoSources : { 
 
@@ -48,6 +50,7 @@ var MediaService = {
 
 //            var GetAudioSources = { };
             GetAudioSources : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioSourcesResponse = { 
 //                    AudioSources : { 
 
@@ -62,6 +65,7 @@ var MediaService = {
 
 //            var GetAudioOutputs = { };
             GetAudioOutputs : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioOutputsResponse = { 
 //                    AudioOutputs : { 
 
@@ -80,6 +84,7 @@ var MediaService = {
 //            
 //            };
             CreateProfile : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var CreateProfileResponse = { 
 //                    Profile : { 
 //                        attributes : {
@@ -182,6 +187,7 @@ var MediaService = {
 //            
 //            };
             GetProfile : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetProfileResponse = { 
 //                    Profile : { 
 //                        attributes : {
@@ -281,6 +287,7 @@ var MediaService = {
 
 //            var GetProfiles = { };
             GetProfiles : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetProfilesResponse = { 
 //                    Profiles : { 
 //                        attributes : {
@@ -384,6 +391,7 @@ var MediaService = {
 //            
 //            };
             AddVideoEncoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var AddVideoEncoderConfigurationResponse = { };
 //                return AddVideoEncoderConfigurationResponse;
             },
@@ -393,6 +401,7 @@ var MediaService = {
 //            
 //            };
             RemoveVideoEncoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RemoveVideoEncoderConfigurationResponse = { };
 //                return RemoveVideoEncoderConfigurationResponse;
             },
@@ -403,6 +412,7 @@ var MediaService = {
 //            
 //            };
             AddVideoSourceConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var AddVideoSourceConfigurationResponse = { };
 //                return AddVideoSourceConfigurationResponse;
             },
@@ -412,6 +422,7 @@ var MediaService = {
 //            
 //            };
             RemoveVideoSourceConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RemoveVideoSourceConfigurationResponse = { };
 //                return RemoveVideoSourceConfigurationResponse;
             },
@@ -422,6 +433,7 @@ var MediaService = {
 //            
 //            };
             AddAudioEncoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var AddAudioEncoderConfigurationResponse = { };
 //                return AddAudioEncoderConfigurationResponse;
             },
@@ -431,6 +443,7 @@ var MediaService = {
 //            
 //            };
             RemoveAudioEncoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RemoveAudioEncoderConfigurationResponse = { };
 //                return RemoveAudioEncoderConfigurationResponse;
             },
@@ -441,6 +454,7 @@ var MediaService = {
 //            
 //            };
             AddAudioSourceConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var AddAudioSourceConfigurationResponse = { };
 //                return AddAudioSourceConfigurationResponse;
             },
@@ -450,6 +464,7 @@ var MediaService = {
 //            
 //            };
             RemoveAudioSourceConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RemoveAudioSourceConfigurationResponse = { };
 //                return RemoveAudioSourceConfigurationResponse;
             },
@@ -460,6 +475,7 @@ var MediaService = {
 //            
 //            };
             AddPTZConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var AddPTZConfigurationResponse = { };
 //                return AddPTZConfigurationResponse;
             },
@@ -469,6 +485,7 @@ var MediaService = {
 //            
 //            };
             RemovePTZConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RemovePTZConfigurationResponse = { };
 //                return RemovePTZConfigurationResponse;
             },
@@ -479,6 +496,7 @@ var MediaService = {
 //            
 //            };
             AddVideoAnalyticsConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var AddVideoAnalyticsConfigurationResponse = { };
 //                return AddVideoAnalyticsConfigurationResponse;
             },
@@ -488,6 +506,7 @@ var MediaService = {
 //            
 //            };
             RemoveVideoAnalyticsConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RemoveVideoAnalyticsConfigurationResponse = { };
 //                return RemoveVideoAnalyticsConfigurationResponse;
             },
@@ -498,6 +517,7 @@ var MediaService = {
 //            
 //            };
             AddMetadataConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var AddMetadataConfigurationResponse = { };
 //                return AddMetadataConfigurationResponse;
             },
@@ -507,6 +527,7 @@ var MediaService = {
 //            
 //            };
             RemoveMetadataConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RemoveMetadataConfigurationResponse = { };
 //                return RemoveMetadataConfigurationResponse;
             },
@@ -517,6 +538,7 @@ var MediaService = {
 //            
 //            };
             AddAudioOutputConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var AddAudioOutputConfigurationResponse = { };
 //                return AddAudioOutputConfigurationResponse;
             },
@@ -526,6 +548,7 @@ var MediaService = {
 //            
 //            };
             RemoveAudioOutputConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RemoveAudioOutputConfigurationResponse = { };
 //                return RemoveAudioOutputConfigurationResponse;
             },
@@ -536,6 +559,7 @@ var MediaService = {
 //            
 //            };
             AddAudioDecoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var AddAudioDecoderConfigurationResponse = { };
 //                return AddAudioDecoderConfigurationResponse;
             },
@@ -545,6 +569,7 @@ var MediaService = {
 //            
 //            };
             RemoveAudioDecoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var RemoveAudioDecoderConfigurationResponse = { };
 //                return RemoveAudioDecoderConfigurationResponse;
             },
@@ -554,12 +579,14 @@ var MediaService = {
 //            
 //            };
             DeleteProfile : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var DeleteProfileResponse = { };
 //                return DeleteProfileResponse;
             },
 
 //            var GetVideoSourceConfigurations = { };
             GetVideoSourceConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetVideoSourceConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -577,6 +604,7 @@ var MediaService = {
 
 //            var GetVideoEncoderConfigurations = { };
             GetVideoEncoderConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetVideoEncoderConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -594,6 +622,7 @@ var MediaService = {
 
 //            var GetAudioSourceConfigurations = { };
             GetAudioSourceConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioSourceConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -611,6 +640,7 @@ var MediaService = {
 
 //            var GetAudioEncoderConfigurations = { };
             GetAudioEncoderConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioEncoderConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -628,6 +658,7 @@ var MediaService = {
 
 //            var GetVideoAnalyticsConfigurations = { };
             GetVideoAnalyticsConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetVideoAnalyticsConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -645,6 +676,7 @@ var MediaService = {
 
 //            var GetMetadataConfigurations = { };
             GetMetadataConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetMetadataConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -662,6 +694,7 @@ var MediaService = {
 
 //            var GetAudioOutputConfigurations = { };
             GetAudioOutputConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioOutputConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -679,6 +712,7 @@ var MediaService = {
 
 //            var GetAudioDecoderConfigurations = { };
             GetAudioDecoderConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioDecoderConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -699,6 +733,7 @@ var MediaService = {
 //            
 //            };
             GetVideoSourceConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetVideoSourceConfigurationResponse = { 
 //                    Configuration : { 
 
@@ -719,6 +754,7 @@ var MediaService = {
 //            
 //            };
             GetVideoEncoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetVideoEncoderConfigurationResponse = { 
 //                    Configuration : { 
 
@@ -739,6 +775,7 @@ var MediaService = {
 //            
 //            };
             GetAudioSourceConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioSourceConfigurationResponse = { 
 //                    Configuration : { 
 
@@ -759,6 +796,7 @@ var MediaService = {
 //            
 //            };
             GetAudioEncoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioEncoderConfigurationResponse = { 
 //                    Configuration : { 
 
@@ -779,6 +817,7 @@ var MediaService = {
 //            
 //            };
             GetVideoAnalyticsConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetVideoAnalyticsConfigurationResponse = { 
 //                    Configuration : { 
 
@@ -799,6 +838,7 @@ var MediaService = {
 //            
 //            };
             GetMetadataConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetMetadataConfigurationResponse = { 
 //                    Configuration : { 
 
@@ -819,6 +859,7 @@ var MediaService = {
 //            
 //            };
             GetAudioOutputConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioOutputConfigurationResponse = { 
 //                    Configuration : { 
 
@@ -839,6 +880,7 @@ var MediaService = {
 //            
 //            };
             GetAudioDecoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioDecoderConfigurationResponse = { 
 //                    Configuration : { 
 
@@ -859,6 +901,7 @@ var MediaService = {
 //            
 //            };
             GetCompatibleVideoEncoderConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCompatibleVideoEncoderConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -879,6 +922,7 @@ var MediaService = {
 //            
 //            };
             GetCompatibleVideoSourceConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCompatibleVideoSourceConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -899,6 +943,7 @@ var MediaService = {
 //            
 //            };
             GetCompatibleAudioEncoderConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCompatibleAudioEncoderConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -919,6 +964,7 @@ var MediaService = {
 //            
 //            };
             GetCompatibleAudioSourceConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCompatibleAudioSourceConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -939,6 +985,7 @@ var MediaService = {
 //            
 //            };
             GetCompatibleVideoAnalyticsConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCompatibleVideoAnalyticsConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -959,6 +1006,7 @@ var MediaService = {
 //            
 //            };
             GetCompatibleMetadataConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCompatibleMetadataConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -979,6 +1027,7 @@ var MediaService = {
 //            
 //            };
             GetCompatibleAudioOutputConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCompatibleAudioOutputConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -999,6 +1048,7 @@ var MediaService = {
 //            
 //            };
             GetCompatibleAudioDecoderConfigurations : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetCompatibleAudioDecoderConfigurationsResponse = { 
 //                    Configurations : { 
 
@@ -1028,6 +1078,7 @@ var MediaService = {
 //            
 //            };
             SetVideoSourceConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetVideoSourceConfigurationResponse = { };
 //                return SetVideoSourceConfigurationResponse;
             },
@@ -1046,6 +1097,7 @@ var MediaService = {
 //            
 //            };
             SetVideoEncoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetVideoEncoderConfigurationResponse = { };
 //                return SetVideoEncoderConfigurationResponse;
             },
@@ -1064,6 +1116,7 @@ var MediaService = {
 //            
 //            };
             SetAudioSourceConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetAudioSourceConfigurationResponse = { };
 //                return SetAudioSourceConfigurationResponse;
             },
@@ -1082,6 +1135,7 @@ var MediaService = {
 //            
 //            };
             SetAudioEncoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetAudioEncoderConfigurationResponse = { };
 //                return SetAudioEncoderConfigurationResponse;
             },
@@ -1100,6 +1154,7 @@ var MediaService = {
 //            
 //            };
             SetVideoAnalyticsConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetVideoAnalyticsConfigurationResponse = { };
 //                return SetVideoAnalyticsConfigurationResponse;
             },
@@ -1118,6 +1173,7 @@ var MediaService = {
 //            
 //            };
             SetMetadataConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetMetadataConfigurationResponse = { };
 //                return SetMetadataConfigurationResponse;
             },
@@ -1136,6 +1192,7 @@ var MediaService = {
 //            
 //            };
             SetAudioOutputConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetAudioOutputConfigurationResponse = { };
 //                return SetAudioOutputConfigurationResponse;
             },
@@ -1154,6 +1211,7 @@ var MediaService = {
 //            
 //            };
             SetAudioDecoderConfiguration : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetAudioDecoderConfigurationResponse = { };
 //                return SetAudioDecoderConfigurationResponse;
             },
@@ -1164,6 +1222,7 @@ var MediaService = {
 //            
 //            };
             GetVideoSourceConfigurationOptions : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetVideoSourceConfigurationOptionsResponse = { 
 //                    Options : { 
 //                        BoundsRange : { 
@@ -1207,6 +1266,7 @@ var MediaService = {
 //            
 //            };
             GetVideoEncoderConfigurationOptions : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetVideoEncoderConfigurationOptionsResponse = { 
 //                    Options : { 
 //                        QualityRange : { 
@@ -1338,6 +1398,7 @@ var MediaService = {
 //            
 //            };
             GetAudioSourceConfigurationOptions : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioSourceConfigurationOptionsResponse = { 
 //                    Options : { 
 //                        InputTokensAvailable : { xs:string},
@@ -1354,6 +1415,7 @@ var MediaService = {
 //            
 //            };
             GetAudioEncoderConfigurationOptions : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioEncoderConfigurationOptionsResponse = { 
 //                    Options : { 
 //                        Options : { 
@@ -1377,6 +1439,7 @@ var MediaService = {
 //            
 //            };
             GetMetadataConfigurationOptions : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetMetadataConfigurationOptionsResponse = { 
 //                    Options : { 
 //                        PTZStatusFilterOptions : { 
@@ -1402,6 +1465,7 @@ var MediaService = {
 //            
 //            };
             GetAudioOutputConfigurationOptions : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioOutputConfigurationOptionsResponse = { 
 //                    Options : { 
 //                        OutputTokensAvailable : { xs:string},
@@ -1422,6 +1486,7 @@ var MediaService = {
 //            
 //            };
             GetAudioDecoderConfigurationOptions : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetAudioDecoderConfigurationOptionsResponse = { 
 //                    Options : { 
 //                        AACDecOptions : { 
@@ -1460,6 +1525,7 @@ var MediaService = {
 //            
 //            };
             GetGuaranteedNumberOfVideoEncoderInstances : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetGuaranteedNumberOfVideoEncoderInstancesResponse = { 
 //                    TotalNumber : { xs:int},
 //                    JPEG : { xs:int},
@@ -1478,6 +1544,7 @@ var MediaService = {
 //            
 //            };
             GetStreamUri : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetStreamUriResponse = { 
 //                    MediaUri : { 
 //                        Uri : { xs:anyURI},
@@ -1495,6 +1562,7 @@ var MediaService = {
 //            
 //            };
             StartMulticastStreaming : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var StartMulticastStreamingResponse = { };
 //                return StartMulticastStreamingResponse;
             },
@@ -1504,6 +1572,7 @@ var MediaService = {
 //            
 //            };
             StopMulticastStreaming : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var StopMulticastStreamingResponse = { };
 //                return StopMulticastStreamingResponse;
             },
@@ -1513,6 +1582,7 @@ var MediaService = {
 //            
 //            };
             SetSynchronizationPoint : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetSynchronizationPointResponse = { };
 //                return SetSynchronizationPointResponse;
             },
@@ -1522,6 +1592,7 @@ var MediaService = {
 //            
 //            };
             GetSnapshotUri : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetSnapshotUriResponse = { 
 //                    MediaUri : { 
 //                        Uri : { xs:anyURI},
@@ -1539,6 +1610,7 @@ var MediaService = {
 //            
 //            };
             GetVideoSourceModes : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetVideoSourceModesResponse = { 
 //                    VideoSourceModes : { 
 //                        attributes : {
@@ -1566,6 +1638,7 @@ var MediaService = {
 //            
 //            };
             SetVideoSourceMode : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetVideoSourceModeResponse = { 
 //                    Reboot : { xs:boolean}
 //                
@@ -1578,6 +1651,7 @@ var MediaService = {
 //            
 //            };
             GetOSDs : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetOSDsResponse = { 
 //                    OSDs : { 
 
@@ -1595,6 +1669,7 @@ var MediaService = {
 //            
 //            };
             GetOSD : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetOSDResponse = { 
 //                    OSD : { 
 
@@ -1612,6 +1687,7 @@ var MediaService = {
 //            
 //            };
             GetOSDOptions : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var GetOSDOptionsResponse = { 
 //                    OSDOptions : { 
 //                        MaximumNumberOfOSDs : { 
@@ -1672,6 +1748,7 @@ var MediaService = {
 //            
 //            };
             SetOSD : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var SetOSDResponse = { };
 //                return SetOSDResponse;
             },
@@ -1686,6 +1763,7 @@ var MediaService = {
 //            
 //            };
             CreateOSD : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var CreateOSDResponse = { 
 //                    OSDToken : { xs:string}
 //                
@@ -1698,6 +1776,7 @@ var MediaService = {
 //            
 //            };
             DeleteOSD : function(args /*, cb, headers*/) {
+                throw { Fault: { Code: { Value: "soap:client" }, Reason: { Text: "Method not implemented" } } };
 //            var DeleteOSDResponse = { };
 //                return DeleteOSDResponse;
             },
