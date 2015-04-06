@@ -4,1650 +4,1542 @@
 var DeviceService = {
     DeviceService : {
         Device : {
-            /*var GetServices = { 
-                IncludeCapability : boolean, 
-            };*/
-            GetServices : function(args) {
-                /*var GetServicesResponse = { 
-                    Service : { 
-                        Namespace : anyURI, 
-                        XAddr : anyURI, 
-                        Version : { 
-                            Major : int, 
-                            Minor : int, 
-
-                        },
-
-                    },
-                };
-                return GetServicesResponse;*/
-            },
-
-            /*var GetServiceCapabilities = { };*/
-            GetServiceCapabilities : function(args) {
-                /*var GetServiceCapabilitiesResponse = { 
-                    Capabilities : { 
-                        Network : { 
-                            IPFilter : boolean, 
-                            ZeroConfiguration : boolean, 
-                            IPVersion6 : boolean, 
-                            DynDNS : boolean, 
-                            Dot11Configuration : boolean, 
-                            Dot1XConfigurations : int, 
-                            HostnameFromDHCP : boolean, 
-                            NTP : int, 
-                            DHCPv6 : boolean, 
-
-                        },
-                        Security : { 
-                            TLS1.0 : boolean, 
-                            TLS1.1 : boolean, 
-                            TLS1.2 : boolean, 
-                            OnboardKeyGeneration : boolean, 
-                            AccessPolicyConfig : boolean, 
-                            DefaultAccessPolicy : boolean, 
-                            Dot1X : boolean, 
-                            RemoteUserHandling : boolean, 
-                            X.509Token : boolean, 
-                            SAMLToken : boolean, 
-                            KerberosToken : boolean, 
-                            UsernameToken : boolean, 
-                            HttpDigest : boolean, 
-                            RELToken : boolean, 
-                            SupportedEAPMethods : EAPMethodTypes, 
-                            MaxUsers : int, 
-                            MaxUserNameLength : int, 
-                            MaxPasswordLength : int, 
-
-                        },
-                        System : { 
-                            DiscoveryResolve : boolean, 
-                            DiscoveryBye : boolean, 
-                            RemoteDiscovery : boolean, 
-                            SystemBackup : boolean, 
-                            SystemLogging : boolean, 
-                            FirmwareUpgrade : boolean, 
-                            HttpFirmwareUpgrade : boolean, 
-                            HttpSystemBackup : boolean, 
-                            HttpSystemLogging : boolean, 
-                            HttpSupportInformation : boolean, 
-                            StorageConfiguration : boolean, 
-
-                        },
-                        Misc : { 
-                            AuxiliaryCommands : StringAttrList, 
-
-                        },
-
-                    },
-                };
-                return GetServiceCapabilitiesResponse;*/
-            },
-
-            /*var GetDeviceInformation = { };*/
-            GetDeviceInformation : function(args) {
-                /*var GetDeviceInformationResponse = { 
-                    Manufacturer : string, 
-                    Model : string, 
-                    FirmwareVersion : string, 
-                    SerialNumber : string, 
-                    HardwareId : string, 
-                };
-                return GetDeviceInformationResponse;*/
-            },
-
-            /*var SetSystemDateAndTime = { 
-                DateTimeType : SetDateTimeType, 
-                DaylightSavings : boolean, 
-                TimeZone : { 
-                    TZ : token, 
-
-                },
-                UTCDateTime : { 
-                    Time : { 
-                        Hour : int, 
-                        Minute : int, 
-                        Second : int, 
-
-                    },
-                    Date : { 
-                        Year : int, 
-                        Month : int, 
-                        Day : int, 
-
-                    },
-
-                },
-            };*/
-            SetSystemDateAndTime : function(args) {
-                /*var SetSystemDateAndTimeResponse = { };
-                return SetSystemDateAndTimeResponse;*/
-            },
-
-            /*var GetSystemDateAndTime = { };*/
-            GetSystemDateAndTime : function(args) {
-                /*var GetSystemDateAndTimeResponse = { 
-                    SystemDateAndTime : { 
-                        DateTimeType : SetDateTimeType, 
-                        DaylightSavings : boolean, 
-                        TimeZone : { 
-                            TZ : token, 
-
-                        },
-                        UTCDateTime : { 
-                            Time : { 
-                                Hour : int, 
-                                Minute : int, 
-                                Second : int, 
-
-                            },
-                            Date : { 
-                                Year : int, 
-                                Month : int, 
-                                Day : int, 
-
-                            },
-
-                        },
-                        LocalDateTime : { 
-                            Time : { 
-                                Hour : int, 
-                                Minute : int, 
-                                Second : int, 
-
-                            },
-                            Date : { 
-                                Year : int, 
-                                Month : int, 
-                                Day : int, 
-
-                            },
-
-                        },
-                        Extension : { },
-
-                    },
-                };
-                return GetSystemDateAndTimeResponse;*/
-            },
-
-            /*var SetSystemFactoryDefault = { 
-                FactoryDefault : FactoryDefaultType, 
-            };*/
-            SetSystemFactoryDefault : function(args) {
-                /*var SetSystemFactoryDefaultResponse = { };
-                return SetSystemFactoryDefaultResponse;*/
-            },
-
-            /*var UpgradeSystemFirmware = { 
-                Firmware : { },
-            };*/
-            UpgradeSystemFirmware : function(args) {
-                /*var UpgradeSystemFirmwareResponse = { 
-                    Message : string, 
-                };
-                return UpgradeSystemFirmwareResponse;*/
-            },
-
-            /*var SystemReboot = { };*/
-            SystemReboot : function(args) {
-                /*var SystemRebootResponse = { 
-                    Message : string, 
-                };
-                return SystemRebootResponse;*/
-            },
-
-            /*var RestoreSystem = { 
-                BackupFiles : { 
-                    Name : string, 
-                    Data : { },
-
-                },
-            };*/
-            RestoreSystem : function(args) {
-                /*var RestoreSystemResponse = { };
-                return RestoreSystemResponse;*/
-            },
-
-            /*var GetSystemBackup = { };*/
-            GetSystemBackup : function(args) {
-                /*var GetSystemBackupResponse = { 
-                    BackupFiles : { 
-                        Name : string, 
-                        Data : { },
-
-                    },
-                };
-                return GetSystemBackupResponse;*/
-            },
-
-            /*var GetSystemLog = { 
-                LogType : SystemLogType, 
-            };*/
-            GetSystemLog : function(args) {
-                /*var GetSystemLogResponse = { 
-                    SystemLog : { 
-                        Binary : { },
-                        String : string, 
-
-                    },
-                };
-                return GetSystemLogResponse;*/
-            },
-
-            /*var GetSystemSupportInformation = { };*/
-            GetSystemSupportInformation : function(args) {
-                /*var GetSystemSupportInformationResponse = { 
-                    SupportInformation : { 
-                        Binary : { },
-                        String : string, 
-
-                    },
-                };
-                return GetSystemSupportInformationResponse;*/
-            },
-
-            /*var GetScopes = { };*/
-            GetScopes : function(args) {
-                /*var GetScopesResponse = { 
-                    Scopes : { 
-                        ScopeDef : ScopeDefinition, 
-                        ScopeItem : anyURI, 
-
-                    },
-                };
-                return GetScopesResponse;*/
-            },
-
-            /*var SetScopes = { 
-                Scopes : anyURI, 
-            };*/
-            SetScopes : function(args) {
-                /*var SetScopesResponse = { };
-                return SetScopesResponse;*/
-            },
-
-            /*var AddScopes = { 
-                ScopeItem : anyURI, 
-            };*/
-            AddScopes : function(args) {
-                /*var AddScopesResponse = { };
-                return AddScopesResponse;*/
-            },
-
-            /*var RemoveScopes = { 
-                ScopeItem : anyURI, 
-            };*/
-            RemoveScopes : function(args) {
-                /*var RemoveScopesResponse = { 
-                    ScopeItem : anyURI, 
-                };
-                return RemoveScopesResponse;*/
-            },
-
-            /*var GetDiscoveryMode = { };*/
-            GetDiscoveryMode : function(args) {
-                /*var GetDiscoveryModeResponse = { 
-                    DiscoveryMode : DiscoveryMode, 
-                };
-                return GetDiscoveryModeResponse;*/
-            },
-
-            /*var SetDiscoveryMode = { 
-                DiscoveryMode : DiscoveryMode, 
-            };*/
-            SetDiscoveryMode : function(args) {
-                /*var SetDiscoveryModeResponse = { };
-                return SetDiscoveryModeResponse;*/
-            },
-
-            /*var GetRemoteDiscoveryMode = { };*/
-            GetRemoteDiscoveryMode : function(args) {
-                /*var GetRemoteDiscoveryModeResponse = { 
-                    RemoteDiscoveryMode : DiscoveryMode, 
-                };
-                return GetRemoteDiscoveryModeResponse;*/
-            },
-
-            /*var SetRemoteDiscoveryMode = { 
-                RemoteDiscoveryMode : DiscoveryMode, 
-            };*/
-            SetRemoteDiscoveryMode : function(args) {
-                /*var SetRemoteDiscoveryModeResponse = { };
-                return SetRemoteDiscoveryModeResponse;*/
-            },
-
-            /*var GetDPAddresses = { };*/
-            GetDPAddresses : function(args) {
-                /*var GetDPAddressesResponse = { 
-                    DPAddress : { 
-                        Type : NetworkHostType, 
-                        IPv4Address : IPv4Address, 
-                        IPv6Address : IPv6Address, 
-                        DNSname : DNSName, 
-                        Extension : { },
-
-                    },
-                };
-                return GetDPAddressesResponse;*/
-            },
-
-            /*var SetDPAddresses = { 
-                DPAddress : { 
-                    Type : NetworkHostType, 
-                    IPv4Address : IPv4Address, 
-                    IPv6Address : IPv6Address, 
-                    DNSname : DNSName, 
-                    Extension : { },
-
-                },
-            };*/
-            SetDPAddresses : function(args) {
-                /*var SetDPAddressesResponse = { };
-                return SetDPAddressesResponse;*/
-            },
-
-            /*var GetEndpointReference = { };*/
-            GetEndpointReference : function(args) {
-                /*var GetEndpointReferenceResponse = { 
-                    GUID : string, 
-                };
-                return GetEndpointReferenceResponse;*/
-            },
-
-            /*var GetRemoteUser = { };*/
-            GetRemoteUser : function(args) {
-                /*var GetRemoteUserResponse = { 
-                    RemoteUser : { 
-                        Username : string, 
-                        Password : string, 
-                        UseDerivedPassword : boolean, 
-
-                    },
-                };
-                return GetRemoteUserResponse;*/
-            },
-
-            /*var SetRemoteUser = { 
-                RemoteUser : { 
-                    Username : string, 
-                    Password : string, 
-                    UseDerivedPassword : boolean, 
-
-                },
-            };*/
-            SetRemoteUser : function(args) {
-                /*var SetRemoteUserResponse = { };
-                return SetRemoteUserResponse;*/
-            },
-
-            /*var GetUsers = { };*/
-            GetUsers : function(args) {
-                /*var GetUsersResponse = { 
-                    User : { 
-                        Username : string, 
-                        Password : string, 
-                        UserLevel : UserLevel, 
-                        Extension : { },
-
-                    },
-                };
-                return GetUsersResponse;*/
-            },
-
-            /*var CreateUsers = { 
-                User : { 
-                    Username : string, 
-                    Password : string, 
-                    UserLevel : UserLevel, 
-                    Extension : { },
-
-                },
-            };*/
-            CreateUsers : function(args) {
-                /*var CreateUsersResponse = { };
-                return CreateUsersResponse;*/
-            },
-
-            /*var DeleteUsers = { 
-                Username : string, 
-            };*/
-            DeleteUsers : function(args) {
-                /*var DeleteUsersResponse = { };
-                return DeleteUsersResponse;*/
-            },
-
-            /*var SetUser = { 
-                User : { 
-                    Username : string, 
-                    Password : string, 
-                    UserLevel : UserLevel, 
-                    Extension : { },
-
-                },
-            };*/
-            SetUser : function(args) {
-                /*var SetUserResponse = { };
-                return SetUserResponse;*/
-            },
-
-            /*var GetWsdlUrl = { };*/
-            GetWsdlUrl : function(args) {
-                /*var GetWsdlUrlResponse = { 
-                    WsdlUrl : anyURI, 
-                };
-                return GetWsdlUrlResponse;*/
-            },
-
-            /*var GetCapabilities = { 
-                Category : CapabilityCategory, 
-            };*/
-            GetCapabilities : function(args) {
-                /*var GetCapabilitiesResponse = { 
-                    Capabilities : { 
-                        Analytics : { 
-                            XAddr : anyURI, 
-                            RuleSupport : boolean, 
-                            AnalyticsModuleSupport : boolean, 
-
-                        },
-                        Device : { 
-                            XAddr : anyURI, 
-                            Network : { 
-                                IPFilter : boolean, 
-                                ZeroConfiguration : boolean, 
-                                IPVersion6 : boolean, 
-                                DynDNS : boolean, 
-                                Extension : { 
-                                    Dot11Configuration : boolean, 
-                                    Extension : { },
-
-                                },
-
-                            },
-                            System : { 
-                                DiscoveryResolve : boolean, 
-                                DiscoveryBye : boolean, 
-                                RemoteDiscovery : boolean, 
-                                SystemBackup : boolean, 
-                                SystemLogging : boolean, 
-                                FirmwareUpgrade : boolean, 
-                                SupportedVersions : { 
-                                    Major : int, 
-                                    Minor : int, 
-
-                                },
-                                Extension : { 
-                                    HttpFirmwareUpgrade : boolean, 
-                                    HttpSystemBackup : boolean, 
-                                    HttpSystemLogging : boolean, 
-                                    HttpSupportInformation : boolean, 
-                                    Extension : { },
-
-                                },
-
-                            },
-                            IO : { 
-                                InputConnectors : int, 
-                                RelayOutputs : int, 
-                                Extension : { 
-                                    Auxiliary : boolean, 
-                                    AuxiliaryCommands : AuxiliaryData, 
-                                    Extension : { },
-
-                                },
-
-                            },
-                            Security : { 
-                                TLS1.1 : boolean, 
-                                TLS1.2 : boolean, 
-                                OnboardKeyGeneration : boolean, 
-                                AccessPolicyConfig : boolean, 
-                                X.509Token : boolean, 
-                                SAMLToken : boolean, 
-                                KerberosToken : boolean, 
-                                RELToken : boolean, 
-                                Extension : { 
-                                    TLS1.0 : boolean, 
-                                    Extension : { 
-                                        Dot1X : boolean, 
-                                        SupportedEAPMethod : int, 
-                                        RemoteUserHandling : boolean, 
-
-                                    },
-
-                                },
-
-                            },
-                            Extension : { },
-
-                        },
-                        Events : { 
-                            XAddr : anyURI, 
-                            WSSubscriptionPolicySupport : boolean, 
-                            WSPullPointSupport : boolean, 
-                            WSPausableSubscriptionManagerInterfaceSupport : boolean, 
-
-                        },
-                        Imaging : { 
-                            XAddr : anyURI, 
-
-                        },
-                        Media : { 
-                            XAddr : anyURI, 
-                            StreamingCapabilities : { 
-                                RTPMulticast : boolean, 
-                                RTP_TCP : boolean, 
-                                RTP_RTSP_TCP : boolean, 
-                                Extension : { },
-
-                            },
-                            Extension : { 
-                                ProfileCapabilities : { 
-                                    MaximumNumberOfProfiles : int, 
-
-                                },
-
-                            },
-
-                        },
-                        PTZ : { 
-                            XAddr : anyURI, 
-
-                        },
-                        Extension : { 
-                            DeviceIO : { 
-                                XAddr : anyURI, 
-                                VideoSources : int, 
-                                VideoOutputs : int, 
-                                AudioSources : int, 
-                                AudioOutputs : int, 
-                                RelayOutputs : int, 
-
-                            },
-                            Display : { 
-                                XAddr : anyURI, 
-                                FixedLayout : boolean, 
-
-                            },
-                            Recording : { 
-                                XAddr : anyURI, 
-                                ReceiverSource : boolean, 
-                                MediaProfileSource : boolean, 
-                                DynamicRecordings : boolean, 
-                                DynamicTracks : boolean, 
-                                MaxStringLength : int, 
-
-                            },
-                            Search : { 
-                                XAddr : anyURI, 
-                                MetadataSearch : boolean, 
-
-                            },
-                            Replay : { 
-                                XAddr : anyURI, 
-
-                            },
-                            Receiver : { 
-                                XAddr : anyURI, 
-                                RTP_Multicast : boolean, 
-                                RTP_TCP : boolean, 
-                                RTP_RTSP_TCP : boolean, 
-                                SupportedReceivers : int, 
-                                MaximumRTSPURILength : int, 
-
-                            },
-                            AnalyticsDevice : { 
-                                XAddr : anyURI, 
-                                RuleSupport : boolean, 
-                                Extension : { },
-
-                            },
-                            Extensions : { },
-
-                        },
-
-                    },
-                };
-                return GetCapabilitiesResponse;*/
-            },
-
-            /*var GetHostname = { };*/
-            GetHostname : function(args) {
-                /*var GetHostnameResponse = { 
-                    HostnameInformation : { 
-                        FromDHCP : boolean, 
-                        Name : token, 
-                        Extension : { },
-
-                    },
-                };
-                return GetHostnameResponse;*/
-            },
-
-            /*var SetHostname = { 
-                Name : token, 
-            };*/
-            SetHostname : function(args) {
-                /*var SetHostnameResponse = { };
-                return SetHostnameResponse;*/
-            },
-
-            /*var SetHostnameFromDHCP = { 
-                FromDHCP : boolean, 
-            };*/
-            SetHostnameFromDHCP : function(args) {
-                /*var SetHostnameFromDHCPResponse = { 
-                    RebootNeeded : boolean, 
-                };
-                return SetHostnameFromDHCPResponse;*/
-            },
-
-            /*var GetDNS = { };*/
-            GetDNS : function(args) {
-                /*var GetDNSResponse = { 
-                    DNSInformation : { 
-                        FromDHCP : boolean, 
-                        SearchDomain : token, 
-                        DNSFromDHCP : { 
-                            Type : IPType, 
-                            IPv4Address : IPv4Address, 
-                            IPv6Address : IPv6Address, 
-
-                        },
-                        DNSManual : { 
-                            Type : IPType, 
-                            IPv4Address : IPv4Address, 
-                            IPv6Address : IPv6Address, 
-
-                        },
-                        Extension : { },
-
-                    },
-                };
-                return GetDNSResponse;*/
-            },
-
-            /*var SetDNS = { 
-                FromDHCP : boolean, 
-                SearchDomain : token, 
-                DNSManual : { 
-                    Type : IPType, 
-                    IPv4Address : IPv4Address, 
-                    IPv6Address : IPv6Address, 
-
-                },
-            };*/
-            SetDNS : function(args) {
-                /*var SetDNSResponse = { };
-                return SetDNSResponse;*/
-            },
-
-            /*var GetNTP = { };*/
-            GetNTP : function(args) {
-                /*var GetNTPResponse = { 
-                    NTPInformation : { 
-                        FromDHCP : boolean, 
-                        NTPFromDHCP : { 
-                            Type : NetworkHostType, 
-                            IPv4Address : IPv4Address, 
-                            IPv6Address : IPv6Address, 
-                            DNSname : DNSName, 
-                            Extension : { },
-
-                        },
-                        NTPManual : { 
-                            Type : NetworkHostType, 
-                            IPv4Address : IPv4Address, 
-                            IPv6Address : IPv6Address, 
-                            DNSname : DNSName, 
-                            Extension : { },
-
-                        },
-                        Extension : { },
-
-                    },
-                };
-                return GetNTPResponse;*/
-            },
-
-            /*var SetNTP = { 
-                FromDHCP : boolean, 
-                NTPManual : { 
-                    Type : NetworkHostType, 
-                    IPv4Address : IPv4Address, 
-                    IPv6Address : IPv6Address, 
-                    DNSname : DNSName, 
-                    Extension : { },
-
-                },
-            };*/
-            SetNTP : function(args) {
-                /*var SetNTPResponse = { };
-                return SetNTPResponse;*/
-            },
-
-            /*var GetDynamicDNS = { };*/
-            GetDynamicDNS : function(args) {
-                /*var GetDynamicDNSResponse = { 
-                    DynamicDNSInformation : { 
-                        Type : DynamicDNSType, 
-                        Name : DNSName, 
-                        TTL : duration, 
-                        Extension : { },
-
-                    },
-                };
-                return GetDynamicDNSResponse;*/
-            },
-
-            /*var SetDynamicDNS = { 
-                Type : DynamicDNSType, 
-                Name : DNSName, 
-                TTL : duration, 
-            };*/
-            SetDynamicDNS : function(args) {
-                /*var SetDynamicDNSResponse = { };
-                return SetDynamicDNSResponse;*/
-            },
-
-            /*var GetNetworkInterfaces = { };*/
-            GetNetworkInterfaces : function(args) {
-                /*var GetNetworkInterfacesResponse = { 
-                    NetworkInterfaces : { 
-                        Enabled : boolean, 
-                        Info : { 
-                            Name : string, 
-                            HwAddress : HwAddress, 
-                            MTU : int, 
-
-                        },
-                        Link : { 
-                            AdminSettings : { 
-                                AutoNegotiation : boolean, 
-                                Speed : int, 
-                                Duplex : Duplex, 
-
-                            },
-                            OperSettings : { 
-                                AutoNegotiation : boolean, 
-                                Speed : int, 
-                                Duplex : Duplex, 
-
-                            },
-                            InterfaceType : IANA-IfTypes, 
-
-                        },
-                        IPv4 : { 
-                            Enabled : boolean, 
-                            Config : { 
-                                Manual : { 
-                                    Address : IPv4Address, 
-                                    PrefixLength : int, 
-
-                                },
-                                LinkLocal : { 
-                                    Address : IPv4Address, 
-                                    PrefixLength : int, 
-
-                                },
-                                FromDHCP : { 
-                                    Address : IPv4Address, 
-                                    PrefixLength : int, 
-
-                                },
-                                DHCP : boolean, 
-
-                            },
-
-                        },
-                        IPv6 : { 
-                            Enabled : boolean, 
-                            Config : { 
-                                AcceptRouterAdvert : boolean, 
-                                DHCP : IPv6DHCPConfiguration, 
-                                Manual : { 
-                                    Address : IPv6Address, 
-                                    PrefixLength : int, 
-
-                                },
-                                LinkLocal : { 
-                                    Address : IPv6Address, 
-                                    PrefixLength : int, 
-
-                                },
-                                FromDHCP : { 
-                                    Address : IPv6Address, 
-                                    PrefixLength : int, 
-
-                                },
-                                FromRA : { 
-                                    Address : IPv6Address, 
-                                    PrefixLength : int, 
-
-                                },
-                                Extension : { },
-
-                            },
-
-                        },
-                        Extension : { 
-                            InterfaceType : IANA-IfTypes, 
-                            Dot3 : { },
-                            Dot11 : { 
-                                SSID : Dot11SSIDType, 
-                                Mode : Dot11StationMode, 
-                                Alias : Name, 
-                                Priority : NetworkInterfaceConfigPriority, 
-                                Security : { 
-                                    Mode : Dot11SecurityMode, 
-                                    Algorithm : Dot11Cipher, 
-                                    PSK : { 
-                                        Key : Dot11PSK, 
-                                        Passphrase : Dot11PSKPassphrase, 
-                                        Extension : { },
-
-                                    },
-                                    Dot1X : ReferenceToken, 
-                                    Extension : { },
-
-                                },
-
-                            },
-                            Extension : { },
-
-                        },
-
-                    },
-                };
-                return GetNetworkInterfacesResponse;*/
-            },
-
-            /*var SetNetworkInterfaces = { 
-                InterfaceToken : ReferenceToken, 
-                NetworkInterface : { 
-                    Enabled : boolean, 
-                    Link : { 
-                        AutoNegotiation : boolean, 
-                        Speed : int, 
-                        Duplex : Duplex, 
-
-                    },
-                    MTU : int, 
-                    IPv4 : { 
-                        Enabled : boolean, 
-                        Manual : { 
-                            Address : IPv4Address, 
-                            PrefixLength : int, 
-
-                        },
-                        DHCP : boolean, 
-
-                    },
-                    IPv6 : { 
-                        Enabled : boolean, 
-                        AcceptRouterAdvert : boolean, 
-                        Manual : { 
-                            Address : IPv6Address, 
-                            PrefixLength : int, 
-
-                        },
-                        DHCP : IPv6DHCPConfiguration, 
-
-                    },
-                    Extension : { 
-                        Dot3 : { },
-                        Dot11 : { 
-                            SSID : Dot11SSIDType, 
-                            Mode : Dot11StationMode, 
-                            Alias : Name, 
-                            Priority : NetworkInterfaceConfigPriority, 
-                            Security : { 
-                                Mode : Dot11SecurityMode, 
-                                Algorithm : Dot11Cipher, 
-                                PSK : { 
-                                    Key : Dot11PSK, 
-                                    Passphrase : Dot11PSKPassphrase, 
-                                    Extension : { },
-
-                                },
-                                Dot1X : ReferenceToken, 
-                                Extension : { },
-
-                            },
-
-                        },
-                        Extension : { },
-
-                    },
-
-                },
-            };*/
-            SetNetworkInterfaces : function(args) {
-                /*var SetNetworkInterfacesResponse = { 
-                    RebootNeeded : boolean, 
-                };
-                return SetNetworkInterfacesResponse;*/
-            },
-
-            /*var GetNetworkProtocols = { };*/
-            GetNetworkProtocols : function(args) {
-                /*var GetNetworkProtocolsResponse = { 
-                    NetworkProtocols : { 
-                        Name : NetworkProtocolType, 
-                        Enabled : boolean, 
-                        Port : int, 
-                        Extension : { },
-
-                    },
-                };
-                return GetNetworkProtocolsResponse;*/
-            },
-
-            /*var SetNetworkProtocols = { 
-                NetworkProtocols : { 
-                    Name : NetworkProtocolType, 
-                    Enabled : boolean, 
-                    Port : int, 
-                    Extension : { },
-
-                },
-            };*/
-            SetNetworkProtocols : function(args) {
-                /*var SetNetworkProtocolsResponse = { };
-                return SetNetworkProtocolsResponse;*/
-            },
-
-            /*var GetNetworkDefaultGateway = { };*/
-            GetNetworkDefaultGateway : function(args) {
-                /*var GetNetworkDefaultGatewayResponse = { 
-                    NetworkGateway : { 
-                        IPv4Address : IPv4Address, 
-                        IPv6Address : IPv6Address, 
-
-                    },
-                };
-                return GetNetworkDefaultGatewayResponse;*/
-            },
-
-            /*var SetNetworkDefaultGateway = { 
-                IPv4Address : IPv4Address, 
-                IPv6Address : IPv6Address, 
-            };*/
-            SetNetworkDefaultGateway : function(args) {
-                /*var SetNetworkDefaultGatewayResponse = { };
-                return SetNetworkDefaultGatewayResponse;*/
-            },
-
-            /*var GetZeroConfiguration = { };*/
-            GetZeroConfiguration : function(args) {
-                /*var GetZeroConfigurationResponse = { 
-                    ZeroConfiguration : { 
-                        InterfaceToken : ReferenceToken, 
-                        Enabled : boolean, 
-                        Addresses : IPv4Address, 
-                        Extension : null, 
-
-                    },
-                };
-                return GetZeroConfigurationResponse;*/
-            },
-
-            /*var SetZeroConfiguration = { 
-                InterfaceToken : ReferenceToken, 
-                Enabled : boolean, 
-            };*/
-            SetZeroConfiguration : function(args) {
-                /*var SetZeroConfigurationResponse = { };
-                return SetZeroConfigurationResponse;*/
-            },
-
-            /*var GetIPAddressFilter = { };*/
-            GetIPAddressFilter : function(args) {
-                /*var GetIPAddressFilterResponse = { 
-                    IPAddressFilter : { 
-                        Type : IPAddressFilterType, 
-                        IPv4Address : { 
-                            Address : IPv4Address, 
-                            PrefixLength : int, 
-
-                        },
-                        IPv6Address : { 
-                            Address : IPv6Address, 
-                            PrefixLength : int, 
-
-                        },
-                        Extension : { },
-
-                    },
-                };
-                return GetIPAddressFilterResponse;*/
-            },
-
-            /*var SetIPAddressFilter = { 
-                IPAddressFilter : { 
-                    Type : IPAddressFilterType, 
-                    IPv4Address : { 
-                        Address : IPv4Address, 
-                        PrefixLength : int, 
-
-                    },
-                    IPv6Address : { 
-                        Address : IPv6Address, 
-                        PrefixLength : int, 
-
-                    },
-                    Extension : { },
-
-                },
-            };*/
-            SetIPAddressFilter : function(args) {
-                /*var SetIPAddressFilterResponse = { };
-                return SetIPAddressFilterResponse;*/
-            },
-
-            /*var AddIPAddressFilter = { 
-                IPAddressFilter : { 
-                    Type : IPAddressFilterType, 
-                    IPv4Address : { 
-                        Address : IPv4Address, 
-                        PrefixLength : int, 
-
-                    },
-                    IPv6Address : { 
-                        Address : IPv6Address, 
-                        PrefixLength : int, 
-
-                    },
-                    Extension : { },
-
-                },
-            };*/
-            AddIPAddressFilter : function(args) {
-                /*var AddIPAddressFilterResponse = { };
-                return AddIPAddressFilterResponse;*/
-            },
-
-            /*var RemoveIPAddressFilter = { 
-                IPAddressFilter : { 
-                    Type : IPAddressFilterType, 
-                    IPv4Address : { 
-                        Address : IPv4Address, 
-                        PrefixLength : int, 
-
-                    },
-                    IPv6Address : { 
-                        Address : IPv6Address, 
-                        PrefixLength : int, 
-
-                    },
-                    Extension : { },
-
-                },
-            };*/
-            RemoveIPAddressFilter : function(args) {
-                /*var RemoveIPAddressFilterResponse = { };
-                return RemoveIPAddressFilterResponse;*/
-            },
-
-            /*var GetAccessPolicy = { };*/
-            GetAccessPolicy : function(args) {
-                /*var GetAccessPolicyResponse = { 
-                    PolicyFile : { 
-                        Data : base64Binary, 
-
-                    },
-                };
-                return GetAccessPolicyResponse;*/
-            },
-
-            /*var SetAccessPolicy = { 
-                PolicyFile : { 
-                    Data : base64Binary, 
-
-                },
-            };*/
-            SetAccessPolicy : function(args) {
-                /*var SetAccessPolicyResponse = { };
-                return SetAccessPolicyResponse;*/
-            },
-
-            /*var CreateCertificate = { 
-                CertificateID : token, 
-                Subject : string, 
-                ValidNotBefore : dateTime, 
-                ValidNotAfter : dateTime, 
-            };*/
-            CreateCertificate : function(args) {
-                /*var CreateCertificateResponse = { 
-                    NvtCertificate : { 
-                        CertificateID : token, 
-                        Certificate : { 
-                            Data : base64Binary, 
-
-                        },
-
-                    },
-                };
-                return CreateCertificateResponse;*/
-            },
-
-            /*var GetCertificates = { };*/
-            GetCertificates : function(args) {
-                /*var GetCertificatesResponse = { 
-                    NvtCertificate : { 
-                        CertificateID : token, 
-                        Certificate : { 
-                            Data : base64Binary, 
-
-                        },
-
-                    },
-                };
-                return GetCertificatesResponse;*/
-            },
-
-            /*var GetCertificatesStatus = { };*/
-            GetCertificatesStatus : function(args) {
-                /*var GetCertificatesStatusResponse = { 
-                    CertificateStatus : { 
-                        CertificateID : token, 
-                        Status : boolean, 
-
-                    },
-                };
-                return GetCertificatesStatusResponse;*/
-            },
-
-            /*var SetCertificatesStatus = { 
-                CertificateStatus : { 
-                    CertificateID : token, 
-                    Status : boolean, 
-
-                },
-            };*/
-            SetCertificatesStatus : function(args) {
-                /*var SetCertificatesStatusResponse = { };
-                return SetCertificatesStatusResponse;*/
-            },
-
-            /*var DeleteCertificates = { 
-                CertificateID : token, 
-            };*/
-            DeleteCertificates : function(args) {
-                /*var DeleteCertificatesResponse = { };
-                return DeleteCertificatesResponse;*/
-            },
-
-            /*var GetPkcs10Request = { 
-                CertificateID : token, 
-                Subject : string, 
-                Attributes : { 
-                    Data : base64Binary, 
-
-                },
-            };*/
-            GetPkcs10Request : function(args) {
-                /*var GetPkcs10RequestResponse = { 
-                    Pkcs10Request : { 
-                        Data : base64Binary, 
-
-                    },
-                };
-                return GetPkcs10RequestResponse;*/
-            },
-
-            /*var LoadCertificates = { 
-                NVTCertificate : { 
-                    CertificateID : token, 
-                    Certificate : { 
-                        Data : base64Binary, 
-
-                    },
-
-                },
-            };*/
-            LoadCertificates : function(args) {
-                /*var LoadCertificatesResponse = { };
-                return LoadCertificatesResponse;*/
-            },
-
-            /*var GetClientCertificateMode = { };*/
-            GetClientCertificateMode : function(args) {
-                /*var GetClientCertificateModeResponse = { 
-                    Enabled : boolean, 
-                };
-                return GetClientCertificateModeResponse;*/
-            },
-
-            /*var SetClientCertificateMode = { 
-                Enabled : boolean, 
-            };*/
-            SetClientCertificateMode : function(args) {
-                /*var SetClientCertificateModeResponse = { };
-                return SetClientCertificateModeResponse;*/
-            },
-
-            /*var GetRelayOutputs = { };*/
-            GetRelayOutputs : function(args) {
-                /*var GetRelayOutputsResponse = { 
-                    RelayOutputs : { 
-                        Properties : { 
-                            Mode : RelayMode, 
-                            DelayTime : duration, 
-                            IdleState : RelayIdleState, 
-
-                        },
-
-                    },
-                };
-                return GetRelayOutputsResponse;*/
-            },
-
-            /*var SetRelayOutputSettings = { 
-                RelayOutputToken : ReferenceToken, 
-                Properties : { 
-                    Mode : RelayMode, 
-                    DelayTime : duration, 
-                    IdleState : RelayIdleState, 
-
-                },
-            };*/
-            SetRelayOutputSettings : function(args) {
-                /*var SetRelayOutputSettingsResponse = { };
-                return SetRelayOutputSettingsResponse;*/
-            },
-
-            /*var SetRelayOutputState = { 
-                RelayOutputToken : ReferenceToken, 
-                LogicalState : RelayLogicalState, 
-            };*/
-            SetRelayOutputState : function(args) {
-                /*var SetRelayOutputStateResponse = { };
-                return SetRelayOutputStateResponse;*/
-            },
-
-            /*var SendAuxiliaryCommand = { 
-                AuxiliaryCommand : AuxiliaryData, 
-            };*/
-            SendAuxiliaryCommand : function(args) {
-                /*var SendAuxiliaryCommandResponse = { 
-                    AuxiliaryCommandResponse : AuxiliaryData, 
-                };
-                return SendAuxiliaryCommandResponse;*/
-            },
-
-            /*var GetCACertificates = { };*/
-            GetCACertificates : function(args) {
-                /*var GetCACertificatesResponse = { 
-                    CACertificate : { 
-                        CertificateID : token, 
-                        Certificate : { 
-                            Data : base64Binary, 
-
-                        },
-
-                    },
-                };
-                return GetCACertificatesResponse;*/
-            },
-
-            /*var LoadCertificateWithPrivateKey = { 
-                CertificateWithPrivateKey : { 
-                    CertificateID : token, 
-                    Certificate : { 
-                        Data : base64Binary, 
-
-                    },
-                    PrivateKey : { 
-                        Data : base64Binary, 
-
-                    },
-
-                },
-            };*/
-            LoadCertificateWithPrivateKey : function(args) {
-                /*var LoadCertificateWithPrivateKeyResponse = { };
-                return LoadCertificateWithPrivateKeyResponse;*/
-            },
-
-            /*var GetCertificateInformation = { 
-                CertificateID : token, 
-            };*/
-            GetCertificateInformation : function(args) {
-                /*var GetCertificateInformationResponse = { 
-                    CertificateInformation : { 
-                        CertificateID : token, 
-                        IssuerDN : string, 
-                        SubjectDN : string, 
-                        KeyUsage : { 
-                            Critical : boolean, 
-
-                        },
-                        ExtendedKeyUsage : { 
-                            Critical : boolean, 
-
-                        },
-                        KeyLength : int, 
-                        Version : string, 
-                        SerialNum : string, 
-                        SignatureAlgorithm : string, 
-                        Validity : { 
-                            From : dateTime, 
-                            Until : dateTime, 
-
-                        },
-                        Extension : { },
-
-                    },
-                };
-                return GetCertificateInformationResponse;*/
-            },
-
-            /*var LoadCACertificates = { 
-                CACertificate : { 
-                    CertificateID : token, 
-                    Certificate : { 
-                        Data : base64Binary, 
-
-                    },
-
-                },
-            };*/
-            LoadCACertificates : function(args) {
-                /*var LoadCACertificatesResponse = { };
-                return LoadCACertificatesResponse;*/
-            },
-
-            /*var CreateDot1XConfiguration = { 
-                Dot1XConfiguration : { 
-                    Dot1XConfigurationToken : ReferenceToken, 
-                    Identity : string, 
-                    AnonymousID : string, 
-                    EAPMethod : int, 
-                    CACertificateID : token, 
-                    EAPMethodConfiguration : { 
-                        TLSConfiguration : { 
-                            CertificateID : token, 
-
-                        },
-                        Password : string, 
-                        Extension : { },
-
-                    },
-                    Extension : { },
-
-                },
-            };*/
-            CreateDot1XConfiguration : function(args) {
-                /*var CreateDot1XConfigurationResponse = { };
-                return CreateDot1XConfigurationResponse;*/
-            },
-
-            /*var SetDot1XConfiguration = { 
-                Dot1XConfiguration : { 
-                    Dot1XConfigurationToken : ReferenceToken, 
-                    Identity : string, 
-                    AnonymousID : string, 
-                    EAPMethod : int, 
-                    CACertificateID : token, 
-                    EAPMethodConfiguration : { 
-                        TLSConfiguration : { 
-                            CertificateID : token, 
-
-                        },
-                        Password : string, 
-                        Extension : { },
-
-                    },
-                    Extension : { },
-
-                },
-            };*/
-            SetDot1XConfiguration : function(args) {
-                /*var SetDot1XConfigurationResponse = { };
-                return SetDot1XConfigurationResponse;*/
-            },
-
-            /*var GetDot1XConfiguration = { 
-                Dot1XConfigurationToken : ReferenceToken, 
-            };*/
-            GetDot1XConfiguration : function(args) {
-                /*var GetDot1XConfigurationResponse = { 
-                    Dot1XConfiguration : { 
-                        Dot1XConfigurationToken : ReferenceToken, 
-                        Identity : string, 
-                        AnonymousID : string, 
-                        EAPMethod : int, 
-                        CACertificateID : token, 
-                        EAPMethodConfiguration : { 
-                            TLSConfiguration : { 
-                                CertificateID : token, 
-
-                            },
-                            Password : string, 
-                            Extension : { },
-
-                        },
-                        Extension : { },
-
-                    },
-                };
-                return GetDot1XConfigurationResponse;*/
-            },
-
-            /*var GetDot1XConfigurations = { };*/
-            GetDot1XConfigurations : function(args) {
-                /*var GetDot1XConfigurationsResponse = { 
-                    Dot1XConfiguration : { 
-                        Dot1XConfigurationToken : ReferenceToken, 
-                        Identity : string, 
-                        AnonymousID : string, 
-                        EAPMethod : int, 
-                        CACertificateID : token, 
-                        EAPMethodConfiguration : { 
-                            TLSConfiguration : { 
-                                CertificateID : token, 
-
-                            },
-                            Password : string, 
-                            Extension : { },
-
-                        },
-                        Extension : { },
-
-                    },
-                };
-                return GetDot1XConfigurationsResponse;*/
-            },
-
-            /*var DeleteDot1XConfiguration = { 
-                Dot1XConfigurationToken : ReferenceToken, 
-            };*/
-            DeleteDot1XConfiguration : function(args) {
-                /*var DeleteDot1XConfigurationResponse = { };
-                return DeleteDot1XConfigurationResponse;*/
-            },
-
-            /*var GetDot11Capabilities = { };*/
-            GetDot11Capabilities : function(args) {
-                /*var GetDot11CapabilitiesResponse = { 
-                    Capabilities : { 
-                        TKIP : boolean, 
-                        ScanAvailableNetworks : boolean, 
-                        MultipleConfiguration : boolean, 
-                        AdHocStationMode : boolean, 
-                        WEP : boolean, 
-
-                    },
-                };
-                return GetDot11CapabilitiesResponse;*/
-            },
-
-            /*var GetDot11Status = { 
-                InterfaceToken : ReferenceToken, 
-            };*/
-            GetDot11Status : function(args) {
-                /*var GetDot11StatusResponse = { 
-                    Status : { 
-                        SSID : Dot11SSIDType, 
-                        BSSID : string, 
-                        PairCipher : Dot11Cipher, 
-                        GroupCipher : Dot11Cipher, 
-                        SignalStrength : Dot11SignalStrength, 
-                        ActiveConfigAlias : ReferenceToken, 
-
-                    },
-                };
-                return GetDot11StatusResponse;*/
-            },
-
-            /*var ScanAvailableDot11Networks = { 
-                InterfaceToken : ReferenceToken, 
-            };*/
-            ScanAvailableDot11Networks : function(args) {
-                /*var ScanAvailableDot11NetworksResponse = { 
-                    Networks : { 
-                        SSID : Dot11SSIDType, 
-                        BSSID : string, 
-                        AuthAndMangementSuite : Dot11AuthAndMangementSuite, 
-                        PairCipher : Dot11Cipher, 
-                        GroupCipher : Dot11Cipher, 
-                        SignalStrength : Dot11SignalStrength, 
-                        Extension : { },
-
-                    },
-                };
-                return ScanAvailableDot11NetworksResponse;*/
-            },
-
-            /*var GetSystemUris = { };*/
-            GetSystemUris : function(args) {
-                /*var GetSystemUrisResponse = { 
-                    SystemLogUris : { 
-                        SystemLog : { 
-                            Type : SystemLogType, 
-                            Uri : anyURI, 
-
-                        },
-
-                    },
-                    SupportInfoUri : anyURI, 
-                    SystemBackupUri : anyURI, 
-                };
-                return GetSystemUrisResponse;*/
-            },
-
-            /*var StartFirmwareUpgrade = { };*/
-            StartFirmwareUpgrade : function(args) {
-                /*var StartFirmwareUpgradeResponse = { 
-                    UploadUri : anyURI, 
-                    UploadDelay : duration, 
-                    ExpectedDownTime : duration, 
-                };
-                return StartFirmwareUpgradeResponse;*/
-            },
-
-            /*var StartSystemRestore = { };*/
-            StartSystemRestore : function(args) {
-                /*var StartSystemRestoreResponse = { 
-                    UploadUri : anyURI, 
-                    ExpectedDownTime : duration, 
-                };
-                return StartSystemRestoreResponse;*/
-            },
-
-            /*var GetStorageConfigurations = { };*/
-            GetStorageConfigurations : function(args) {
-                /*var GetStorageConfigurationsResponse = { 
-                    StorageConfigurations : { 
-                        Data : { 
-                            LocalPath : anyURI, 
-                            StorageUri : anyURI, 
-                            User : { 
-                                UserName : string, 
-                                Password : string, 
-
-                            },
-                            type : string, 
-
-                        },
-
-                    },
-                };
-                return GetStorageConfigurationsResponse;*/
-            },
-
-            /*var CreateStorageConfiguration = { 
-                StorageConfiguration : { 
-                    LocalPath : anyURI, 
-                    StorageUri : anyURI, 
-                    User : { 
-                        UserName : string, 
-                        Password : string, 
-
-                    },
-                    type : string, 
-
-                },
-            };*/
-            CreateStorageConfiguration : function(args) {
-                /*var CreateStorageConfigurationResponse = { 
-                    Token : ReferenceToken, 
-                };
-                return CreateStorageConfigurationResponse;*/
-            },
-
-            /*var GetStorageConfiguration = { 
-                Token : ReferenceToken, 
-            };*/
-            GetStorageConfiguration : function(args) {
-                /*var GetStorageConfigurationResponse = { 
-                    StorageConfiguration : { 
-                        Data : { 
-                            LocalPath : anyURI, 
-                            StorageUri : anyURI, 
-                            User : { 
-                                UserName : string, 
-                                Password : string, 
-
-                            },
-                            type : string, 
-
-                        },
-
-                    },
-                };
-                return GetStorageConfigurationResponse;*/
-            },
-
-            /*var SetStorageConfiguration = { 
-                StorageConfiguration : { 
-                    Data : { 
-                        LocalPath : anyURI, 
-                        StorageUri : anyURI, 
-                        User : { 
-                            UserName : string, 
-                            Password : string, 
-
-                        },
-                        type : string, 
-
-                    },
-
-                },
-            };*/
-            SetStorageConfiguration : function(args) {
-                /*var SetStorageConfigurationResponse = { };
-                return SetStorageConfigurationResponse;*/
-            },
-
-            /*var DeleteStorageConfiguration = { 
-                Token : ReferenceToken, 
-            };*/
-            DeleteStorageConfiguration : function(args) {
-                /*var DeleteStorageConfigurationResponse = { };
-                return DeleteStorageConfigurationResponse;*/
+//            var GetServices = { 
+//                IncludeCapability : { xs:boolean}
+//            
+//            };
+            GetServices : function(args /*, cb, headers*/) {
+//            var GetServicesResponse = { 
+//                    Service : { 
+//                        Namespace : { xs:anyURI},
+//                        XAddr : { xs:anyURI},
+//                        Capabilities : { },
+//                        Version : { 
+//                            Major : { xs:int},
+//                            Minor : { xs:int}
+//                        }
+//                    }
+//                
+//                };
+//                return GetServicesResponse;
+            },
+
+//            var GetServiceCapabilities = { };
+            GetServiceCapabilities : function(args /*, cb, headers*/) {
+//            var GetServiceCapabilitiesResponse = { 
+//                    Capabilities : { 
+//                        Network : { 
+//                            attributes : {
+//                                IPFilter : {xs:boolean},
+//                                ZeroConfiguration : {xs:boolean},
+//                                IPVersion6 : {xs:boolean},
+//                                DynDNS : {xs:boolean},
+//                                Dot11Configuration : {xs:boolean},
+//                                Dot1XConfigurations : {xs:int},
+//                                HostnameFromDHCP : {xs:boolean},
+//                                NTP : {xs:int},
+//                                DHCPv6 : {xs:boolean}
+//                            }},
+//                        Security : { 
+//                            attributes : {
+//                                TLS1.0 : {xs:boolean},
+//                                TLS1.1 : {xs:boolean},
+//                                TLS1.2 : {xs:boolean},
+//                                OnboardKeyGeneration : {xs:boolean},
+//                                AccessPolicyConfig : {xs:boolean},
+//                                DefaultAccessPolicy : {xs:boolean},
+//                                Dot1X : {xs:boolean},
+//                                RemoteUserHandling : {xs:boolean},
+//                                X.509Token : {xs:boolean},
+//                                SAMLToken : {xs:boolean},
+//                                KerberosToken : {xs:boolean},
+//                                UsernameToken : {xs:boolean},
+//                                HttpDigest : {xs:boolean},
+//                                RELToken : {xs:boolean},
+//                                SupportedEAPMethods : {tds:EAPMethodTypes},
+//                                MaxUsers : {xs:int},
+//                                MaxUserNameLength : {xs:int},
+//                                MaxPasswordLength : {xs:int}
+//                            }},
+//                        System : { 
+//                            attributes : {
+//                                DiscoveryResolve : {xs:boolean},
+//                                DiscoveryBye : {xs:boolean},
+//                                RemoteDiscovery : {xs:boolean},
+//                                SystemBackup : {xs:boolean},
+//                                SystemLogging : {xs:boolean},
+//                                FirmwareUpgrade : {xs:boolean},
+//                                HttpFirmwareUpgrade : {xs:boolean},
+//                                HttpSystemBackup : {xs:boolean},
+//                                HttpSystemLogging : {xs:boolean},
+//                                HttpSupportInformation : {xs:boolean},
+//                                StorageConfiguration : {xs:boolean}
+//                            }},
+//                        Misc : { 
+//                            attributes : {
+//                                AuxiliaryCommands : {tt:StringAttrList}
+//                            }}
+//                    }
+//                
+//                };
+//                return GetServiceCapabilitiesResponse;
+            },
+
+//            var GetDeviceInformation = { };
+            GetDeviceInformation : function(args /*, cb, headers*/) {
+//            var GetDeviceInformationResponse = { 
+//                    Manufacturer : { xs:string},
+//                    Model : { xs:string},
+//                    FirmwareVersion : { xs:string},
+//                    SerialNumber : { xs:string},
+//                    HardwareId : { xs:string}
+//                
+//                };
+//                return GetDeviceInformationResponse;
+            },
+
+//            var SetSystemDateAndTime = { 
+//                DateTimeType : { xs:string},
+//                DaylightSavings : { xs:boolean},
+//                TimeZone : { 
+//                    TZ : { xs:token}
+//                },
+//                UTCDateTime : { 
+//                    Time : { 
+//                        Hour : { xs:int},
+//                        Minute : { xs:int},
+//                        Second : { xs:int}
+//                    },
+//                    Date : { 
+//                        Year : { xs:int},
+//                        Month : { xs:int},
+//                        Day : { xs:int}
+//                    }
+//                }
+//            
+//            };
+            SetSystemDateAndTime : function(args /*, cb, headers*/) {
+//            var SetSystemDateAndTimeResponse = { };
+//                return SetSystemDateAndTimeResponse;
+            },
+
+//            var GetSystemDateAndTime = { };
+            GetSystemDateAndTime : function(args /*, cb, headers*/) {
+//            var GetSystemDateAndTimeResponse = { 
+//                    SystemDateAndTime : { 
+//                        DateTimeType : { xs:string},
+//                        DaylightSavings : { xs:boolean},
+//                        TimeZone : { 
+//                            TZ : { xs:token}
+//                        },
+//                        UTCDateTime : { 
+//                            Time : { 
+//                                Hour : { xs:int},
+//                                Minute : { xs:int},
+//                                Second : { xs:int}
+//                            },
+//                            Date : { 
+//                                Year : { xs:int},
+//                                Month : { xs:int},
+//                                Day : { xs:int}
+//                            }
+//                        },
+//                        LocalDateTime : { 
+//                            Time : { 
+//                                Hour : { xs:int},
+//                                Minute : { xs:int},
+//                                Second : { xs:int}
+//                            },
+//                            Date : { 
+//                                Year : { xs:int},
+//                                Month : { xs:int},
+//                                Day : { xs:int}
+//                            }
+//                        },
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetSystemDateAndTimeResponse;
+            },
+
+//            var SetSystemFactoryDefault = { 
+//                FactoryDefault : { xs:string}
+//            
+//            };
+            SetSystemFactoryDefault : function(args /*, cb, headers*/) {
+//            var SetSystemFactoryDefaultResponse = { };
+//                return SetSystemFactoryDefaultResponse;
+            },
+
+//            var UpgradeSystemFirmware = { 
+//                Firmware : { 
+//                    attributes : {
+//                        undefined : {}
+//                    }}
+//            
+//            };
+            UpgradeSystemFirmware : function(args /*, cb, headers*/) {
+//            var UpgradeSystemFirmwareResponse = { 
+//                    Message : { xs:string}
+//                
+//                };
+//                return UpgradeSystemFirmwareResponse;
+            },
+
+//            var SystemReboot = { };
+            SystemReboot : function(args /*, cb, headers*/) {
+//            var SystemRebootResponse = { 
+//                    Message : { xs:string}
+//                
+//                };
+//                return SystemRebootResponse;
+            },
+
+//            var RestoreSystem = { 
+//                BackupFiles : { 
+//                    Name : { xs:string},
+//                    Data : { 
+//                        attributes : {
+//                            undefined : {}
+//                        }}
+//                }
+//            
+//            };
+            RestoreSystem : function(args /*, cb, headers*/) {
+//            var RestoreSystemResponse = { };
+//                return RestoreSystemResponse;
+            },
+
+//            var GetSystemBackup = { };
+            GetSystemBackup : function(args /*, cb, headers*/) {
+//            var GetSystemBackupResponse = { 
+//                    BackupFiles : { 
+//                        Name : { xs:string},
+//                        Data : { 
+//                            attributes : {
+//                                undefined : {}
+//                            }}
+//                    }
+//                
+//                };
+//                return GetSystemBackupResponse;
+            },
+
+//            var GetSystemLog = { 
+//                LogType : { xs:string}
+//            
+//            };
+            GetSystemLog : function(args /*, cb, headers*/) {
+//            var GetSystemLogResponse = { 
+//                    SystemLog : { 
+//                        Binary : { 
+//                            attributes : {
+//                                undefined : {}
+//                            }},
+//                        String : { xs:string}
+//                    }
+//                
+//                };
+//                return GetSystemLogResponse;
+            },
+
+//            var GetSystemSupportInformation = { };
+            GetSystemSupportInformation : function(args /*, cb, headers*/) {
+//            var GetSystemSupportInformationResponse = { 
+//                    SupportInformation : { 
+//                        Binary : { 
+//                            attributes : {
+//                                undefined : {}
+//                            }},
+//                        String : { xs:string}
+//                    }
+//                
+//                };
+//                return GetSystemSupportInformationResponse;
+            },
+
+//            var GetScopes = { };
+            GetScopes : function(args /*, cb, headers*/) {
+//            var GetScopesResponse = { 
+//                    Scopes : { 
+//                        ScopeDef : { xs:string},
+//                        ScopeItem : { xs:anyURI}
+//                    }
+//                
+//                };
+//                return GetScopesResponse;
+            },
+
+//            var SetScopes = { 
+//                Scopes : { xs:anyURI}
+//            
+//            };
+            SetScopes : function(args /*, cb, headers*/) {
+//            var SetScopesResponse = { };
+//                return SetScopesResponse;
+            },
+
+//            var AddScopes = { 
+//                ScopeItem : { xs:anyURI}
+//            
+//            };
+            AddScopes : function(args /*, cb, headers*/) {
+//            var AddScopesResponse = { };
+//                return AddScopesResponse;
+            },
+
+//            var RemoveScopes = { 
+//                ScopeItem : { xs:anyURI}
+//            
+//            };
+            RemoveScopes : function(args /*, cb, headers*/) {
+//            var RemoveScopesResponse = { 
+//                    ScopeItem : { xs:anyURI}
+//                
+//                };
+//                return RemoveScopesResponse;
+            },
+
+//            var GetDiscoveryMode = { };
+            GetDiscoveryMode : function(args /*, cb, headers*/) {
+//            var GetDiscoveryModeResponse = { 
+//                    DiscoveryMode : { xs:string}
+//                
+//                };
+//                return GetDiscoveryModeResponse;
+            },
+
+//            var SetDiscoveryMode = { 
+//                DiscoveryMode : { xs:string}
+//            
+//            };
+            SetDiscoveryMode : function(args /*, cb, headers*/) {
+//            var SetDiscoveryModeResponse = { };
+//                return SetDiscoveryModeResponse;
+            },
+
+//            var GetRemoteDiscoveryMode = { };
+            GetRemoteDiscoveryMode : function(args /*, cb, headers*/) {
+//            var GetRemoteDiscoveryModeResponse = { 
+//                    RemoteDiscoveryMode : { xs:string}
+//                
+//                };
+//                return GetRemoteDiscoveryModeResponse;
+            },
+
+//            var SetRemoteDiscoveryMode = { 
+//                RemoteDiscoveryMode : { xs:string}
+//            
+//            };
+            SetRemoteDiscoveryMode : function(args /*, cb, headers*/) {
+//            var SetRemoteDiscoveryModeResponse = { };
+//                return SetRemoteDiscoveryModeResponse;
+            },
+
+//            var GetDPAddresses = { };
+            GetDPAddresses : function(args /*, cb, headers*/) {
+//            var GetDPAddressesResponse = { 
+//                    DPAddress : { 
+//                        Type : { xs:string},
+//                        IPv4Address : { xs:token},
+//                        IPv6Address : { xs:token},
+//                        DNSname : { xs:token},
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetDPAddressesResponse;
+            },
+
+//            var SetDPAddresses = { 
+//                DPAddress : { 
+//                    Type : { xs:string},
+//                    IPv4Address : { xs:token},
+//                    IPv6Address : { xs:token},
+//                    DNSname : { xs:token},
+//                    Extension : { }
+//                }
+//            
+//            };
+            SetDPAddresses : function(args /*, cb, headers*/) {
+//            var SetDPAddressesResponse = { };
+//                return SetDPAddressesResponse;
+            },
+
+//            var GetEndpointReference = { };
+            GetEndpointReference : function(args /*, cb, headers*/) {
+//            var GetEndpointReferenceResponse = { 
+//                    GUID : { xs:string}
+//                
+//                };
+//                return GetEndpointReferenceResponse;
+            },
+
+//            var GetRemoteUser = { };
+            GetRemoteUser : function(args /*, cb, headers*/) {
+//            var GetRemoteUserResponse = { 
+//                    RemoteUser : { 
+//                        Username : { xs:string},
+//                        Password : { xs:string},
+//                        UseDerivedPassword : { xs:boolean}
+//                    }
+//                
+//                };
+//                return GetRemoteUserResponse;
+            },
+
+//            var SetRemoteUser = { 
+//                RemoteUser : { 
+//                    Username : { xs:string},
+//                    Password : { xs:string},
+//                    UseDerivedPassword : { xs:boolean}
+//                }
+//            
+//            };
+            SetRemoteUser : function(args /*, cb, headers*/) {
+//            var SetRemoteUserResponse = { };
+//                return SetRemoteUserResponse;
+            },
+
+//            var GetUsers = { };
+            GetUsers : function(args /*, cb, headers*/) {
+//            var GetUsersResponse = { 
+//                    User : { 
+//                        Username : { xs:string},
+//                        Password : { xs:string},
+//                        UserLevel : { xs:string},
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetUsersResponse;
+            },
+
+//            var CreateUsers = { 
+//                User : { 
+//                    Username : { xs:string},
+//                    Password : { xs:string},
+//                    UserLevel : { xs:string},
+//                    Extension : { }
+//                }
+//            
+//            };
+            CreateUsers : function(args /*, cb, headers*/) {
+//            var CreateUsersResponse = { };
+//                return CreateUsersResponse;
+            },
+
+//            var DeleteUsers = { 
+//                Username : { xs:string}
+//            
+//            };
+            DeleteUsers : function(args /*, cb, headers*/) {
+//            var DeleteUsersResponse = { };
+//                return DeleteUsersResponse;
+            },
+
+//            var SetUser = { 
+//                User : { 
+//                    Username : { xs:string},
+//                    Password : { xs:string},
+//                    UserLevel : { xs:string},
+//                    Extension : { }
+//                }
+//            
+//            };
+            SetUser : function(args /*, cb, headers*/) {
+//            var SetUserResponse = { };
+//                return SetUserResponse;
+            },
+
+//            var GetWsdlUrl = { };
+            GetWsdlUrl : function(args /*, cb, headers*/) {
+//            var GetWsdlUrlResponse = { 
+//                    WsdlUrl : { xs:anyURI}
+//                
+//                };
+//                return GetWsdlUrlResponse;
+            },
+
+//            var GetCapabilities = { 
+//                Category : { xs:string}
+//            
+//            };
+            GetCapabilities : function(args /*, cb, headers*/) {
+//            var GetCapabilitiesResponse = { 
+//                    Capabilities : { 
+//                        Analytics : { 
+//                            XAddr : { xs:anyURI},
+//                            RuleSupport : { xs:boolean},
+//                            AnalyticsModuleSupport : { xs:boolean}
+//                        },
+//                        Device : { 
+//                            XAddr : { xs:anyURI},
+//                            Network : { 
+//                                IPFilter : { xs:boolean},
+//                                ZeroConfiguration : { xs:boolean},
+//                                IPVersion6 : { xs:boolean},
+//                                DynDNS : { xs:boolean},
+//                                Extension : { 
+//                                    Dot11Configuration : { xs:boolean},
+//                                    Extension : { }
+//                                }
+//                            },
+//                            System : { 
+//                                DiscoveryResolve : { xs:boolean},
+//                                DiscoveryBye : { xs:boolean},
+//                                RemoteDiscovery : { xs:boolean},
+//                                SystemBackup : { xs:boolean},
+//                                SystemLogging : { xs:boolean},
+//                                FirmwareUpgrade : { xs:boolean},
+//                                SupportedVersions : { 
+//                                    Major : { xs:int},
+//                                    Minor : { xs:int}
+//                                },
+//                                Extension : { 
+//                                    HttpFirmwareUpgrade : { xs:boolean},
+//                                    HttpSystemBackup : { xs:boolean},
+//                                    HttpSystemLogging : { xs:boolean},
+//                                    HttpSupportInformation : { xs:boolean},
+//                                    Extension : { }
+//                                }
+//                            },
+//                            IO : { 
+//                                InputConnectors : { xs:int},
+//                                RelayOutputs : { xs:int},
+//                                Extension : { 
+//                                    Auxiliary : { xs:boolean},
+//                                    AuxiliaryCommands : { xs:string},
+//                                    Extension : { }
+//                                }
+//                            },
+//                            Security : { 
+//                                TLS1.1 : { xs:boolean},
+//                                TLS1.2 : { xs:boolean},
+//                                OnboardKeyGeneration : { xs:boolean},
+//                                AccessPolicyConfig : { xs:boolean},
+//                                X.509Token : { xs:boolean},
+//                                SAMLToken : { xs:boolean},
+//                                KerberosToken : { xs:boolean},
+//                                RELToken : { xs:boolean},
+//                                Extension : { 
+//                                    TLS1.0 : { xs:boolean},
+//                                    Extension : { 
+//                                        Dot1X : { xs:boolean},
+//                                        SupportedEAPMethod : { xs:int},
+//                                        RemoteUserHandling : { xs:boolean}
+//                                    }
+//                                }
+//                            },
+//                            Extension : { }
+//                        },
+//                        Events : { 
+//                            XAddr : { xs:anyURI},
+//                            WSSubscriptionPolicySupport : { xs:boolean},
+//                            WSPullPointSupport : { xs:boolean},
+//                            WSPausableSubscriptionManagerInterfaceSupport : { xs:boolean}
+//                        },
+//                        Imaging : { 
+//                            XAddr : { xs:anyURI}
+//                        },
+//                        Media : { 
+//                            XAddr : { xs:anyURI},
+//                            StreamingCapabilities : { 
+//                                RTPMulticast : { xs:boolean},
+//                                RTP_TCP : { xs:boolean},
+//                                RTP_RTSP_TCP : { xs:boolean},
+//                                Extension : { }
+//                            },
+//                            Extension : { 
+//                                ProfileCapabilities : { 
+//                                    MaximumNumberOfProfiles : { xs:int}
+//                                }
+//                            }
+//                        },
+//                        PTZ : { 
+//                            XAddr : { xs:anyURI}
+//                        },
+//                        Extension : { 
+//                            DeviceIO : { 
+//                                XAddr : { xs:anyURI},
+//                                VideoSources : { xs:int},
+//                                VideoOutputs : { xs:int},
+//                                AudioSources : { xs:int},
+//                                AudioOutputs : { xs:int},
+//                                RelayOutputs : { xs:int}
+//                            },
+//                            Display : { 
+//                                XAddr : { xs:anyURI},
+//                                FixedLayout : { xs:boolean}
+//                            },
+//                            Recording : { 
+//                                XAddr : { xs:anyURI},
+//                                ReceiverSource : { xs:boolean},
+//                                MediaProfileSource : { xs:boolean},
+//                                DynamicRecordings : { xs:boolean},
+//                                DynamicTracks : { xs:boolean},
+//                                MaxStringLength : { xs:int}
+//                            },
+//                            Search : { 
+//                                XAddr : { xs:anyURI},
+//                                MetadataSearch : { xs:boolean}
+//                            },
+//                            Replay : { 
+//                                XAddr : { xs:anyURI}
+//                            },
+//                            Receiver : { 
+//                                XAddr : { xs:anyURI},
+//                                RTP_Multicast : { xs:boolean},
+//                                RTP_TCP : { xs:boolean},
+//                                RTP_RTSP_TCP : { xs:boolean},
+//                                SupportedReceivers : { xs:int},
+//                                MaximumRTSPURILength : { xs:int}
+//                            },
+//                            AnalyticsDevice : { 
+//                                XAddr : { xs:anyURI},
+//                                RuleSupport : { xs:boolean},
+//                                Extension : { }
+//                            },
+//                            Extensions : { }
+//                        }
+//                    }
+//                
+//                };
+//                return GetCapabilitiesResponse;
+            },
+
+//            var GetHostname = { };
+            GetHostname : function(args /*, cb, headers*/) {
+//            var GetHostnameResponse = { 
+//                    HostnameInformation : { 
+//                        FromDHCP : { xs:boolean},
+//                        Name : { xs:token},
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetHostnameResponse;
+            },
+
+//            var SetHostname = { 
+//                Name : { xs:token}
+//            
+//            };
+            SetHostname : function(args /*, cb, headers*/) {
+//            var SetHostnameResponse = { };
+//                return SetHostnameResponse;
+            },
+
+//            var SetHostnameFromDHCP = { 
+//                FromDHCP : { xs:boolean}
+//            
+//            };
+            SetHostnameFromDHCP : function(args /*, cb, headers*/) {
+//            var SetHostnameFromDHCPResponse = { 
+//                    RebootNeeded : { xs:boolean}
+//                
+//                };
+//                return SetHostnameFromDHCPResponse;
+            },
+
+//            var GetDNS = { };
+            GetDNS : function(args /*, cb, headers*/) {
+//            var GetDNSResponse = { 
+//                    DNSInformation : { 
+//                        FromDHCP : { xs:boolean},
+//                        SearchDomain : { xs:token},
+//                        DNSFromDHCP : { 
+//                            Type : { xs:string},
+//                            IPv4Address : { xs:token},
+//                            IPv6Address : { xs:token}
+//                        },
+//                        DNSManual : { 
+//                            Type : { xs:string},
+//                            IPv4Address : { xs:token},
+//                            IPv6Address : { xs:token}
+//                        },
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetDNSResponse;
+            },
+
+//            var SetDNS = { 
+//                FromDHCP : { xs:boolean},
+//                SearchDomain : { xs:token},
+//                DNSManual : { 
+//                    Type : { xs:string},
+//                    IPv4Address : { xs:token},
+//                    IPv6Address : { xs:token}
+//                }
+//            
+//            };
+            SetDNS : function(args /*, cb, headers*/) {
+//            var SetDNSResponse = { };
+//                return SetDNSResponse;
+            },
+
+//            var GetNTP = { };
+            GetNTP : function(args /*, cb, headers*/) {
+//            var GetNTPResponse = { 
+//                    NTPInformation : { 
+//                        FromDHCP : { xs:boolean},
+//                        NTPFromDHCP : { 
+//                            Type : { xs:string},
+//                            IPv4Address : { xs:token},
+//                            IPv6Address : { xs:token},
+//                            DNSname : { xs:token},
+//                            Extension : { }
+//                        },
+//                        NTPManual : { 
+//                            Type : { xs:string},
+//                            IPv4Address : { xs:token},
+//                            IPv6Address : { xs:token},
+//                            DNSname : { xs:token},
+//                            Extension : { }
+//                        },
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetNTPResponse;
+            },
+
+//            var SetNTP = { 
+//                FromDHCP : { xs:boolean},
+//                NTPManual : { 
+//                    Type : { xs:string},
+//                    IPv4Address : { xs:token},
+//                    IPv6Address : { xs:token},
+//                    DNSname : { xs:token},
+//                    Extension : { }
+//                }
+//            
+//            };
+            SetNTP : function(args /*, cb, headers*/) {
+//            var SetNTPResponse = { };
+//                return SetNTPResponse;
+            },
+
+//            var GetDynamicDNS = { };
+            GetDynamicDNS : function(args /*, cb, headers*/) {
+//            var GetDynamicDNSResponse = { 
+//                    DynamicDNSInformation : { 
+//                        Type : { xs:string},
+//                        Name : { xs:token},
+//                        TTL : { xs:duration},
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetDynamicDNSResponse;
+            },
+
+//            var SetDynamicDNS = { 
+//                Type : { xs:string},
+//                Name : { xs:token},
+//                TTL : { xs:duration}
+//            
+//            };
+            SetDynamicDNS : function(args /*, cb, headers*/) {
+//            var SetDynamicDNSResponse = { };
+//                return SetDynamicDNSResponse;
+            },
+
+//            var GetNetworkInterfaces = { };
+            GetNetworkInterfaces : function(args /*, cb, headers*/) {
+//            var GetNetworkInterfacesResponse = { 
+//                    NetworkInterfaces : { 
+
+//                        attributes : {
+//                            token : {tt:ReferenceToken}
+//                        }
+//                    }
+//                
+//                };
+//                return GetNetworkInterfacesResponse;
+            },
+
+//            var SetNetworkInterfaces = { 
+//                InterfaceToken : { xs:string},
+//                NetworkInterface : { 
+//                    Enabled : { xs:boolean},
+//                    Link : { 
+//                        AutoNegotiation : { xs:boolean},
+//                        Speed : { xs:int},
+//                        Duplex : { xs:string}
+//                    },
+//                    MTU : { xs:int},
+//                    IPv4 : { 
+//                        Enabled : { xs:boolean},
+//                        Manual : { 
+//                            Address : { xs:token},
+//                            PrefixLength : { xs:int}
+//                        },
+//                        DHCP : { xs:boolean}
+//                    },
+//                    IPv6 : { 
+//                        Enabled : { xs:boolean},
+//                        AcceptRouterAdvert : { xs:boolean},
+//                        Manual : { 
+//                            Address : { xs:token},
+//                            PrefixLength : { xs:int}
+//                        },
+//                        DHCP : { xs:string}
+//                    },
+//                    Extension : { 
+//                        Dot3 : { },
+//                        Dot11 : { 
+//                            SSID : { xs:hexBinary},
+//                            Mode : { xs:string},
+//                            Alias : { xs:string},
+//                            Priority : { xs:integer},
+//                            Security : { 
+//                                Mode : { xs:string},
+//                                Algorithm : { xs:string},
+//                                PSK : { 
+//                                    Key : { xs:hexBinary},
+//                                    Passphrase : { xs:string},
+//                                    Extension : { }
+//                                },
+//                                Dot1X : { xs:string},
+//                                Extension : { }
+//                            }
+//                        },
+//                        Extension : { }
+//                    }
+//                }
+//            
+//            };
+            SetNetworkInterfaces : function(args /*, cb, headers*/) {
+//            var SetNetworkInterfacesResponse = { 
+//                    RebootNeeded : { xs:boolean}
+//                
+//                };
+//                return SetNetworkInterfacesResponse;
+            },
+
+//            var GetNetworkProtocols = { };
+            GetNetworkProtocols : function(args /*, cb, headers*/) {
+//            var GetNetworkProtocolsResponse = { 
+//                    NetworkProtocols : { 
+//                        Name : { xs:string},
+//                        Enabled : { xs:boolean},
+//                        Port : { xs:int},
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetNetworkProtocolsResponse;
+            },
+
+//            var SetNetworkProtocols = { 
+//                NetworkProtocols : { 
+//                    Name : { xs:string},
+//                    Enabled : { xs:boolean},
+//                    Port : { xs:int},
+//                    Extension : { }
+//                }
+//            
+//            };
+            SetNetworkProtocols : function(args /*, cb, headers*/) {
+//            var SetNetworkProtocolsResponse = { };
+//                return SetNetworkProtocolsResponse;
+            },
+
+//            var GetNetworkDefaultGateway = { };
+            GetNetworkDefaultGateway : function(args /*, cb, headers*/) {
+//            var GetNetworkDefaultGatewayResponse = { 
+//                    NetworkGateway : { 
+//                        IPv4Address : { xs:token},
+//                        IPv6Address : { xs:token}
+//                    }
+//                
+//                };
+//                return GetNetworkDefaultGatewayResponse;
+            },
+
+//            var SetNetworkDefaultGateway = { 
+//                IPv4Address : { xs:token},
+//                IPv6Address : { xs:token}
+//            
+//            };
+            SetNetworkDefaultGateway : function(args /*, cb, headers*/) {
+//            var SetNetworkDefaultGatewayResponse = { };
+//                return SetNetworkDefaultGatewayResponse;
+            },
+
+//            var GetZeroConfiguration = { };
+            GetZeroConfiguration : function(args /*, cb, headers*/) {
+//            var GetZeroConfigurationResponse = { 
+//                    ZeroConfiguration : { 
+//                        InterfaceToken : { xs:string},
+//                        Enabled : { xs:boolean},
+//                        Addresses : { xs:token}
+//                    }
+//                
+//                };
+//                return GetZeroConfigurationResponse;
+            },
+
+//            var SetZeroConfiguration = { 
+//                InterfaceToken : { xs:string},
+//                Enabled : { xs:boolean}
+//            
+//            };
+            SetZeroConfiguration : function(args /*, cb, headers*/) {
+//            var SetZeroConfigurationResponse = { };
+//                return SetZeroConfigurationResponse;
+            },
+
+//            var GetIPAddressFilter = { };
+            GetIPAddressFilter : function(args /*, cb, headers*/) {
+//            var GetIPAddressFilterResponse = { 
+//                    IPAddressFilter : { 
+//                        Type : { xs:string},
+//                        IPv4Address : { 
+//                            Address : { xs:token},
+//                            PrefixLength : { xs:int}
+//                        },
+//                        IPv6Address : { 
+//                            Address : { xs:token},
+//                            PrefixLength : { xs:int}
+//                        },
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetIPAddressFilterResponse;
+            },
+
+//            var SetIPAddressFilter = { 
+//                IPAddressFilter : { 
+//                    Type : { xs:string},
+//                    IPv4Address : { 
+//                        Address : { xs:token},
+//                        PrefixLength : { xs:int}
+//                    },
+//                    IPv6Address : { 
+//                        Address : { xs:token},
+//                        PrefixLength : { xs:int}
+//                    },
+//                    Extension : { }
+//                }
+//            
+//            };
+            SetIPAddressFilter : function(args /*, cb, headers*/) {
+//            var SetIPAddressFilterResponse = { };
+//                return SetIPAddressFilterResponse;
+            },
+
+//            var AddIPAddressFilter = { 
+//                IPAddressFilter : { 
+//                    Type : { xs:string},
+//                    IPv4Address : { 
+//                        Address : { xs:token},
+//                        PrefixLength : { xs:int}
+//                    },
+//                    IPv6Address : { 
+//                        Address : { xs:token},
+//                        PrefixLength : { xs:int}
+//                    },
+//                    Extension : { }
+//                }
+//            
+//            };
+            AddIPAddressFilter : function(args /*, cb, headers*/) {
+//            var AddIPAddressFilterResponse = { };
+//                return AddIPAddressFilterResponse;
+            },
+
+//            var RemoveIPAddressFilter = { 
+//                IPAddressFilter : { 
+//                    Type : { xs:string},
+//                    IPv4Address : { 
+//                        Address : { xs:token},
+//                        PrefixLength : { xs:int}
+//                    },
+//                    IPv6Address : { 
+//                        Address : { xs:token},
+//                        PrefixLength : { xs:int}
+//                    },
+//                    Extension : { }
+//                }
+//            
+//            };
+            RemoveIPAddressFilter : function(args /*, cb, headers*/) {
+//            var RemoveIPAddressFilterResponse = { };
+//                return RemoveIPAddressFilterResponse;
+            },
+
+//            var GetAccessPolicy = { };
+            GetAccessPolicy : function(args /*, cb, headers*/) {
+//            var GetAccessPolicyResponse = { 
+//                    PolicyFile : { 
+//                        attributes : {
+//                            undefined : {}
+//                        },
+//                        Data : { xs:base64Binary}
+//                    }
+//                
+//                };
+//                return GetAccessPolicyResponse;
+            },
+
+//            var SetAccessPolicy = { 
+//                PolicyFile : { 
+//                    attributes : {
+//                        undefined : {}
+//                    },
+//                    Data : { xs:base64Binary}
+//                }
+//            
+//            };
+            SetAccessPolicy : function(args /*, cb, headers*/) {
+//            var SetAccessPolicyResponse = { };
+//                return SetAccessPolicyResponse;
+            },
+
+//            var CreateCertificate = { 
+//                CertificateID : { xs:token},
+//                Subject : { xs:string},
+//                ValidNotBefore : { xs:dateTime},
+//                ValidNotAfter : { xs:dateTime}
+//            
+//            };
+            CreateCertificate : function(args /*, cb, headers*/) {
+//            var CreateCertificateResponse = { 
+//                    NvtCertificate : { 
+//                        CertificateID : { xs:token},
+//                        Certificate : { 
+//                            attributes : {
+//                                undefined : {}
+//                            },
+//                            Data : { xs:base64Binary}
+//                        }
+//                    }
+//                
+//                };
+//                return CreateCertificateResponse;
+            },
+
+//            var GetCertificates = { };
+            GetCertificates : function(args /*, cb, headers*/) {
+//            var GetCertificatesResponse = { 
+//                    NvtCertificate : { 
+//                        CertificateID : { xs:token},
+//                        Certificate : { 
+//                            attributes : {
+//                                undefined : {}
+//                            },
+//                            Data : { xs:base64Binary}
+//                        }
+//                    }
+//                
+//                };
+//                return GetCertificatesResponse;
+            },
+
+//            var GetCertificatesStatus = { };
+            GetCertificatesStatus : function(args /*, cb, headers*/) {
+//            var GetCertificatesStatusResponse = { 
+//                    CertificateStatus : { 
+//                        CertificateID : { xs:token},
+//                        Status : { xs:boolean}
+//                    }
+//                
+//                };
+//                return GetCertificatesStatusResponse;
+            },
+
+//            var SetCertificatesStatus = { 
+//                CertificateStatus : { 
+//                    CertificateID : { xs:token},
+//                    Status : { xs:boolean}
+//                }
+//            
+//            };
+            SetCertificatesStatus : function(args /*, cb, headers*/) {
+//            var SetCertificatesStatusResponse = { };
+//                return SetCertificatesStatusResponse;
+            },
+
+//            var DeleteCertificates = { 
+//                CertificateID : { xs:token}
+//            
+//            };
+            DeleteCertificates : function(args /*, cb, headers*/) {
+//            var DeleteCertificatesResponse = { };
+//                return DeleteCertificatesResponse;
+            },
+
+//            var GetPkcs10Request = { 
+//                CertificateID : { xs:token},
+//                Subject : { xs:string},
+//                Attributes : { 
+//                    attributes : {
+//                        undefined : {}
+//                    },
+//                    Data : { xs:base64Binary}
+//                }
+//            
+//            };
+            GetPkcs10Request : function(args /*, cb, headers*/) {
+//            var GetPkcs10RequestResponse = { 
+//                    Pkcs10Request : { 
+//                        attributes : {
+//                            undefined : {}
+//                        },
+//                        Data : { xs:base64Binary}
+//                    }
+//                
+//                };
+//                return GetPkcs10RequestResponse;
+            },
+
+//            var LoadCertificates = { 
+//                NVTCertificate : { 
+//                    CertificateID : { xs:token},
+//                    Certificate : { 
+//                        attributes : {
+//                            undefined : {}
+//                        },
+//                        Data : { xs:base64Binary}
+//                    }
+//                }
+//            
+//            };
+            LoadCertificates : function(args /*, cb, headers*/) {
+//            var LoadCertificatesResponse = { };
+//                return LoadCertificatesResponse;
+            },
+
+//            var GetClientCertificateMode = { };
+            GetClientCertificateMode : function(args /*, cb, headers*/) {
+//            var GetClientCertificateModeResponse = { 
+//                    Enabled : { xs:boolean}
+//                
+//                };
+//                return GetClientCertificateModeResponse;
+            },
+
+//            var SetClientCertificateMode = { 
+//                Enabled : { xs:boolean}
+//            
+//            };
+            SetClientCertificateMode : function(args /*, cb, headers*/) {
+//            var SetClientCertificateModeResponse = { };
+//                return SetClientCertificateModeResponse;
+            },
+
+//            var GetRelayOutputs = { };
+            GetRelayOutputs : function(args /*, cb, headers*/) {
+//            var GetRelayOutputsResponse = { 
+//                    RelayOutputs : { 
+
+//                        attributes : {
+//                            token : {tt:ReferenceToken}
+//                        }
+//                    }
+//                
+//                };
+//                return GetRelayOutputsResponse;
+            },
+
+//            var SetRelayOutputSettings = { 
+//                RelayOutputToken : { xs:string},
+//                Properties : { 
+//                    Mode : { xs:string},
+//                    DelayTime : { xs:duration},
+//                    IdleState : { xs:string}
+//                }
+//            
+//            };
+            SetRelayOutputSettings : function(args /*, cb, headers*/) {
+//            var SetRelayOutputSettingsResponse = { };
+//                return SetRelayOutputSettingsResponse;
+            },
+
+//            var SetRelayOutputState = { 
+//                RelayOutputToken : { xs:string},
+//                LogicalState : { xs:string}
+//            
+//            };
+            SetRelayOutputState : function(args /*, cb, headers*/) {
+//            var SetRelayOutputStateResponse = { };
+//                return SetRelayOutputStateResponse;
+            },
+
+//            var SendAuxiliaryCommand = { 
+//                AuxiliaryCommand : { xs:string}
+//            
+//            };
+            SendAuxiliaryCommand : function(args /*, cb, headers*/) {
+//            var SendAuxiliaryCommandResponse = { 
+//                    AuxiliaryCommandResponse : { xs:string}
+//                
+//                };
+//                return SendAuxiliaryCommandResponse;
+            },
+
+//            var GetCACertificates = { };
+            GetCACertificates : function(args /*, cb, headers*/) {
+//            var GetCACertificatesResponse = { 
+//                    CACertificate : { 
+//                        CertificateID : { xs:token},
+//                        Certificate : { 
+//                            attributes : {
+//                                undefined : {}
+//                            },
+//                            Data : { xs:base64Binary}
+//                        }
+//                    }
+//                
+//                };
+//                return GetCACertificatesResponse;
+            },
+
+//            var LoadCertificateWithPrivateKey = { 
+//                CertificateWithPrivateKey : { 
+//                    CertificateID : { xs:token},
+//                    Certificate : { 
+//                        attributes : {
+//                            undefined : {}
+//                        },
+//                        Data : { xs:base64Binary}
+//                    },
+//                    PrivateKey : { 
+//                        attributes : {
+//                            undefined : {}
+//                        },
+//                        Data : { xs:base64Binary}
+//                    }
+//                }
+//            
+//            };
+            LoadCertificateWithPrivateKey : function(args /*, cb, headers*/) {
+//            var LoadCertificateWithPrivateKeyResponse = { };
+//                return LoadCertificateWithPrivateKeyResponse;
+            },
+
+//            var GetCertificateInformation = { 
+//                CertificateID : { xs:token}
+//            
+//            };
+            GetCertificateInformation : function(args /*, cb, headers*/) {
+//            var GetCertificateInformationResponse = { 
+//                    CertificateInformation : { 
+//                        CertificateID : { xs:token},
+//                        IssuerDN : { xs:string},
+//                        SubjectDN : { xs:string},
+//                        KeyUsage : { },
+//                        ExtendedKeyUsage : { },
+//                        KeyLength : { xs:int},
+//                        Version : { xs:string},
+//                        SerialNum : { xs:string},
+//                        SignatureAlgorithm : { xs:string},
+//                        Validity : { 
+//                            From : { xs:dateTime},
+//                            Until : { xs:dateTime}
+//                        },
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetCertificateInformationResponse;
+            },
+
+//            var LoadCACertificates = { 
+//                CACertificate : { 
+//                    CertificateID : { xs:token},
+//                    Certificate : { 
+//                        attributes : {
+//                            undefined : {}
+//                        },
+//                        Data : { xs:base64Binary}
+//                    }
+//                }
+//            
+//            };
+            LoadCACertificates : function(args /*, cb, headers*/) {
+//            var LoadCACertificatesResponse = { };
+//                return LoadCACertificatesResponse;
+            },
+
+//            var CreateDot1XConfiguration = { 
+//                Dot1XConfiguration : { 
+//                    Dot1XConfigurationToken : { xs:string},
+//                    Identity : { xs:string},
+//                    AnonymousID : { xs:string},
+//                    EAPMethod : { xs:int},
+//                    CACertificateID : { xs:token},
+//                    EAPMethodConfiguration : { 
+//                        TLSConfiguration : { 
+//                            CertificateID : { xs:token}
+//                        },
+//                        Password : { xs:string},
+//                        Extension : { }
+//                    },
+//                    Extension : { }
+//                }
+//            
+//            };
+            CreateDot1XConfiguration : function(args /*, cb, headers*/) {
+//            var CreateDot1XConfigurationResponse = { };
+//                return CreateDot1XConfigurationResponse;
+            },
+
+//            var SetDot1XConfiguration = { 
+//                Dot1XConfiguration : { 
+//                    Dot1XConfigurationToken : { xs:string},
+//                    Identity : { xs:string},
+//                    AnonymousID : { xs:string},
+//                    EAPMethod : { xs:int},
+//                    CACertificateID : { xs:token},
+//                    EAPMethodConfiguration : { 
+//                        TLSConfiguration : { 
+//                            CertificateID : { xs:token}
+//                        },
+//                        Password : { xs:string},
+//                        Extension : { }
+//                    },
+//                    Extension : { }
+//                }
+//            
+//            };
+            SetDot1XConfiguration : function(args /*, cb, headers*/) {
+//            var SetDot1XConfigurationResponse = { };
+//                return SetDot1XConfigurationResponse;
+            },
+
+//            var GetDot1XConfiguration = { 
+//                Dot1XConfigurationToken : { xs:string}
+//            
+//            };
+            GetDot1XConfiguration : function(args /*, cb, headers*/) {
+//            var GetDot1XConfigurationResponse = { 
+//                    Dot1XConfiguration : { 
+//                        Dot1XConfigurationToken : { xs:string},
+//                        Identity : { xs:string},
+//                        AnonymousID : { xs:string},
+//                        EAPMethod : { xs:int},
+//                        CACertificateID : { xs:token},
+//                        EAPMethodConfiguration : { 
+//                            TLSConfiguration : { 
+//                                CertificateID : { xs:token}
+//                            },
+//                            Password : { xs:string},
+//                            Extension : { }
+//                        },
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetDot1XConfigurationResponse;
+            },
+
+//            var GetDot1XConfigurations = { };
+            GetDot1XConfigurations : function(args /*, cb, headers*/) {
+//            var GetDot1XConfigurationsResponse = { 
+//                    Dot1XConfiguration : { 
+//                        Dot1XConfigurationToken : { xs:string},
+//                        Identity : { xs:string},
+//                        AnonymousID : { xs:string},
+//                        EAPMethod : { xs:int},
+//                        CACertificateID : { xs:token},
+//                        EAPMethodConfiguration : { 
+//                            TLSConfiguration : { 
+//                                CertificateID : { xs:token}
+//                            },
+//                            Password : { xs:string},
+//                            Extension : { }
+//                        },
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return GetDot1XConfigurationsResponse;
+            },
+
+//            var DeleteDot1XConfiguration = { 
+//                Dot1XConfigurationToken : { xs:string}
+//            
+//            };
+            DeleteDot1XConfiguration : function(args /*, cb, headers*/) {
+//            var DeleteDot1XConfigurationResponse = { };
+//                return DeleteDot1XConfigurationResponse;
+            },
+
+//            var GetDot11Capabilities = { };
+            GetDot11Capabilities : function(args /*, cb, headers*/) {
+//            var GetDot11CapabilitiesResponse = { 
+//                    Capabilities : { 
+//                        TKIP : { xs:boolean},
+//                        ScanAvailableNetworks : { xs:boolean},
+//                        MultipleConfiguration : { xs:boolean},
+//                        AdHocStationMode : { xs:boolean},
+//                        WEP : { xs:boolean}
+//                    }
+//                
+//                };
+//                return GetDot11CapabilitiesResponse;
+            },
+
+//            var GetDot11Status = { 
+//                InterfaceToken : { xs:string}
+//            
+//            };
+            GetDot11Status : function(args /*, cb, headers*/) {
+//            var GetDot11StatusResponse = { 
+//                    Status : { 
+//                        SSID : { xs:hexBinary},
+//                        BSSID : { xs:string},
+//                        PairCipher : { xs:string},
+//                        GroupCipher : { xs:string},
+//                        SignalStrength : { xs:string},
+//                        ActiveConfigAlias : { xs:string}
+//                    }
+//                
+//                };
+//                return GetDot11StatusResponse;
+            },
+
+//            var ScanAvailableDot11Networks = { 
+//                InterfaceToken : { xs:string}
+//            
+//            };
+            ScanAvailableDot11Networks : function(args /*, cb, headers*/) {
+//            var ScanAvailableDot11NetworksResponse = { 
+//                    Networks : { 
+//                        SSID : { xs:hexBinary},
+//                        BSSID : { xs:string},
+//                        AuthAndMangementSuite : { xs:string},
+//                        PairCipher : { xs:string},
+//                        GroupCipher : { xs:string},
+//                        SignalStrength : { xs:string},
+//                        Extension : { }
+//                    }
+//                
+//                };
+//                return ScanAvailableDot11NetworksResponse;
+            },
+
+//            var GetSystemUris = { };
+            GetSystemUris : function(args /*, cb, headers*/) {
+//            var GetSystemUrisResponse = { 
+//                    SystemLogUris : { 
+//                        SystemLog : { 
+//                            Type : { xs:string},
+//                            Uri : { xs:anyURI}
+//                        }
+//                    },
+//                    SupportInfoUri : { xs:anyURI},
+//                    SystemBackupUri : { xs:anyURI},
+//                    Extension : { }
+//                
+//                };
+//                return GetSystemUrisResponse;
+            },
+
+//            var StartFirmwareUpgrade = { };
+            StartFirmwareUpgrade : function(args /*, cb, headers*/) {
+//            var StartFirmwareUpgradeResponse = { 
+//                    UploadUri : { xs:anyURI},
+//                    UploadDelay : { xs:duration},
+//                    ExpectedDownTime : { xs:duration}
+//                
+//                };
+//                return StartFirmwareUpgradeResponse;
+            },
+
+//            var StartSystemRestore = { };
+            StartSystemRestore : function(args /*, cb, headers*/) {
+//            var StartSystemRestoreResponse = { 
+//                    UploadUri : { xs:anyURI},
+//                    ExpectedDownTime : { xs:duration}
+//                
+//                };
+//                return StartSystemRestoreResponse;
+            },
+
+//            var GetStorageConfigurations = { };
+            GetStorageConfigurations : function(args /*, cb, headers*/) {
+//            var GetStorageConfigurationsResponse = { 
+//                    StorageConfigurations : { 
+
+//                        attributes : {
+//                            token : {tt:ReferenceToken}
+//                        }
+//                    }
+//                
+//                };
+//                return GetStorageConfigurationsResponse;
+            },
+
+//            var CreateStorageConfiguration = { 
+//                StorageConfiguration : { 
+//                    attributes : {
+//                        type : {xs:string}
+//                    },
+//                    LocalPath : { xs:anyURI},
+//                    StorageUri : { xs:anyURI},
+//                    User : { 
+//                        UserName : { xs:string},
+//                        Password : { xs:string},
+//                        Extension : { }
+//                    },
+//                    Extension : { }
+//                }
+//            
+//            };
+            CreateStorageConfiguration : function(args /*, cb, headers*/) {
+//            var CreateStorageConfigurationResponse = { 
+//                    Token : { xs:string}
+//                
+//                };
+//                return CreateStorageConfigurationResponse;
+            },
+
+//            var GetStorageConfiguration = { 
+//                Token : { xs:string}
+//            
+//            };
+            GetStorageConfiguration : function(args /*, cb, headers*/) {
+//            var GetStorageConfigurationResponse = { 
+//                    StorageConfiguration : { 
+
+//                        attributes : {
+//                            token : {tt:ReferenceToken}
+//                        }
+//                    }
+//                
+//                };
+//                return GetStorageConfigurationResponse;
+            },
+
+//            var SetStorageConfiguration = { 
+//                StorageConfiguration : { 
+
+//                    attributes : {
+//                        token : {tt:ReferenceToken}
+//                    }
+//                }
+//            
+//            };
+            SetStorageConfiguration : function(args /*, cb, headers*/) {
+//            var SetStorageConfigurationResponse = { };
+//                return SetStorageConfigurationResponse;
+            },
+
+//            var DeleteStorageConfiguration = { 
+//                Token : { xs:string}
+//            
+//            };
+            DeleteStorageConfiguration : function(args /*, cb, headers*/) {
+//            var DeleteStorageConfigurationResponse = { };
+//                return DeleteStorageConfigurationResponse;
             },
 
         }

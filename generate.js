@@ -3,11 +3,11 @@ var soap = require("soap");
 var util = require("util");
 
 var options = {
-    wsdl : "./test-wsdl/device_service.wsdl",
-    output : "./test-output/device_service.js",
-    ignoredTypes : "[NetworkZeroConfigurationExtension]",
+    wsdl : "./test-wsdl/media_service.wsdl",
+    output : "./test-output/media_service.js",
+    ignoredTypes : "[NetworkZeroConfigurationExtension,Transport]",
     tab : "    ",
-    maxrecursion : 25
+    maxdepth : "25"
 };
 
 args = process.argv.slice(2);
@@ -31,8 +31,8 @@ if (!options.output) {
 }
 if (options.ignoredTypes[0] == "[" && options.ignoredTypes[options.ignoredTypes.length - 1] == "]") {
     var it = options.ignoredTypes.substr(1, options.ignoredTypes.length - 2);
-    it=it.split(",");
-    options.ignoredTypes = util.format("[\"%s\"]", it.join("\""));
+    it = it.split(",");
+    options.ignoredTypes = util.format("[\"%s\"]", it.join("\",\""));
 } else if (options.ignoredTypes) {
     console.log("options.ignoredTypes should be an array");
     process.exit(1);
@@ -42,7 +42,7 @@ var wsdlPath = options.wsdl;
 var outputPath = options.output;
 var tab = options.tab || "    ";
 var ignoredTypes = JSON.parse((options.ignoredTypes || "[]"));
-var maxrecursion = options.maxrecursion || 25;
+var maxdepth = parseInt(options.maxdepth || "25");
 
 console.log("loading wsdl: %s", wsdlPath);
 var WSDL = new soap.WSDL(fs.readFileSync(wsdlPath, 'utf8'), wsdlPath, {});
@@ -61,8 +61,13 @@ WSDL.onReady(function () {
             console.log(err);
             process.exit(1);
         }
-        console.log('Done!');
-        process.exit(0);
+        console.log('Done!, press any key to exit');
+        var stdin = process.openStdin();
+        stdin.setRawMode(true);
+        stdin.resume();
+        stdin.on('data', function (key) {
+            process.exit(0);
+        });
     });
 });
 
@@ -90,57 +95,175 @@ var generatePort = function (name, port, indent) {
 }
 
 var generateMethod = function (name, method, indent) {
-    var input = generateParameter(method.input.$name, WSDL.findParameterObject(method.input.targetNamespace, method.input.$type || method.input.$name), indent);
-    var output = generateParameter(method.output.$name, WSDL.findParameterObject(method.output.targetNamespace, method.output.$type || method.output.$name), indent + tab);
-    return util.format([indent, "/*%s*/\r\n",
-                       indent, "%s : function(args) {\r\n",
-                       indent, tab, "/*%s\r\n",
-                       indent, tab, "return %s;*/\r\n",
-                       indent, "},\r\n\r\n"].join(''), input, name, output, method.output.$name);
+    var inputParameter = generateParameter(method.input.$name, method.input, "//" + indent, 0);
+    var outputParameter = generateParameter(method.output.$name, method.output, "//" + indent + tab, 0);
+    return util.format(["//", indent, "%s\r\n",
+                       indent, "%s : function(args /*, cb, headers*/) {\r\n",
+                       "//", indent, "%s\r\n",
+                       "//", indent, tab, "return %s;\r\n",
+                       indent, "},\r\n\r\n"].join(''), inputParameter, name, outputParameter, method.output.$name);
 }
 
-var generateParameter = function (name, object, indent) {
-    var code = "";
-    
-    if (object.$lookupTypes[0])
-        object = WSDL.findParameterObject(object.$lookupTypes[0].$namespace || object.targetNamespace, object.$lookupTypes[0].$type || object.$lookupTypes[0].$name)
-    
-    var properties = findProperties(object);
-    var recursioncount = 0;
-    for (var c = 0; c < properties.length; c++)
-        code += generateProperties(properties[c], indent + tab, recursioncount, name);
-    return util.format("var %s = { %s};", name, (code ? ["\r\n", code, indent].join('') : ""));
-}
-
-var generateProperties = function (object, indent, recursioncount, path) {
-    var code = "";
-    if (recursioncount > maxrecursion) {
-        console.log("ABORTED !! Maximum recursion exceeded on generating property : '%s' of type : '%s', path : %s", object.name, object.type.$name, path);
-        process.exit(-1);
+var generateParameter = function (name, object, indent, depth) {
+    var parameter = [];
+    var child, c = 0;
+    while (child = object.children[c++]) {
+        if (child.name == "complexType") {
+            var par = generateComplexType(child, indent + tab, depth);
+            if (par)
+                parameter.push(par);
+        }
+        else {
+            console.log("Parameter '%s' not a complexType?", name);
+            parameter.push[name + " : " + child.name];
+        }
     }
-    if (!object.type.$type && ignoredTypes.indexOf(object.type.$name) == -1) {
-        var properties = findProperties(object.type);
-        for (var c = 0; c < properties.length; c++)
-            code += generateProperties(properties[c], indent + tab, recursioncount++, path + ">" + object.name);
-        return util.format([indent, "%s : { %s},\r\n"].join(''), object.name, (code ? ["\r\n", code, "\r\n", indent].join('') : ""));
-    }
-    return util.format([indent, "%s : %s, \r\n"].join(''), object.name, (object.type.$type ? object.type.$type.substr(object.type.$type.indexOf(':') + 1) : "null"));
-}
+    
+    var r = util.format(
+        ["var %s = { %s};"].join(''), 
+        name, 
+        (parameter.length > 0 ? 
+        [parameter.join(",\r\n"), "\r\n", indent].join('') : 
+        "")
+    );
+    return r;
+};
 
-var findProperties = function (object) {
-    var result = [];
-    var itterate = function (o) {
-        if (o.$type)
-            return o;
-        for (var c = 0; c < o.children.length; c++) {
-            var t = itterate(o.children[c]);
-            if (t) {
-                var childNamespace = t.$type.substr(0, t.$type.indexOf(':'));
-                result.push({ name : t.$name, type : WSDL.findChildParameterObjectFromSchema(t.$type.substr(t.$type.indexOf(':') + 1), WSDL.definitions.xmlns[childNamespace]) || t });
+var generateAttribute = function (object, indent, depth) {
+    var name = object.$name;
+    var props = [object.$type];
+    
+    return util.format(
+        [indent, "%s : {%s}"].join(''), 
+        name,
+        props.join("")
+    );
+};
+
+var generateComplexType = function (object, indent, depth) {
+    var props = [];
+    var name = "";
+    
+    var attr = [];
+    var child, c = 0;
+    while (child = object.children[c++]) {
+        if (child.name == "sequence") {
+            var el, e = 0;
+            while (el = child.children[e++]) {
+                var gel = generateElement(el, indent,depth);
+                if (gel)
+                    props.push(gel);
+            }
+        }
+        else if (child.name == "attribute") {
+            var gat = generateAttribute(child, indent + tab, depth);
+            if (gat)
+                attr.push(gat);
+        }
+        else if (child.name == "complexContent") {
+            var gcc = generateComplextContent(child, indent, depth);
+            if (gcc)
+                props.push(gcc);
+        }
+        else if (child.name == "anyAttribute") { }
+        else if (child.name == "annotation") { }
+        else if (child.name == "extension") { }
+        else {
+            props.push[child];
+        }
+    }
+    var r = util.format(
+        ["%s%s"].join(''), 
+        (attr.length ? 
+            ["\r\n", indent, "attributes : {\r\n", attr.join(',\r\n'), "\r\n", indent, "}", (props.length > 0 ? "," : "")].join('') 
+            : ""),
+        (props.length > 0 ? 
+            ["\r\n", props.join(",\r\n"), "\r\n", indent.substr(0, indent.length - tab.length)].join('') : 
+            "")
+    );
+    return r;
+};
+
+var generateComplextContent = function (object, indent, depth) {
+    var res = "";
+    var child, c = 0;
+    while (child = object.children[c++]) {
+        if (child.name == "extension") {
+            if (child.$base) {
+                var t = child.$base.split(':');
+                var typedObject = findChildObjectFromSchema(t[1], WSDL.definitions.xmlns[t[0]]) || object;
+                if (typedObject.name == "complexType")
+                    res += generateComplexType(typedObject, indent, depth);
+                else if (typedObject.name == "simpleType")
+                    res += generateSimpleType(typedObject, indent, depth);
+                else if (typedObject.name == "complexContent")
+                    res += generateComplextContent(typedObject, indent, depth);
+                else if (object.name == "element")
+                    res += typedObject.$type;
+                else
+                    res += typedObject.name;
             }
         }
     }
-    if (object)
-        itterate(object);
-    return result;
-}
+    res += generateComplexType(object, indent, depth);
+    return res;
+};
+
+var generateSimpleType = function (object, indent, depth) {
+    var child, c = 0;
+    while (child = object.children[c++]) {
+        if (child.name == "restriction")
+            return child.$base || child.$type;
+    }
+    return object.name;
+};
+
+var generateElement = function (object, indent, depth) {
+    depth++;
+    if (object.$type && ignoredTypes.indexOf(object.$type.split(':')[1]) > -1)
+        return "";
+    if (depth > maxdepth) {
+        console.log("ABORT !! Maxdepth exceeded on generating : %s type %s", object.$name, object.$type);
+        process.exit(-1);
+    }
+    var res;
+    var name = object.$name;
+    if (object.$type) {
+        var t = object.$type.split(':');
+        object = findChildObjectFromSchema(t[1], WSDL.definitions.xmlns[t[0]]) || object;
+    }
+    
+    if (object) {
+        if (object.name == "complexType")
+            res = generateComplexType(object, indent + tab, depth);
+        else if (object.name == "simpleType")
+            res = generateSimpleType(object, indent + tab, depth);
+        else if (object.name == "complexContent")
+            res = generateComplextContent(object, indent + tab, depth);
+        else if (object.name == "element")
+            res = object.$type;
+        else
+            res = object.name;
+    }
+    if (name) {
+        var r = util.format(
+            [indent, "%s : { %s}"].join(''), 
+        name,
+        (res? res : "")
+        );
+        return r;
+    }
+};
+
+var findChildObjectFromSchema = function (name, xmlns) {
+    if (!WSDL.definitions.schemas || !name || !xmlns) {
+        return null;
+    }
+    
+    var schema = WSDL.definitions.schemas[xmlns];
+    if (!schema || !schema.complexTypes) {
+        return null;
+    }
+    
+    return schema.complexTypes[name] || schema.types[name];
+};
