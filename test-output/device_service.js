@@ -21,19 +21,19 @@ var DeviceService = {
       //};
       GetServices : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
-        var GetServicesResponse = { 
-          Service : { 
-            Namespace : { xs:anyURI},
-            XAddr : { xs:anyURI},
-            Capabilities : { },
-            Version : { 
-              Major : { xs:int},
-              Minor : { xs:int}
-            }
-          }
-        
-        };
-        return GetServicesResponse;
+        //var GetServicesResponse = { 
+          //Service : { 
+            //Namespace : { xs:anyURI},
+            //XAddr : { xs:anyURI},
+            //Capabilities : { },
+            //Version : { 
+              //Major : { xs:int},
+              //Minor : { xs:int}
+            //}
+          //}
+        //
+        //};
+        //return GetServicesResponse;
       },
 
       //var GetServiceCapabilities = { };
@@ -52,7 +52,8 @@ var DeviceService = {
                 //HostnameFromDHCP : {xs:boolean},
                 //NTP : {xs:int},
                 //DHCPv6 : {xs:boolean}
-              //}},
+              //}
+            //},
             //Security : { 
               //attributes : {
                 //TLS1.0 : {xs:boolean},
@@ -73,7 +74,8 @@ var DeviceService = {
                 //MaxUsers : {xs:int},
                 //MaxUserNameLength : {xs:int},
                 //MaxPasswordLength : {xs:int}
-              //}},
+              //}
+            //},
             //System : { 
               //attributes : {
                 //DiscoveryResolve : {xs:boolean},
@@ -87,11 +89,13 @@ var DeviceService = {
                 //HttpSystemLogging : {xs:boolean},
                 //HttpSupportInformation : {xs:boolean},
                 //StorageConfiguration : {xs:boolean}
-              //}},
+              //}
+            //},
             //Misc : { 
               //attributes : {
                 //AuxiliaryCommands : {tt:StringAttrList}
-              //}}
+              //}
+            //}
           //}
         //
         //};
@@ -193,7 +197,8 @@ var DeviceService = {
         //Firmware : { 
           //attributes : {
             //undefined : {}
-          //}}
+          //}
+        //}
       //
       //};
       UpgradeSystemFirmware : function(args /*, cb, headers*/) {
@@ -221,7 +226,8 @@ var DeviceService = {
           //Data : { 
             //attributes : {
               //undefined : {}
-            //}}
+            //}
+          //}
         //}
       //
       //};
@@ -240,7 +246,8 @@ var DeviceService = {
             //Data : { 
               //attributes : {
                 //undefined : {}
-              //}}
+              //}
+            //}
           //}
         //
         //};
@@ -258,7 +265,8 @@ var DeviceService = {
             //Binary : { 
               //attributes : {
                 //undefined : {}
-              //}},
+              //}
+            //},
             //String : { xs:string}
           //}
         //
@@ -274,7 +282,8 @@ var DeviceService = {
             //Binary : { 
               //attributes : {
                 //undefined : {}
-              //}},
+              //}
+            //},
             //String : { xs:string}
           //}
         //
@@ -804,9 +813,92 @@ var DeviceService = {
         throw NOT_IMPLEMENTED;
         //var GetNetworkInterfacesResponse = { 
           //NetworkInterfaces : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
+            //}
+          //
+            //Enabled : { xs:boolean},
+            //Info : { 
+              //Name : { xs:string},
+              //HwAddress : { xs:token},
+              //MTU : { xs:int}
+            //},
+            //Link : { 
+              //AdminSettings : { 
+                //AutoNegotiation : { xs:boolean},
+                //Speed : { xs:int},
+                //Duplex : { xs:string}
+              //},
+              //OperSettings : { 
+                //AutoNegotiation : { xs:boolean},
+                //Speed : { xs:int},
+                //Duplex : { xs:string}
+              //},
+              //InterfaceType : { xs:int}
+            //},
+            //IPv4 : { 
+              //Enabled : { xs:boolean},
+              //Config : { 
+                //Manual : { 
+                  //Address : { xs:token},
+                  //PrefixLength : { xs:int}
+                //},
+                //LinkLocal : { 
+                  //Address : { xs:token},
+                  //PrefixLength : { xs:int}
+                //},
+                //FromDHCP : { 
+                  //Address : { xs:token},
+                  //PrefixLength : { xs:int}
+                //},
+                //DHCP : { xs:boolean}
+              //}
+            //},
+            //IPv6 : { 
+              //Enabled : { xs:boolean},
+              //Config : { 
+                //AcceptRouterAdvert : { xs:boolean},
+                //DHCP : { xs:string},
+                //Manual : { 
+                  //Address : { xs:token},
+                  //PrefixLength : { xs:int}
+                //},
+                //LinkLocal : { 
+                  //Address : { xs:token},
+                  //PrefixLength : { xs:int}
+                //},
+                //FromDHCP : { 
+                  //Address : { xs:token},
+                  //PrefixLength : { xs:int}
+                //},
+                //FromRA : { 
+                  //Address : { xs:token},
+                  //PrefixLength : { xs:int}
+                //},
+                //Extension : { }
+              //}
+            //},
+            //Extension : { 
+              //InterfaceType : { xs:int},
+              //Dot3 : { },
+              //Dot11 : { 
+                //SSID : { xs:hexBinary},
+                //Mode : { xs:string},
+                //Alias : { xs:string},
+                //Priority : { xs:integer},
+                //Security : { 
+                  //Mode : { xs:string},
+                  //Algorithm : { xs:string},
+                  //PSK : { 
+                    //Key : { xs:hexBinary},
+                    //Passphrase : { xs:string},
+                    //Extension : { }
+                  //},
+                  //Dot1X : { xs:string},
+                  //Extension : { }
+                //}
+              //},
+              //Extension : { }
             //}
           //}
         //
@@ -1213,9 +1305,14 @@ var DeviceService = {
         throw NOT_IMPLEMENTED;
         //var GetRelayOutputsResponse = { 
           //RelayOutputs : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
+            //}
+          //
+            //Properties : { 
+              //Mode : { xs:string},
+              //DelayTime : { xs:duration},
+              //IdleState : { xs:string}
             //}
           //}
         //
@@ -1315,8 +1412,20 @@ var DeviceService = {
             //CertificateID : { xs:token},
             //IssuerDN : { xs:string},
             //SubjectDN : { xs:string},
-            //KeyUsage : { },
-            //ExtendedKeyUsage : { },
+            //KeyUsage : { 
+              //xs:string
+              //attributes : {
+                //Critical : {xs:boolean}
+              //}
+            //
+            //},
+            //ExtendedKeyUsage : { 
+              //xs:string
+              //attributes : {
+                //Critical : {xs:boolean}
+              //}
+            //
+            //},
             //KeyLength : { xs:int},
             //Version : { xs:string},
             //SerialNum : { xs:string},
@@ -1562,9 +1671,22 @@ var DeviceService = {
         throw NOT_IMPLEMENTED;
         //var GetStorageConfigurationsResponse = { 
           //StorageConfigurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
+            //}
+          //
+            //Data : { 
+              //attributes : {
+                //type : {xs:string}
+              //},
+              //LocalPath : { xs:anyURI},
+              //StorageUri : { xs:anyURI},
+              //User : { 
+                //UserName : { xs:string},
+                //Password : { xs:string},
+                //Extension : { }
+              //},
+              //Extension : { }
             //}
           //}
         //
@@ -1605,9 +1727,22 @@ var DeviceService = {
         throw NOT_IMPLEMENTED;
         //var GetStorageConfigurationResponse = { 
           //StorageConfiguration : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
+            //}
+          //
+            //Data : { 
+              //attributes : {
+                //type : {xs:string}
+              //},
+              //LocalPath : { xs:anyURI},
+              //StorageUri : { xs:anyURI},
+              //User : { 
+                //UserName : { xs:string},
+                //Password : { xs:string},
+                //Extension : { }
+              //},
+              //Extension : { }
             //}
           //}
         //
@@ -1617,9 +1752,22 @@ var DeviceService = {
 
       //var SetStorageConfiguration = { 
         //StorageConfiguration : { 
-
           //attributes : {
             //token : {tt:ReferenceToken}
+          //}
+        //
+          //Data : { 
+            //attributes : {
+              //type : {xs:string}
+            //},
+            //LocalPath : { xs:anyURI},
+            //StorageUri : { xs:anyURI},
+            //User : { 
+              //UserName : { xs:string},
+              //Password : { xs:string},
+              //Extension : { }
+            //},
+            //Extension : { }
           //}
         //}
       //

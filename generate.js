@@ -3,8 +3,8 @@ var soap = require("soap");
 var util = require("util");
 
 var options = {
-  wsdl : "./test-wsdl/media_service.wsdl",
-  output : "./test-output/media_service.js",
+  wsdl : "./test-wsdl/device_service.wsdl",
+  output : "./test-output/device_service.js",
   ignoredTypes : "[NetworkZeroConfigurationExtension,Transport]",
   tab : "  ",
   lineEnd : "\n",
@@ -126,7 +126,7 @@ var generateParameter = function (name, object, indent, depth) {
   var child, c = 0;
   while (child = object.children[c++]) {
     if (child.name == "complexType") {
-      var par = generateComplexType(child, tab + indent, depth);
+      var par = generateType(child, tab + indent, depth);
       if (par)
         parameter.push(par);
     }
@@ -157,7 +157,7 @@ var generateAttribute = function (object, indent, depth) {
   );
 };
 
-var generateComplexType = function (object, indent, depth) {
+var generateType = function (object, indent, depth) {
   var props = [];
   var name = "";
   
@@ -178,13 +178,16 @@ var generateComplexType = function (object, indent, depth) {
         attr.push(gat);
     }
     else if (child.name == "complexContent") {
-      var gcc = generateComplextContent(child, indent, depth);
-      if (gcc)
-        props.push(gcc);
+      return generateComplextContent(child, indent, depth);
     }
     else if (child.name == "anyAttribute") { }
     else if (child.name == "annotation") { }
     else if (child.name == "extension") { }
+    else if (child.name == "simpleContent") {
+      var gsc = generateSimpleContent(child, indent, depth);
+      if (gsc)
+        props.push(gsc);
+    }
     else {
       props.push[child];
     }
@@ -196,9 +199,41 @@ var generateComplexType = function (object, indent, depth) {
             : ""),
         (props.length > 0 ? 
             [lineEnd, props.join("," + lineEnd), lineEnd, indent.substr(tab.length)].join('') : 
-            "")
+            (attr.length ? [lineEnd, indent.substr(2)].join('') : ""))
   );
   return r;
+};
+
+var generateSimpleContent = function (object, indent, depth) {
+  var res = "";
+  var child, c = 0;
+  while (child = object.children[c++]) {
+    if (child.name == "extension") {
+      if (child.$base) {
+        var t = child.$base.split(':');
+        var typedObject = findChildObjectFromSchema(t[1], WSDL.definitions.xmlns[t[0]]);
+        if (typedObject) {
+          if (typedObject.name == "complexType")
+            res += generateType(typedObject, indent, depth);
+          else if (typedObject.name == "simpleType")
+            res += generateSimpleType(typedObject, indent, depth);
+          else if (typedObject.name == "complexContent")
+            res += generateComplextContent(typedObject, indent, depth);
+          else if (object.name == "element")
+            res += typedObject.$type;
+          else
+            res += typedObject.name;
+        } else {
+          res += [indent, child.$base].join('');
+        }
+        var cchild, cc = 0;
+        while (cchild = object.children[cc++]) {
+          res += generateType(cchild, indent, depth);
+        }
+      }
+    }
+  }
+  return res;
 };
 
 var generateComplextContent = function (object, indent, depth) {
@@ -210,7 +245,7 @@ var generateComplextContent = function (object, indent, depth) {
         var t = child.$base.split(':');
         var typedObject = findChildObjectFromSchema(t[1], WSDL.definitions.xmlns[t[0]]) || object;
         if (typedObject.name == "complexType")
-          res += generateComplexType(typedObject, indent, depth);
+          res += generateType(typedObject, indent, depth);
         else if (typedObject.name == "simpleType")
           res += generateSimpleType(typedObject, indent, depth);
         else if (typedObject.name == "complexContent")
@@ -220,9 +255,10 @@ var generateComplextContent = function (object, indent, depth) {
         else
           res += typedObject.name;
       }
+      res += generateType(child, indent, depth);
     }
   }
-  res += generateComplexType(object, indent, depth);
+  res += generateType(object, indent, depth);
   return res;
 };
 
@@ -231,6 +267,9 @@ var generateSimpleType = function (object, indent, depth) {
   while (child = object.children[c++]) {
     if (child.name == "restriction")
       return child.$base || child.$type;
+    else if (child.name == "list") {
+      return ["[", child.$itemType, "]"].join('');
+    }
   }
   return object.name;
 };
@@ -252,13 +291,17 @@ var generateElement = function (object, indent, depth) {
   
   if (object) {
     if (object.name == "complexType")
-      res = generateComplexType(object, tab + indent, depth);
+      res = generateType(object, tab + indent, depth);
     else if (object.name == "simpleType")
-      res = generateSimpleType(object,tab + indent, depth);
+      res = generateSimpleType(object, tab + indent, depth);
     else if (object.name == "complexContent")
       res = generateComplextContent(object, tab + indent, depth);
+    else if (object.name == "simpleContent")
+      res = generateSimpleContent(object, tab + indent, depth);
     else if (object.name == "element")
       res = object.$type;
+    else if (object.name == "any")
+      res = "";
     else
       res = object.name;
   }

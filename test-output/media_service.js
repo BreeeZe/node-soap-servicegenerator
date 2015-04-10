@@ -29,7 +29,8 @@ var MediaService = {
             //ProfileCapabilities : { 
               //attributes : {
                 //MaximumNumberOfProfiles : {xs:int}
-              //}},
+              //}
+            //},
             //StreamingCapabilities : { 
               //attributes : {
                 //RTPMulticast : {xs:boolean},
@@ -37,7 +38,8 @@ var MediaService = {
                 //RTP_RTSP_TCP : {xs:boolean},
                 //NonAggregateControl : {xs:boolean},
                 //NoRTSPStreaming : {xs:boolean}
-              //}}
+              //}
+            //}
           //}
         //
         //};
@@ -49,9 +51,145 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetVideoSourcesResponse = { 
           //VideoSources : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
+            //}
+          //
+            //Framerate : { xs:float},
+            //Resolution : { 
+              //Width : { xs:int},
+              //Height : { xs:int}
+            //},
+            //Imaging : { 
+              //BacklightCompensation : { 
+                //Mode : { xs:string},
+                //Level : { xs:float}
+              //},
+              //Brightness : { xs:float},
+              //ColorSaturation : { xs:float},
+              //Contrast : { xs:float},
+              //Exposure : { 
+                //Mode : { xs:string},
+                //Priority : { xs:string},
+                //Window : { 
+                  //attributes : {
+                    //bottom : {xs:float},
+                    //top : {xs:float},
+                    //right : {xs:float},
+                    //left : {xs:float}
+                  //}
+                //},
+                //MinExposureTime : { xs:float},
+                //MaxExposureTime : { xs:float},
+                //MinGain : { xs:float},
+                //MaxGain : { xs:float},
+                //MinIris : { xs:float},
+                //MaxIris : { xs:float},
+                //ExposureTime : { xs:float},
+                //Gain : { xs:float},
+                //Iris : { xs:float}
+              //},
+              //Focus : { 
+                //AutoFocusMode : { xs:string},
+                //DefaultSpeed : { xs:float},
+                //NearLimit : { xs:float},
+                //FarLimit : { xs:float}
+              //},
+              //IrCutFilter : { xs:string},
+              //Sharpness : { xs:float},
+              //WideDynamicRange : { 
+                //Mode : { xs:string},
+                //Level : { xs:float}
+              //},
+              //WhiteBalance : { 
+                //Mode : { xs:string},
+                //CrGain : { xs:float},
+                //CbGain : { xs:float}
+              //},
+              //Extension : { }
+            //},
+            //Extension : { 
+              //Imaging : { 
+                //BacklightCompensation : { 
+                  //Mode : { xs:string},
+                  //Level : { xs:float}
+                //},
+                //Brightness : { xs:float},
+                //ColorSaturation : { xs:float},
+                //Contrast : { xs:float},
+                //Exposure : { 
+                  //Mode : { xs:string},
+                  //Priority : { xs:string},
+                  //Window : { 
+                    //attributes : {
+                      //bottom : {xs:float},
+                      //top : {xs:float},
+                      //right : {xs:float},
+                      //left : {xs:float}
+                    //}
+                  //},
+                  //MinExposureTime : { xs:float},
+                  //MaxExposureTime : { xs:float},
+                  //MinGain : { xs:float},
+                  //MaxGain : { xs:float},
+                  //MinIris : { xs:float},
+                  //MaxIris : { xs:float},
+                  //ExposureTime : { xs:float},
+                  //Gain : { xs:float},
+                  //Iris : { xs:float}
+                //},
+                //Focus : { 
+                  //AutoFocusMode : { xs:string},
+                  //DefaultSpeed : { xs:float},
+                  //NearLimit : { xs:float},
+                  //FarLimit : { xs:float},
+                  //Extension : { }
+                //},
+                //IrCutFilter : { xs:string},
+                //Sharpness : { xs:float},
+                //WideDynamicRange : { 
+                  //Mode : { xs:string},
+                  //Level : { xs:float}
+                //},
+                //WhiteBalance : { 
+                  //Mode : { xs:string},
+                  //CrGain : { xs:float},
+                  //CbGain : { xs:float},
+                  //Extension : { }
+                //},
+                //Extension : { 
+                  //ImageStabilization : { 
+                    //Mode : { xs:string},
+                    //Level : { xs:float},
+                    //Extension : { }
+                  //},
+                  //Extension : { 
+                    //IrCutFilterAutoAdjustment : { 
+                      //BoundaryType : { xs:string},
+                      //BoundaryOffset : { xs:float},
+                      //ResponseTime : { xs:duration},
+                      //Extension : { }
+                    //},
+                    //Extension : { 
+                      //ToneCompensation : { 
+                        //Mode : { xs:string},
+                        //Level : { xs:float},
+                        //Extension : { }
+                      //},
+                      //Defogging : { 
+                        //Mode : { xs:string},
+                        //Level : { xs:float},
+                        //Extension : { }
+                      //},
+                      //NoiseReduction : { 
+                        //Level : { xs:float}
+                      //},
+                      //Extension : { }
+                    //}
+                  //}
+                //}
+              //},
+              //Extension : { }
             //}
           //}
         //
@@ -64,10 +202,11 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetAudioSourcesResponse = { 
           //AudioSources : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //}
+          //
+            //Channels : { xs:int}
           //}
         //
         //};
@@ -79,7 +218,6 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetAudioOutputsResponse = { 
           //AudioOutputs : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //}
@@ -104,86 +242,269 @@ var MediaService = {
             //},
             //Name : { xs:string},
             //VideoSourceConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //SourceToken : { xs:string},
+              //Bounds : { 
+                //attributes : {
+                  //x : {xs:int},
+                  //y : {xs:int},
+                  //width : {xs:int},
+                  //height : {xs:int}
+                //}
+              //},
+              //Extension : { 
+                //Rotate : { 
+                  //Mode : { xs:string},
+                  //Degree : { xs:int},
+                  //Extension : { }
+                //},
+                //Extension : { }
+              //}
             //},
             //AudioSourceConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //SourceToken : { xs:string}
             //},
             //VideoEncoderConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //Encoding : { xs:string},
+              //Resolution : { 
+                //Width : { xs:int},
+                //Height : { xs:int}
+              //},
+              //Quality : { xs:float},
+              //RateControl : { 
+                //FrameRateLimit : { xs:int},
+                //EncodingInterval : { xs:int},
+                //BitrateLimit : { xs:int}
+              //},
+              //MPEG4 : { 
+                //GovLength : { xs:int},
+                //Mpeg4Profile : { xs:string}
+              //},
+              //H264 : { 
+                //GovLength : { xs:int},
+                //H264Profile : { xs:string}
+              //},
+              //Multicast : { 
+                //Address : { 
+                  //Type : { xs:string},
+                  //IPv4Address : { xs:token},
+                  //IPv6Address : { xs:token}
+                //},
+                //Port : { xs:int},
+                //TTL : { xs:int},
+                //AutoStart : { xs:boolean}
+              //},
+              //SessionTimeout : { xs:duration}
             //},
             //AudioEncoderConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //Encoding : { xs:string},
+              //Bitrate : { xs:int},
+              //SampleRate : { xs:int},
+              //Multicast : { 
+                //Address : { 
+                  //Type : { xs:string},
+                  //IPv4Address : { xs:token},
+                  //IPv6Address : { xs:token}
+                //},
+                //Port : { xs:int},
+                //TTL : { xs:int},
+                //AutoStart : { xs:boolean}
+              //},
+              //SessionTimeout : { xs:duration}
             //},
             //VideoAnalyticsConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //AnalyticsEngineConfiguration : { 
+                //AnalyticsModule : { 
+                  //attributes : {
+                    //Name : {xs:string},
+                    //Type : {xs:QName}
+                  //},
+                  //Parameters : { 
+                    //SimpleItem : { },
+                    //ElementItem : { },
+                    //Extension : { }
+                  //}
+                //},
+                //Extension : { }
+              //},
+              //RuleEngineConfiguration : { 
+                //Rule : { 
+                  //attributes : {
+                    //Name : {xs:string},
+                    //Type : {xs:QName}
+                  //},
+                  //Parameters : { 
+                    //SimpleItem : { },
+                    //ElementItem : { },
+                    //Extension : { }
+                  //}
+                //},
+                //Extension : { }
+              //}
             //},
             //PTZConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //attributes : {
+                //MoveRamp : {xs:int},
+                //PresetRamp : {xs:int},
+                //PresetTourRamp : {xs:int}
+              //},
+              //NodeToken : { xs:string},
+              //DefaultAbsolutePantTiltPositionSpace : { xs:anyURI},
+              //DefaultAbsoluteZoomPositionSpace : { xs:anyURI},
+              //DefaultRelativePanTiltTranslationSpace : { xs:anyURI},
+              //DefaultRelativeZoomTranslationSpace : { xs:anyURI},
+              //DefaultContinuousPanTiltVelocitySpace : { xs:anyURI},
+              //DefaultContinuousZoomVelocitySpace : { xs:anyURI},
+              //DefaultPTZSpeed : { 
+                //PanTilt : { 
+                  //attributes : {
+                    //x : {xs:float},
+                    //y : {xs:float},
+                    //space : {xs:anyURI}
+                  //}
+                //},
+                //Zoom : { 
+                  //attributes : {
+                    //x : {xs:float},
+                    //space : {xs:anyURI}
+                  //}
+                //}
+              //},
+              //DefaultPTZTimeout : { xs:duration},
+              //PanTiltLimits : { 
+                //Range : { 
+                  //URI : { xs:anyURI},
+                  //XRange : { 
+                    //Min : { xs:float},
+                    //Max : { xs:float}
+                  //},
+                  //YRange : { 
+                    //Min : { xs:float},
+                    //Max : { xs:float}
+                  //}
+                //}
+              //},
+              //ZoomLimits : { 
+                //Range : { 
+                  //URI : { xs:anyURI},
+                  //XRange : { 
+                    //Min : { xs:float},
+                    //Max : { xs:float}
+                  //}
+                //}
+              //},
+              //Extension : { 
+                //PTControlDirection : { 
+                  //EFlip : { 
+                    //Mode : { xs:string}
+                  //},
+                  //Reverse : { 
+                    //Mode : { xs:string}
+                  //},
+                  //Extension : { }
+                //},
+                //Extension : { }
+              //}
             //},
             //MetadataConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //attributes : {
+                //CompressionType : {xs:string}
+              //},
+              //PTZStatus : { 
+                //Status : { xs:boolean},
+                //Position : { xs:boolean}
+              //},
+              //Events : { 
+                //Filter : { wsnt:FilterType},
+                //SubscriptionPolicy : { }
+              //},
+              //Analytics : { xs:boolean},
+              //Multicast : { 
+                //Address : { 
+                  //Type : { xs:string},
+                  //IPv4Address : { xs:token},
+                  //IPv6Address : { xs:token}
+                //},
+                //Port : { xs:int},
+                //TTL : { xs:int},
+                //AutoStart : { xs:boolean}
+              //},
+              //SessionTimeout : { xs:duration},
+              //AnalyticsEngineConfiguration : { 
+                //AnalyticsModule : { 
+                  //attributes : {
+                    //Name : {xs:string},
+                    //Type : {xs:QName}
+                  //},
+                  //Parameters : { 
+                    //SimpleItem : { },
+                    //ElementItem : { },
+                    //Extension : { }
+                  //}
+                //},
+                //Extension : { }
+              //},
+              //Extension : { }
             //},
             //Extension : { 
               //AudioOutputConfiguration : { 
-
                 //attributes : {
                   //token : {tt:ReferenceToken}
                 //},
                 //Name : { xs:string},
                 //UseCount : { xs:int}
               //
+                //OutputToken : { xs:string},
+                //SendPrimacy : { xs:anyURI},
+                //OutputLevel : { xs:int}
               //},
               //AudioDecoderConfiguration : { 
-
                 //attributes : {
                   //token : {tt:ReferenceToken}
                 //},
                 //Name : { xs:string},
                 //UseCount : { xs:int}
-              //
               //},
               //Extension : { }
             //}
@@ -207,86 +528,269 @@ var MediaService = {
             //},
             //Name : { xs:string},
             //VideoSourceConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //SourceToken : { xs:string},
+              //Bounds : { 
+                //attributes : {
+                  //x : {xs:int},
+                  //y : {xs:int},
+                  //width : {xs:int},
+                  //height : {xs:int}
+                //}
+              //},
+              //Extension : { 
+                //Rotate : { 
+                  //Mode : { xs:string},
+                  //Degree : { xs:int},
+                  //Extension : { }
+                //},
+                //Extension : { }
+              //}
             //},
             //AudioSourceConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //SourceToken : { xs:string}
             //},
             //VideoEncoderConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //Encoding : { xs:string},
+              //Resolution : { 
+                //Width : { xs:int},
+                //Height : { xs:int}
+              //},
+              //Quality : { xs:float},
+              //RateControl : { 
+                //FrameRateLimit : { xs:int},
+                //EncodingInterval : { xs:int},
+                //BitrateLimit : { xs:int}
+              //},
+              //MPEG4 : { 
+                //GovLength : { xs:int},
+                //Mpeg4Profile : { xs:string}
+              //},
+              //H264 : { 
+                //GovLength : { xs:int},
+                //H264Profile : { xs:string}
+              //},
+              //Multicast : { 
+                //Address : { 
+                  //Type : { xs:string},
+                  //IPv4Address : { xs:token},
+                  //IPv6Address : { xs:token}
+                //},
+                //Port : { xs:int},
+                //TTL : { xs:int},
+                //AutoStart : { xs:boolean}
+              //},
+              //SessionTimeout : { xs:duration}
             //},
             //AudioEncoderConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //Encoding : { xs:string},
+              //Bitrate : { xs:int},
+              //SampleRate : { xs:int},
+              //Multicast : { 
+                //Address : { 
+                  //Type : { xs:string},
+                  //IPv4Address : { xs:token},
+                  //IPv6Address : { xs:token}
+                //},
+                //Port : { xs:int},
+                //TTL : { xs:int},
+                //AutoStart : { xs:boolean}
+              //},
+              //SessionTimeout : { xs:duration}
             //},
             //VideoAnalyticsConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //AnalyticsEngineConfiguration : { 
+                //AnalyticsModule : { 
+                  //attributes : {
+                    //Name : {xs:string},
+                    //Type : {xs:QName}
+                  //},
+                  //Parameters : { 
+                    //SimpleItem : { },
+                    //ElementItem : { },
+                    //Extension : { }
+                  //}
+                //},
+                //Extension : { }
+              //},
+              //RuleEngineConfiguration : { 
+                //Rule : { 
+                  //attributes : {
+                    //Name : {xs:string},
+                    //Type : {xs:QName}
+                  //},
+                  //Parameters : { 
+                    //SimpleItem : { },
+                    //ElementItem : { },
+                    //Extension : { }
+                  //}
+                //},
+                //Extension : { }
+              //}
             //},
             //PTZConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //attributes : {
+                //MoveRamp : {xs:int},
+                //PresetRamp : {xs:int},
+                //PresetTourRamp : {xs:int}
+              //},
+              //NodeToken : { xs:string},
+              //DefaultAbsolutePantTiltPositionSpace : { xs:anyURI},
+              //DefaultAbsoluteZoomPositionSpace : { xs:anyURI},
+              //DefaultRelativePanTiltTranslationSpace : { xs:anyURI},
+              //DefaultRelativeZoomTranslationSpace : { xs:anyURI},
+              //DefaultContinuousPanTiltVelocitySpace : { xs:anyURI},
+              //DefaultContinuousZoomVelocitySpace : { xs:anyURI},
+              //DefaultPTZSpeed : { 
+                //PanTilt : { 
+                  //attributes : {
+                    //x : {xs:float},
+                    //y : {xs:float},
+                    //space : {xs:anyURI}
+                  //}
+                //},
+                //Zoom : { 
+                  //attributes : {
+                    //x : {xs:float},
+                    //space : {xs:anyURI}
+                  //}
+                //}
+              //},
+              //DefaultPTZTimeout : { xs:duration},
+              //PanTiltLimits : { 
+                //Range : { 
+                  //URI : { xs:anyURI},
+                  //XRange : { 
+                    //Min : { xs:float},
+                    //Max : { xs:float}
+                  //},
+                  //YRange : { 
+                    //Min : { xs:float},
+                    //Max : { xs:float}
+                  //}
+                //}
+              //},
+              //ZoomLimits : { 
+                //Range : { 
+                  //URI : { xs:anyURI},
+                  //XRange : { 
+                    //Min : { xs:float},
+                    //Max : { xs:float}
+                  //}
+                //}
+              //},
+              //Extension : { 
+                //PTControlDirection : { 
+                  //EFlip : { 
+                    //Mode : { xs:string}
+                  //},
+                  //Reverse : { 
+                    //Mode : { xs:string}
+                  //},
+                  //Extension : { }
+                //},
+                //Extension : { }
+              //}
             //},
             //MetadataConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //attributes : {
+                //CompressionType : {xs:string}
+              //},
+              //PTZStatus : { 
+                //Status : { xs:boolean},
+                //Position : { xs:boolean}
+              //},
+              //Events : { 
+                //Filter : { wsnt:FilterType},
+                //SubscriptionPolicy : { }
+              //},
+              //Analytics : { xs:boolean},
+              //Multicast : { 
+                //Address : { 
+                  //Type : { xs:string},
+                  //IPv4Address : { xs:token},
+                  //IPv6Address : { xs:token}
+                //},
+                //Port : { xs:int},
+                //TTL : { xs:int},
+                //AutoStart : { xs:boolean}
+              //},
+              //SessionTimeout : { xs:duration},
+              //AnalyticsEngineConfiguration : { 
+                //AnalyticsModule : { 
+                  //attributes : {
+                    //Name : {xs:string},
+                    //Type : {xs:QName}
+                  //},
+                  //Parameters : { 
+                    //SimpleItem : { },
+                    //ElementItem : { },
+                    //Extension : { }
+                  //}
+                //},
+                //Extension : { }
+              //},
+              //Extension : { }
             //},
             //Extension : { 
               //AudioOutputConfiguration : { 
-
                 //attributes : {
                   //token : {tt:ReferenceToken}
                 //},
                 //Name : { xs:string},
                 //UseCount : { xs:int}
               //
+                //OutputToken : { xs:string},
+                //SendPrimacy : { xs:anyURI},
+                //OutputLevel : { xs:int}
               //},
               //AudioDecoderConfiguration : { 
-
                 //attributes : {
                   //token : {tt:ReferenceToken}
                 //},
                 //Name : { xs:string},
                 //UseCount : { xs:int}
-              //
               //},
               //Extension : { }
             //}
@@ -307,86 +811,269 @@ var MediaService = {
             //},
             //Name : { xs:string},
             //VideoSourceConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //SourceToken : { xs:string},
+              //Bounds : { 
+                //attributes : {
+                  //x : {xs:int},
+                  //y : {xs:int},
+                  //width : {xs:int},
+                  //height : {xs:int}
+                //}
+              //},
+              //Extension : { 
+                //Rotate : { 
+                  //Mode : { xs:string},
+                  //Degree : { xs:int},
+                  //Extension : { }
+                //},
+                //Extension : { }
+              //}
             //},
             //AudioSourceConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //SourceToken : { xs:string}
             //},
             //VideoEncoderConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //Encoding : { xs:string},
+              //Resolution : { 
+                //Width : { xs:int},
+                //Height : { xs:int}
+              //},
+              //Quality : { xs:float},
+              //RateControl : { 
+                //FrameRateLimit : { xs:int},
+                //EncodingInterval : { xs:int},
+                //BitrateLimit : { xs:int}
+              //},
+              //MPEG4 : { 
+                //GovLength : { xs:int},
+                //Mpeg4Profile : { xs:string}
+              //},
+              //H264 : { 
+                //GovLength : { xs:int},
+                //H264Profile : { xs:string}
+              //},
+              //Multicast : { 
+                //Address : { 
+                  //Type : { xs:string},
+                  //IPv4Address : { xs:token},
+                  //IPv6Address : { xs:token}
+                //},
+                //Port : { xs:int},
+                //TTL : { xs:int},
+                //AutoStart : { xs:boolean}
+              //},
+              //SessionTimeout : { xs:duration}
             //},
             //AudioEncoderConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //Encoding : { xs:string},
+              //Bitrate : { xs:int},
+              //SampleRate : { xs:int},
+              //Multicast : { 
+                //Address : { 
+                  //Type : { xs:string},
+                  //IPv4Address : { xs:token},
+                  //IPv6Address : { xs:token}
+                //},
+                //Port : { xs:int},
+                //TTL : { xs:int},
+                //AutoStart : { xs:boolean}
+              //},
+              //SessionTimeout : { xs:duration}
             //},
             //VideoAnalyticsConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //AnalyticsEngineConfiguration : { 
+                //AnalyticsModule : { 
+                  //attributes : {
+                    //Name : {xs:string},
+                    //Type : {xs:QName}
+                  //},
+                  //Parameters : { 
+                    //SimpleItem : { },
+                    //ElementItem : { },
+                    //Extension : { }
+                  //}
+                //},
+                //Extension : { }
+              //},
+              //RuleEngineConfiguration : { 
+                //Rule : { 
+                  //attributes : {
+                    //Name : {xs:string},
+                    //Type : {xs:QName}
+                  //},
+                  //Parameters : { 
+                    //SimpleItem : { },
+                    //ElementItem : { },
+                    //Extension : { }
+                  //}
+                //},
+                //Extension : { }
+              //}
             //},
             //PTZConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //attributes : {
+                //MoveRamp : {xs:int},
+                //PresetRamp : {xs:int},
+                //PresetTourRamp : {xs:int}
+              //},
+              //NodeToken : { xs:string},
+              //DefaultAbsolutePantTiltPositionSpace : { xs:anyURI},
+              //DefaultAbsoluteZoomPositionSpace : { xs:anyURI},
+              //DefaultRelativePanTiltTranslationSpace : { xs:anyURI},
+              //DefaultRelativeZoomTranslationSpace : { xs:anyURI},
+              //DefaultContinuousPanTiltVelocitySpace : { xs:anyURI},
+              //DefaultContinuousZoomVelocitySpace : { xs:anyURI},
+              //DefaultPTZSpeed : { 
+                //PanTilt : { 
+                  //attributes : {
+                    //x : {xs:float},
+                    //y : {xs:float},
+                    //space : {xs:anyURI}
+                  //}
+                //},
+                //Zoom : { 
+                  //attributes : {
+                    //x : {xs:float},
+                    //space : {xs:anyURI}
+                  //}
+                //}
+              //},
+              //DefaultPTZTimeout : { xs:duration},
+              //PanTiltLimits : { 
+                //Range : { 
+                  //URI : { xs:anyURI},
+                  //XRange : { 
+                    //Min : { xs:float},
+                    //Max : { xs:float}
+                  //},
+                  //YRange : { 
+                    //Min : { xs:float},
+                    //Max : { xs:float}
+                  //}
+                //}
+              //},
+              //ZoomLimits : { 
+                //Range : { 
+                  //URI : { xs:anyURI},
+                  //XRange : { 
+                    //Min : { xs:float},
+                    //Max : { xs:float}
+                  //}
+                //}
+              //},
+              //Extension : { 
+                //PTControlDirection : { 
+                  //EFlip : { 
+                    //Mode : { xs:string}
+                  //},
+                  //Reverse : { 
+                    //Mode : { xs:string}
+                  //},
+                  //Extension : { }
+                //},
+                //Extension : { }
+              //}
             //},
             //MetadataConfiguration : { 
-
               //attributes : {
                 //token : {tt:ReferenceToken}
               //},
               //Name : { xs:string},
               //UseCount : { xs:int}
             //
+              //attributes : {
+                //CompressionType : {xs:string}
+              //},
+              //PTZStatus : { 
+                //Status : { xs:boolean},
+                //Position : { xs:boolean}
+              //},
+              //Events : { 
+                //Filter : { wsnt:FilterType},
+                //SubscriptionPolicy : { }
+              //},
+              //Analytics : { xs:boolean},
+              //Multicast : { 
+                //Address : { 
+                  //Type : { xs:string},
+                  //IPv4Address : { xs:token},
+                  //IPv6Address : { xs:token}
+                //},
+                //Port : { xs:int},
+                //TTL : { xs:int},
+                //AutoStart : { xs:boolean}
+              //},
+              //SessionTimeout : { xs:duration},
+              //AnalyticsEngineConfiguration : { 
+                //AnalyticsModule : { 
+                  //attributes : {
+                    //Name : {xs:string},
+                    //Type : {xs:QName}
+                  //},
+                  //Parameters : { 
+                    //SimpleItem : { },
+                    //ElementItem : { },
+                    //Extension : { }
+                  //}
+                //},
+                //Extension : { }
+              //},
+              //Extension : { }
             //},
             //Extension : { 
               //AudioOutputConfiguration : { 
-
                 //attributes : {
                   //token : {tt:ReferenceToken}
                 //},
                 //Name : { xs:string},
                 //UseCount : { xs:int}
               //
+                //OutputToken : { xs:string},
+                //SendPrimacy : { xs:anyURI},
+                //OutputLevel : { xs:int}
               //},
               //AudioDecoderConfiguration : { 
-
                 //attributes : {
                   //token : {tt:ReferenceToken}
                 //},
                 //Name : { xs:string},
                 //UseCount : { xs:int}
-              //
               //},
               //Extension : { }
             //}
@@ -600,13 +1287,29 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetVideoSourceConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //SourceToken : { xs:string},
+            //Bounds : { 
+              //attributes : {
+                //x : {xs:int},
+                //y : {xs:int},
+                //width : {xs:int},
+                //height : {xs:int}
+              //}
+            //},
+            //Extension : { 
+              //Rotate : { 
+                //Mode : { xs:string},
+                //Degree : { xs:int},
+                //Extension : { }
+              //},
+              //Extension : { }
+            //}
           //}
         //
         //};
@@ -618,13 +1321,42 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetVideoEncoderConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //Encoding : { xs:string},
+            //Resolution : { 
+              //Width : { xs:int},
+              //Height : { xs:int}
+            //},
+            //Quality : { xs:float},
+            //RateControl : { 
+              //FrameRateLimit : { xs:int},
+              //EncodingInterval : { xs:int},
+              //BitrateLimit : { xs:int}
+            //},
+            //MPEG4 : { 
+              //GovLength : { xs:int},
+              //Mpeg4Profile : { xs:string}
+            //},
+            //H264 : { 
+              //GovLength : { xs:int},
+              //H264Profile : { xs:string}
+            //},
+            //Multicast : { 
+              //Address : { 
+                //Type : { xs:string},
+                //IPv4Address : { xs:token},
+                //IPv6Address : { xs:token}
+              //},
+              //Port : { xs:int},
+              //TTL : { xs:int},
+              //AutoStart : { xs:boolean}
+            //},
+            //SessionTimeout : { xs:duration}
           //}
         //
         //};
@@ -636,13 +1368,13 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetAudioSourceConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //SourceToken : { xs:string}
           //}
         //
         //};
@@ -654,13 +1386,26 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetAudioEncoderConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //Encoding : { xs:string},
+            //Bitrate : { xs:int},
+            //SampleRate : { xs:int},
+            //Multicast : { 
+              //Address : { 
+                //Type : { xs:string},
+                //IPv4Address : { xs:token},
+                //IPv6Address : { xs:token}
+              //},
+              //Port : { xs:int},
+              //TTL : { xs:int},
+              //AutoStart : { xs:boolean}
+            //},
+            //SessionTimeout : { xs:duration}
           //}
         //
         //};
@@ -672,13 +1417,40 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetVideoAnalyticsConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //AnalyticsEngineConfiguration : { 
+              //AnalyticsModule : { 
+                //attributes : {
+                  //Name : {xs:string},
+                  //Type : {xs:QName}
+                //},
+                //Parameters : { 
+                  //SimpleItem : { },
+                  //ElementItem : { },
+                  //Extension : { }
+                //}
+              //},
+              //Extension : { }
+            //},
+            //RuleEngineConfiguration : { 
+              //Rule : { 
+                //attributes : {
+                  //Name : {xs:string},
+                  //Type : {xs:QName}
+                //},
+                //Parameters : { 
+                  //SimpleItem : { },
+                  //ElementItem : { },
+                  //Extension : { }
+                //}
+              //},
+              //Extension : { }
+            //}
           //}
         //
         //};
@@ -690,13 +1462,50 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetMetadataConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //attributes : {
+              //CompressionType : {xs:string}
+            //},
+            //PTZStatus : { 
+              //Status : { xs:boolean},
+              //Position : { xs:boolean}
+            //},
+            //Events : { 
+              //Filter : { wsnt:FilterType},
+              //SubscriptionPolicy : { }
+            //},
+            //Analytics : { xs:boolean},
+            //Multicast : { 
+              //Address : { 
+                //Type : { xs:string},
+                //IPv4Address : { xs:token},
+                //IPv6Address : { xs:token}
+              //},
+              //Port : { xs:int},
+              //TTL : { xs:int},
+              //AutoStart : { xs:boolean}
+            //},
+            //SessionTimeout : { xs:duration},
+            //AnalyticsEngineConfiguration : { 
+              //AnalyticsModule : { 
+                //attributes : {
+                  //Name : {xs:string},
+                  //Type : {xs:QName}
+                //},
+                //Parameters : { 
+                  //SimpleItem : { },
+                  //ElementItem : { },
+                  //Extension : { }
+                //}
+              //},
+              //Extension : { }
+            //},
+            //Extension : { }
           //}
         //
         //};
@@ -708,13 +1517,15 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetAudioOutputConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //OutputToken : { xs:string},
+            //SendPrimacy : { xs:anyURI},
+            //OutputLevel : { xs:int}
           //}
         //
         //};
@@ -726,13 +1537,11 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetAudioDecoderConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
-          //
           //}
         //
         //};
@@ -747,13 +1556,29 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetVideoSourceConfigurationResponse = { 
           //Configuration : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //SourceToken : { xs:string},
+            //Bounds : { 
+              //attributes : {
+                //x : {xs:int},
+                //y : {xs:int},
+                //width : {xs:int},
+                //height : {xs:int}
+              //}
+            //},
+            //Extension : { 
+              //Rotate : { 
+                //Mode : { xs:string},
+                //Degree : { xs:int},
+                //Extension : { }
+              //},
+              //Extension : { }
+            //}
           //}
         //
         //};
@@ -768,13 +1593,42 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetVideoEncoderConfigurationResponse = { 
           //Configuration : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //Encoding : { xs:string},
+            //Resolution : { 
+              //Width : { xs:int},
+              //Height : { xs:int}
+            //},
+            //Quality : { xs:float},
+            //RateControl : { 
+              //FrameRateLimit : { xs:int},
+              //EncodingInterval : { xs:int},
+              //BitrateLimit : { xs:int}
+            //},
+            //MPEG4 : { 
+              //GovLength : { xs:int},
+              //Mpeg4Profile : { xs:string}
+            //},
+            //H264 : { 
+              //GovLength : { xs:int},
+              //H264Profile : { xs:string}
+            //},
+            //Multicast : { 
+              //Address : { 
+                //Type : { xs:string},
+                //IPv4Address : { xs:token},
+                //IPv6Address : { xs:token}
+              //},
+              //Port : { xs:int},
+              //TTL : { xs:int},
+              //AutoStart : { xs:boolean}
+            //},
+            //SessionTimeout : { xs:duration}
           //}
         //
         //};
@@ -789,13 +1643,13 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetAudioSourceConfigurationResponse = { 
           //Configuration : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //SourceToken : { xs:string}
           //}
         //
         //};
@@ -810,13 +1664,26 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetAudioEncoderConfigurationResponse = { 
           //Configuration : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //Encoding : { xs:string},
+            //Bitrate : { xs:int},
+            //SampleRate : { xs:int},
+            //Multicast : { 
+              //Address : { 
+                //Type : { xs:string},
+                //IPv4Address : { xs:token},
+                //IPv6Address : { xs:token}
+              //},
+              //Port : { xs:int},
+              //TTL : { xs:int},
+              //AutoStart : { xs:boolean}
+            //},
+            //SessionTimeout : { xs:duration}
           //}
         //
         //};
@@ -831,13 +1698,40 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetVideoAnalyticsConfigurationResponse = { 
           //Configuration : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //AnalyticsEngineConfiguration : { 
+              //AnalyticsModule : { 
+                //attributes : {
+                  //Name : {xs:string},
+                  //Type : {xs:QName}
+                //},
+                //Parameters : { 
+                  //SimpleItem : { },
+                  //ElementItem : { },
+                  //Extension : { }
+                //}
+              //},
+              //Extension : { }
+            //},
+            //RuleEngineConfiguration : { 
+              //Rule : { 
+                //attributes : {
+                  //Name : {xs:string},
+                  //Type : {xs:QName}
+                //},
+                //Parameters : { 
+                  //SimpleItem : { },
+                  //ElementItem : { },
+                  //Extension : { }
+                //}
+              //},
+              //Extension : { }
+            //}
           //}
         //
         //};
@@ -852,13 +1746,50 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetMetadataConfigurationResponse = { 
           //Configuration : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //attributes : {
+              //CompressionType : {xs:string}
+            //},
+            //PTZStatus : { 
+              //Status : { xs:boolean},
+              //Position : { xs:boolean}
+            //},
+            //Events : { 
+              //Filter : { wsnt:FilterType},
+              //SubscriptionPolicy : { }
+            //},
+            //Analytics : { xs:boolean},
+            //Multicast : { 
+              //Address : { 
+                //Type : { xs:string},
+                //IPv4Address : { xs:token},
+                //IPv6Address : { xs:token}
+              //},
+              //Port : { xs:int},
+              //TTL : { xs:int},
+              //AutoStart : { xs:boolean}
+            //},
+            //SessionTimeout : { xs:duration},
+            //AnalyticsEngineConfiguration : { 
+              //AnalyticsModule : { 
+                //attributes : {
+                  //Name : {xs:string},
+                  //Type : {xs:QName}
+                //},
+                //Parameters : { 
+                  //SimpleItem : { },
+                  //ElementItem : { },
+                  //Extension : { }
+                //}
+              //},
+              //Extension : { }
+            //},
+            //Extension : { }
           //}
         //
         //};
@@ -873,13 +1804,15 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetAudioOutputConfigurationResponse = { 
           //Configuration : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //OutputToken : { xs:string},
+            //SendPrimacy : { xs:anyURI},
+            //OutputLevel : { xs:int}
           //}
         //
         //};
@@ -894,13 +1827,11 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetAudioDecoderConfigurationResponse = { 
           //Configuration : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
-          //
           //}
         //
         //};
@@ -915,13 +1846,42 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleVideoEncoderConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //Encoding : { xs:string},
+            //Resolution : { 
+              //Width : { xs:int},
+              //Height : { xs:int}
+            //},
+            //Quality : { xs:float},
+            //RateControl : { 
+              //FrameRateLimit : { xs:int},
+              //EncodingInterval : { xs:int},
+              //BitrateLimit : { xs:int}
+            //},
+            //MPEG4 : { 
+              //GovLength : { xs:int},
+              //Mpeg4Profile : { xs:string}
+            //},
+            //H264 : { 
+              //GovLength : { xs:int},
+              //H264Profile : { xs:string}
+            //},
+            //Multicast : { 
+              //Address : { 
+                //Type : { xs:string},
+                //IPv4Address : { xs:token},
+                //IPv6Address : { xs:token}
+              //},
+              //Port : { xs:int},
+              //TTL : { xs:int},
+              //AutoStart : { xs:boolean}
+            //},
+            //SessionTimeout : { xs:duration}
           //}
         //
         //};
@@ -936,13 +1896,29 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleVideoSourceConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //SourceToken : { xs:string},
+            //Bounds : { 
+              //attributes : {
+                //x : {xs:int},
+                //y : {xs:int},
+                //width : {xs:int},
+                //height : {xs:int}
+              //}
+            //},
+            //Extension : { 
+              //Rotate : { 
+                //Mode : { xs:string},
+                //Degree : { xs:int},
+                //Extension : { }
+              //},
+              //Extension : { }
+            //}
           //}
         //
         //};
@@ -957,13 +1933,26 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleAudioEncoderConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //Encoding : { xs:string},
+            //Bitrate : { xs:int},
+            //SampleRate : { xs:int},
+            //Multicast : { 
+              //Address : { 
+                //Type : { xs:string},
+                //IPv4Address : { xs:token},
+                //IPv6Address : { xs:token}
+              //},
+              //Port : { xs:int},
+              //TTL : { xs:int},
+              //AutoStart : { xs:boolean}
+            //},
+            //SessionTimeout : { xs:duration}
           //}
         //
         //};
@@ -978,13 +1967,13 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleAudioSourceConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //SourceToken : { xs:string}
           //}
         //
         //};
@@ -999,13 +1988,40 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleVideoAnalyticsConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //AnalyticsEngineConfiguration : { 
+              //AnalyticsModule : { 
+                //attributes : {
+                  //Name : {xs:string},
+                  //Type : {xs:QName}
+                //},
+                //Parameters : { 
+                  //SimpleItem : { },
+                  //ElementItem : { },
+                  //Extension : { }
+                //}
+              //},
+              //Extension : { }
+            //},
+            //RuleEngineConfiguration : { 
+              //Rule : { 
+                //attributes : {
+                  //Name : {xs:string},
+                  //Type : {xs:QName}
+                //},
+                //Parameters : { 
+                  //SimpleItem : { },
+                  //ElementItem : { },
+                  //Extension : { }
+                //}
+              //},
+              //Extension : { }
+            //}
           //}
         //
         //};
@@ -1020,13 +2036,50 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleMetadataConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //attributes : {
+              //CompressionType : {xs:string}
+            //},
+            //PTZStatus : { 
+              //Status : { xs:boolean},
+              //Position : { xs:boolean}
+            //},
+            //Events : { 
+              //Filter : { wsnt:FilterType},
+              //SubscriptionPolicy : { }
+            //},
+            //Analytics : { xs:boolean},
+            //Multicast : { 
+              //Address : { 
+                //Type : { xs:string},
+                //IPv4Address : { xs:token},
+                //IPv6Address : { xs:token}
+              //},
+              //Port : { xs:int},
+              //TTL : { xs:int},
+              //AutoStart : { xs:boolean}
+            //},
+            //SessionTimeout : { xs:duration},
+            //AnalyticsEngineConfiguration : { 
+              //AnalyticsModule : { 
+                //attributes : {
+                  //Name : {xs:string},
+                  //Type : {xs:QName}
+                //},
+                //Parameters : { 
+                  //SimpleItem : { },
+                  //ElementItem : { },
+                  //Extension : { }
+                //}
+              //},
+              //Extension : { }
+            //},
+            //Extension : { }
           //}
         //
         //};
@@ -1041,13 +2094,15 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleAudioOutputConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
           //
+            //OutputToken : { xs:string},
+            //SendPrimacy : { xs:anyURI},
+            //OutputLevel : { xs:int}
           //}
         //
         //};
@@ -1062,13 +2117,11 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleAudioDecoderConfigurationsResponse = { 
           //Configurations : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
-          //
           //}
         //
         //};
@@ -1077,13 +2130,29 @@ var MediaService = {
 
       //var SetVideoSourceConfiguration = { 
         //Configuration : { 
-
           //attributes : {
             //token : {tt:ReferenceToken}
           //},
           //Name : { xs:string},
           //UseCount : { xs:int}
         //
+          //SourceToken : { xs:string},
+          //Bounds : { 
+            //attributes : {
+              //x : {xs:int},
+              //y : {xs:int},
+              //width : {xs:int},
+              //height : {xs:int}
+            //}
+          //},
+          //Extension : { 
+            //Rotate : { 
+              //Mode : { xs:string},
+              //Degree : { xs:int},
+              //Extension : { }
+            //},
+            //Extension : { }
+          //}
         //},
         //ForcePersistence : { xs:boolean}
       //
@@ -1096,13 +2165,42 @@ var MediaService = {
 
       //var SetVideoEncoderConfiguration = { 
         //Configuration : { 
-
           //attributes : {
             //token : {tt:ReferenceToken}
           //},
           //Name : { xs:string},
           //UseCount : { xs:int}
         //
+          //Encoding : { xs:string},
+          //Resolution : { 
+            //Width : { xs:int},
+            //Height : { xs:int}
+          //},
+          //Quality : { xs:float},
+          //RateControl : { 
+            //FrameRateLimit : { xs:int},
+            //EncodingInterval : { xs:int},
+            //BitrateLimit : { xs:int}
+          //},
+          //MPEG4 : { 
+            //GovLength : { xs:int},
+            //Mpeg4Profile : { xs:string}
+          //},
+          //H264 : { 
+            //GovLength : { xs:int},
+            //H264Profile : { xs:string}
+          //},
+          //Multicast : { 
+            //Address : { 
+              //Type : { xs:string},
+              //IPv4Address : { xs:token},
+              //IPv6Address : { xs:token}
+            //},
+            //Port : { xs:int},
+            //TTL : { xs:int},
+            //AutoStart : { xs:boolean}
+          //},
+          //SessionTimeout : { xs:duration}
         //},
         //ForcePersistence : { xs:boolean}
       //
@@ -1115,13 +2213,13 @@ var MediaService = {
 
       //var SetAudioSourceConfiguration = { 
         //Configuration : { 
-
           //attributes : {
             //token : {tt:ReferenceToken}
           //},
           //Name : { xs:string},
           //UseCount : { xs:int}
         //
+          //SourceToken : { xs:string}
         //},
         //ForcePersistence : { xs:boolean}
       //
@@ -1134,13 +2232,26 @@ var MediaService = {
 
       //var SetAudioEncoderConfiguration = { 
         //Configuration : { 
-
           //attributes : {
             //token : {tt:ReferenceToken}
           //},
           //Name : { xs:string},
           //UseCount : { xs:int}
         //
+          //Encoding : { xs:string},
+          //Bitrate : { xs:int},
+          //SampleRate : { xs:int},
+          //Multicast : { 
+            //Address : { 
+              //Type : { xs:string},
+              //IPv4Address : { xs:token},
+              //IPv6Address : { xs:token}
+            //},
+            //Port : { xs:int},
+            //TTL : { xs:int},
+            //AutoStart : { xs:boolean}
+          //},
+          //SessionTimeout : { xs:duration}
         //},
         //ForcePersistence : { xs:boolean}
       //
@@ -1153,13 +2264,40 @@ var MediaService = {
 
       //var SetVideoAnalyticsConfiguration = { 
         //Configuration : { 
-
           //attributes : {
             //token : {tt:ReferenceToken}
           //},
           //Name : { xs:string},
           //UseCount : { xs:int}
         //
+          //AnalyticsEngineConfiguration : { 
+            //AnalyticsModule : { 
+              //attributes : {
+                //Name : {xs:string},
+                //Type : {xs:QName}
+              //},
+              //Parameters : { 
+                //SimpleItem : { },
+                //ElementItem : { },
+                //Extension : { }
+              //}
+            //},
+            //Extension : { }
+          //},
+          //RuleEngineConfiguration : { 
+            //Rule : { 
+              //attributes : {
+                //Name : {xs:string},
+                //Type : {xs:QName}
+              //},
+              //Parameters : { 
+                //SimpleItem : { },
+                //ElementItem : { },
+                //Extension : { }
+              //}
+            //},
+            //Extension : { }
+          //}
         //},
         //ForcePersistence : { xs:boolean}
       //
@@ -1172,13 +2310,50 @@ var MediaService = {
 
       //var SetMetadataConfiguration = { 
         //Configuration : { 
-
           //attributes : {
             //token : {tt:ReferenceToken}
           //},
           //Name : { xs:string},
           //UseCount : { xs:int}
         //
+          //attributes : {
+            //CompressionType : {xs:string}
+          //},
+          //PTZStatus : { 
+            //Status : { xs:boolean},
+            //Position : { xs:boolean}
+          //},
+          //Events : { 
+            //Filter : { wsnt:FilterType},
+            //SubscriptionPolicy : { }
+          //},
+          //Analytics : { xs:boolean},
+          //Multicast : { 
+            //Address : { 
+              //Type : { xs:string},
+              //IPv4Address : { xs:token},
+              //IPv6Address : { xs:token}
+            //},
+            //Port : { xs:int},
+            //TTL : { xs:int},
+            //AutoStart : { xs:boolean}
+          //},
+          //SessionTimeout : { xs:duration},
+          //AnalyticsEngineConfiguration : { 
+            //AnalyticsModule : { 
+              //attributes : {
+                //Name : {xs:string},
+                //Type : {xs:QName}
+              //},
+              //Parameters : { 
+                //SimpleItem : { },
+                //ElementItem : { },
+                //Extension : { }
+              //}
+            //},
+            //Extension : { }
+          //},
+          //Extension : { }
         //},
         //ForcePersistence : { xs:boolean}
       //
@@ -1191,13 +2366,15 @@ var MediaService = {
 
       //var SetAudioOutputConfiguration = { 
         //Configuration : { 
-
           //attributes : {
             //token : {tt:ReferenceToken}
           //},
           //Name : { xs:string},
           //UseCount : { xs:int}
         //
+          //OutputToken : { xs:string},
+          //SendPrimacy : { xs:anyURI},
+          //OutputLevel : { xs:int}
         //},
         //ForcePersistence : { xs:boolean}
       //
@@ -1210,13 +2387,11 @@ var MediaService = {
 
       //var SetAudioDecoderConfiguration = { 
         //Configuration : { 
-
           //attributes : {
             //token : {tt:ReferenceToken}
           //},
           //Name : { xs:string},
           //UseCount : { xs:int}
-        //
         //},
         //ForcePersistence : { xs:boolean}
       //
@@ -1338,7 +2513,6 @@ var MediaService = {
             //},
             //Extension : { 
               //JPEG : { 
-
                 //ResolutionsAvailable : { 
                   //Width : { xs:int},
                   //Height : { xs:int}
@@ -1352,9 +2526,12 @@ var MediaService = {
                   //Max : { xs:int}
                 //}
               //
+                //BitrateRange : { 
+                  //Min : { xs:int},
+                  //Max : { xs:int}
+                //}
               //},
               //MPEG4 : { 
-
                 //ResolutionsAvailable : { 
                   //Width : { xs:int},
                   //Height : { xs:int}
@@ -1373,9 +2550,12 @@ var MediaService = {
                 //},
                 //Mpeg4ProfilesSupported : { xs:string}
               //
+                //BitrateRange : { 
+                  //Min : { xs:int},
+                  //Max : { xs:int}
+                //}
               //},
               //H264 : { 
-
                 //ResolutionsAvailable : { 
                   //Width : { xs:int},
                   //Height : { xs:int}
@@ -1394,6 +2574,10 @@ var MediaService = {
                 //},
                 //H264ProfilesSupported : { xs:string}
               //
+                //BitrateRange : { 
+                  //Min : { xs:int},
+                  //Max : { xs:int}
+                //}
               //},
               //Extension : { }
             //}
@@ -1633,7 +2817,7 @@ var MediaService = {
               //Width : { xs:int},
               //Height : { xs:int}
             //},
-            //Encodings : { simpleType},
+            //Encodings : { [xs:string]},
             //Reboot : { xs:boolean},
             //Description : { xs:string},
             //Extension : { }
@@ -1665,10 +2849,63 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetOSDsResponse = { 
           //OSDs : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //}
+          //
+            //VideoSourceConfigurationToken : { 
+xs:string
+            //},
+            //Type : { xs:string},
+            //Position : { 
+              //Type : { xs:string},
+              //Pos : { 
+                //attributes : {
+                  //x : {xs:float},
+                  //y : {xs:float}
+                //}
+              //},
+              //Extension : { }
+            //},
+            //TextString : { 
+              //Type : { xs:string},
+              //DateFormat : { xs:string},
+              //TimeFormat : { xs:string},
+              //FontSize : { xs:int},
+              //FontColor : { 
+                //attributes : {
+                  //Transparent : {xs:int}
+                //},
+                //Color : { 
+                  //attributes : {
+                    //X : {xs:float},
+                    //Y : {xs:float},
+                    //Z : {xs:float},
+                    //Colorspace : {xs:anyURI}
+                  //}
+                //}
+              //},
+              //BackgroundColor : { 
+                //attributes : {
+                  //Transparent : {xs:int}
+                //},
+                //Color : { 
+                  //attributes : {
+                    //X : {xs:float},
+                    //Y : {xs:float},
+                    //Z : {xs:float},
+                    //Colorspace : {xs:anyURI}
+                  //}
+                //}
+              //},
+              //PlainText : { xs:string},
+              //Extension : { }
+            //},
+            //Image : { 
+              //ImgPath : { xs:anyURI},
+              //Extension : { }
+            //},
+            //Extension : { }
           //}
         //
         //};
@@ -1683,10 +2920,63 @@ var MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetOSDResponse = { 
           //OSD : { 
-
             //attributes : {
               //token : {tt:ReferenceToken}
             //}
+          //
+            //VideoSourceConfigurationToken : { 
+xs:string
+            //},
+            //Type : { xs:string},
+            //Position : { 
+              //Type : { xs:string},
+              //Pos : { 
+                //attributes : {
+                  //x : {xs:float},
+                  //y : {xs:float}
+                //}
+              //},
+              //Extension : { }
+            //},
+            //TextString : { 
+              //Type : { xs:string},
+              //DateFormat : { xs:string},
+              //TimeFormat : { xs:string},
+              //FontSize : { xs:int},
+              //FontColor : { 
+                //attributes : {
+                  //Transparent : {xs:int}
+                //},
+                //Color : { 
+                  //attributes : {
+                    //X : {xs:float},
+                    //Y : {xs:float},
+                    //Z : {xs:float},
+                    //Colorspace : {xs:anyURI}
+                  //}
+                //}
+              //},
+              //BackgroundColor : { 
+                //attributes : {
+                  //Transparent : {xs:int}
+                //},
+                //Color : { 
+                  //attributes : {
+                    //X : {xs:float},
+                    //Y : {xs:float},
+                    //Z : {xs:float},
+                    //Colorspace : {xs:anyURI}
+                  //}
+                //}
+              //},
+              //PlainText : { xs:string},
+              //Extension : { }
+            //},
+            //Image : { 
+              //ImgPath : { xs:anyURI},
+              //Extension : { }
+            //},
+            //Extension : { }
           //}
         //
         //};
@@ -1709,7 +2999,8 @@ var MediaService = {
                 //Date : {xs:int},
                 //Time : {xs:int},
                 //DateAndTime : {xs:int}
-              //}},
+              //}
+            //},
             //Type : { xs:string},
             //PositionOption : { xs:string},
             //TextOption : { 
@@ -1751,10 +3042,63 @@ var MediaService = {
 
       //var SetOSD = { 
         //OSD : { 
-
           //attributes : {
             //token : {tt:ReferenceToken}
           //}
+        //
+          //VideoSourceConfigurationToken : { 
+xs:string
+          //},
+          //Type : { xs:string},
+          //Position : { 
+            //Type : { xs:string},
+            //Pos : { 
+              //attributes : {
+                //x : {xs:float},
+                //y : {xs:float}
+              //}
+            //},
+            //Extension : { }
+          //},
+          //TextString : { 
+            //Type : { xs:string},
+            //DateFormat : { xs:string},
+            //TimeFormat : { xs:string},
+            //FontSize : { xs:int},
+            //FontColor : { 
+              //attributes : {
+                //Transparent : {xs:int}
+              //},
+              //Color : { 
+                //attributes : {
+                  //X : {xs:float},
+                  //Y : {xs:float},
+                  //Z : {xs:float},
+                  //Colorspace : {xs:anyURI}
+                //}
+              //}
+            //},
+            //BackgroundColor : { 
+              //attributes : {
+                //Transparent : {xs:int}
+              //},
+              //Color : { 
+                //attributes : {
+                  //X : {xs:float},
+                  //Y : {xs:float},
+                  //Z : {xs:float},
+                  //Colorspace : {xs:anyURI}
+                //}
+              //}
+            //},
+            //PlainText : { xs:string},
+            //Extension : { }
+          //},
+          //Image : { 
+            //ImgPath : { xs:anyURI},
+            //Extension : { }
+          //},
+          //Extension : { }
         //}
       //
       //};
@@ -1766,10 +3110,63 @@ var MediaService = {
 
       //var CreateOSD = { 
         //OSD : { 
-
           //attributes : {
             //token : {tt:ReferenceToken}
           //}
+        //
+          //VideoSourceConfigurationToken : { 
+xs:string
+          //},
+          //Type : { xs:string},
+          //Position : { 
+            //Type : { xs:string},
+            //Pos : { 
+              //attributes : {
+                //x : {xs:float},
+                //y : {xs:float}
+              //}
+            //},
+            //Extension : { }
+          //},
+          //TextString : { 
+            //Type : { xs:string},
+            //DateFormat : { xs:string},
+            //TimeFormat : { xs:string},
+            //FontSize : { xs:int},
+            //FontColor : { 
+              //attributes : {
+                //Transparent : {xs:int}
+              //},
+              //Color : { 
+                //attributes : {
+                  //X : {xs:float},
+                  //Y : {xs:float},
+                  //Z : {xs:float},
+                  //Colorspace : {xs:anyURI}
+                //}
+              //}
+            //},
+            //BackgroundColor : { 
+              //attributes : {
+                //Transparent : {xs:int}
+              //},
+              //Color : { 
+                //attributes : {
+                  //X : {xs:float},
+                  //Y : {xs:float},
+                  //Z : {xs:float},
+                  //Colorspace : {xs:anyURI}
+                //}
+              //}
+            //},
+            //PlainText : { xs:string},
+            //Extension : { }
+          //},
+          //Image : { 
+            //ImgPath : { xs:anyURI},
+            //Extension : { }
+          //},
+          //Extension : { }
         //}
       //
       //};
