@@ -31,6 +31,8 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="generate.js" />
+    <Compile Include="test-output\device_service.js" />
+    <Compile Include="test-output\media_service.js" />
     <Content Include="package.json" />
     <Content Include="README.md" />
     <Content Include="test-wsdl\device_service.wsdl" />

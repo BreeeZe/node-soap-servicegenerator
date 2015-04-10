@@ -3,8 +3,8 @@ var soap = require("soap");
 var util = require("util");
 
 var options = {
-  wsdl : "./test-wsdl/device_service.wsdl",
-  output : "./test-output/device_service.js",
+  wsdl : "./test-wsdl/media_service.wsdl",
+  output : "./test-output/media_service.js",
   ignoredTypes : "[NetworkZeroConfigurationExtension,Transport]",
   tab : "  ",
   lineEnd : "\n",
@@ -63,7 +63,8 @@ WSDL.onReady(function () {
               tab, tab, tab, "Text: \"Method not implemented\"", lineEnd,
               tab, tab, "}", lineEnd,
               tab, "}", lineEnd,
-              "};", lineEnd, lineEnd].join('');
+              "};", lineEnd,
+              "var exports = module.exports = {};",lineEnd,lineEnd].join('');
   
   console.log("wsdl loaded");
   for (var serviceName in WSDL.services)
@@ -91,7 +92,7 @@ var generateService = function (name, service, indent) {
   for (var portName in service.ports)
     code += generatePort(portName, service.ports[portName], indent + tab);
   
-  return util.format(["var %s = {", lineEnd,
+  return util.format(["exports.%s = {", lineEnd,
                        indent, "%s : {", lineEnd,
                        "%s",
                        indent, "}", lineEnd,

@@ -11,8 +11,9 @@ var NOT_IMPLEMENTED = {
     }
   }
 };
+var exports = module.exports = {};
 
-var MediaService = {
+exports.MediaService = {
   MediaService : {
     Media : {
       //var GetServiceCapabilities = { };

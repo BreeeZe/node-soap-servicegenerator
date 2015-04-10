@@ -11,8 +11,9 @@ var NOT_IMPLEMENTED = {
     }
   }
 };
+var exports = module.exports = {};
 
-var DeviceService = {
+exports.DeviceService = {
   DeviceService : {
     Device : {
       //var GetServices = { 
