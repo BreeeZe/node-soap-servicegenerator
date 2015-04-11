@@ -205,7 +205,7 @@ exports.DeviceService = {
       UpgradeSystemFirmware : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var UpgradeSystemFirmwareResponse = { 
-          //Message : { xs:string}
+          //Message : [{ xs:string}]
         //
         //};
         //return UpgradeSystemFirmwareResponse;
@@ -222,14 +222,14 @@ exports.DeviceService = {
       },
 
       //var RestoreSystem = { 
-        //BackupFiles : { 
+        //BackupFiles : [{ 
           //Name : { xs:string},
           //Data : { 
             //attributes : {
               //undefined : {}
             //}
           //}
-        //}
+        //}]
       //
       //};
       RestoreSystem : function(args /*, cb, headers*/) {
@@ -242,14 +242,14 @@ exports.DeviceService = {
       GetSystemBackup : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetSystemBackupResponse = { 
-          //BackupFiles : { 
+          //BackupFiles : [{ 
             //Name : { xs:string},
             //Data : { 
               //attributes : {
                 //undefined : {}
               //}
             //}
-          //}
+          //}]
         //
         //};
         //return GetSystemBackupResponse;
@@ -296,17 +296,17 @@ exports.DeviceService = {
       GetScopes : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetScopesResponse = { 
-          //Scopes : { 
+          //Scopes : [{ 
             //ScopeDef : { xs:string},
             //ScopeItem : { xs:anyURI}
-          //}
+          //}]
         //
         //};
         //return GetScopesResponse;
       },
 
       //var SetScopes = { 
-        //Scopes : { xs:anyURI}
+        //Scopes : [{ xs:anyURI}]
       //
       //};
       SetScopes : function(args /*, cb, headers*/) {
@@ -316,7 +316,7 @@ exports.DeviceService = {
       },
 
       //var AddScopes = { 
-        //ScopeItem : { xs:anyURI}
+        //ScopeItem : [{ xs:anyURI}]
       //
       //};
       AddScopes : function(args /*, cb, headers*/) {
@@ -326,13 +326,13 @@ exports.DeviceService = {
       },
 
       //var RemoveScopes = { 
-        //ScopeItem : { xs:anyURI}
+        //ScopeItem : [{ xs:anyURI}]
       //
       //};
       RemoveScopes : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var RemoveScopesResponse = { 
-          //ScopeItem : { xs:anyURI}
+          //ScopeItem : [{ xs:anyURI}]
         //
         //};
         //return RemoveScopesResponse;
@@ -382,26 +382,26 @@ exports.DeviceService = {
       GetDPAddresses : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetDPAddressesResponse = { 
-          //DPAddress : { 
+          //DPAddress : [{ 
             //Type : { xs:string},
             //IPv4Address : { xs:token},
             //IPv6Address : { xs:token},
             //DNSname : { xs:token},
             //Extension : { }
-          //}
+          //}]
         //
         //};
         //return GetDPAddressesResponse;
       },
 
       //var SetDPAddresses = { 
-        //DPAddress : { 
+        //DPAddress : [{ 
           //Type : { xs:string},
           //IPv4Address : { xs:token},
           //IPv6Address : { xs:token},
           //DNSname : { xs:token},
           //Extension : { }
-        //}
+        //}]
       //
       //};
       SetDPAddresses : function(args /*, cb, headers*/) {
@@ -452,24 +452,24 @@ exports.DeviceService = {
       GetUsers : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetUsersResponse = { 
-          //User : { 
+          //User : [{ 
             //Username : { xs:string},
             //Password : { xs:string},
             //UserLevel : { xs:string},
             //Extension : { }
-          //}
+          //}]
         //
         //};
         //return GetUsersResponse;
       },
 
       //var CreateUsers = { 
-        //User : { 
+        //User : [{ 
           //Username : { xs:string},
           //Password : { xs:string},
           //UserLevel : { xs:string},
           //Extension : { }
-        //}
+        //}]
       //
       //};
       CreateUsers : function(args /*, cb, headers*/) {
@@ -479,7 +479,7 @@ exports.DeviceService = {
       },
 
       //var DeleteUsers = { 
-        //Username : { xs:string}
+        //Username : [{ xs:string}]
       //
       //};
       DeleteUsers : function(args /*, cb, headers*/) {
@@ -489,12 +489,12 @@ exports.DeviceService = {
       },
 
       //var SetUser = { 
-        //User : { 
+        //User : [{ 
           //Username : { xs:string},
           //Password : { xs:string},
           //UserLevel : { xs:string},
           //Extension : { }
-        //}
+        //}]
       //
       //};
       SetUser : function(args /*, cb, headers*/) {
@@ -514,7 +514,7 @@ exports.DeviceService = {
       },
 
       //var GetCapabilities = { 
-        //Category : { xs:string}
+        //Category : [{ xs:string}]
       //
       //};
       GetCapabilities : function(args /*, cb, headers*/) {
@@ -562,7 +562,7 @@ exports.DeviceService = {
                 //RelayOutputs : { xs:int},
                 //Extension : { 
                   //Auxiliary : { xs:boolean},
-                  //AuxiliaryCommands : { xs:string},
+                  //AuxiliaryCommands : [{ xs:string}],
                   //Extension : { }
                 //}
               //},
@@ -579,7 +579,7 @@ exports.DeviceService = {
                   //TLS1.0 : { xs:boolean},
                   //Extension : { 
                     //Dot1X : { xs:boolean},
-                    //SupportedEAPMethod : { xs:int},
+                    //SupportedEAPMethod : [{ xs:int}],
                     //RemoteUserHandling : { xs:boolean}
                   //}
                 //}
@@ -704,17 +704,17 @@ exports.DeviceService = {
         //var GetDNSResponse = { 
           //DNSInformation : { 
             //FromDHCP : { xs:boolean},
-            //SearchDomain : { xs:token},
-            //DNSFromDHCP : { 
+            //SearchDomain : [{ xs:token}],
+            //DNSFromDHCP : [{ 
               //Type : { xs:string},
               //IPv4Address : { xs:token},
               //IPv6Address : { xs:token}
-            //},
-            //DNSManual : { 
+            //}],
+            //DNSManual : [{ 
               //Type : { xs:string},
               //IPv4Address : { xs:token},
               //IPv6Address : { xs:token}
-            //},
+            //}],
             //Extension : { }
           //}
         //
@@ -724,12 +724,12 @@ exports.DeviceService = {
 
       //var SetDNS = { 
         //FromDHCP : { xs:boolean},
-        //SearchDomain : { xs:token},
-        //DNSManual : { 
+        //SearchDomain : [{ xs:token}],
+        //DNSManual : [{ 
           //Type : { xs:string},
           //IPv4Address : { xs:token},
           //IPv6Address : { xs:token}
-        //}
+        //}]
       //
       //};
       SetDNS : function(args /*, cb, headers*/) {
@@ -744,20 +744,20 @@ exports.DeviceService = {
         //var GetNTPResponse = { 
           //NTPInformation : { 
             //FromDHCP : { xs:boolean},
-            //NTPFromDHCP : { 
+            //NTPFromDHCP : [{ 
               //Type : { xs:string},
               //IPv4Address : { xs:token},
               //IPv6Address : { xs:token},
               //DNSname : { xs:token},
               //Extension : { }
-            //},
-            //NTPManual : { 
+            //}],
+            //NTPManual : [{ 
               //Type : { xs:string},
               //IPv4Address : { xs:token},
               //IPv6Address : { xs:token},
               //DNSname : { xs:token},
               //Extension : { }
-            //},
+            //}],
             //Extension : { }
           //}
         //
@@ -767,13 +767,13 @@ exports.DeviceService = {
 
       //var SetNTP = { 
         //FromDHCP : { xs:boolean},
-        //NTPManual : { 
+        //NTPManual : [{ 
           //Type : { xs:string},
           //IPv4Address : { xs:token},
           //IPv6Address : { xs:token},
           //DNSname : { xs:token},
           //Extension : { }
-        //}
+        //}]
       //
       //};
       SetNTP : function(args /*, cb, headers*/) {
@@ -813,7 +813,7 @@ exports.DeviceService = {
       GetNetworkInterfaces : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetNetworkInterfacesResponse = { 
-          //NetworkInterfaces : { 
+          //NetworkInterfaces : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //}
@@ -840,10 +840,10 @@ exports.DeviceService = {
             //IPv4 : { 
               //Enabled : { xs:boolean},
               //Config : { 
-                //Manual : { 
+                //Manual : [{ 
                   //Address : { xs:token},
                   //PrefixLength : { xs:int}
-                //},
+                //}],
                 //LinkLocal : { 
                   //Address : { xs:token},
                   //PrefixLength : { xs:int}
@@ -860,29 +860,29 @@ exports.DeviceService = {
               //Config : { 
                 //AcceptRouterAdvert : { xs:boolean},
                 //DHCP : { xs:string},
-                //Manual : { 
+                //Manual : [{ 
                   //Address : { xs:token},
                   //PrefixLength : { xs:int}
-                //},
-                //LinkLocal : { 
+                //}],
+                //LinkLocal : [{ 
                   //Address : { xs:token},
                   //PrefixLength : { xs:int}
-                //},
-                //FromDHCP : { 
+                //}],
+                //FromDHCP : [{ 
                   //Address : { xs:token},
                   //PrefixLength : { xs:int}
-                //},
-                //FromRA : { 
+                //}],
+                //FromRA : [{ 
                   //Address : { xs:token},
                   //PrefixLength : { xs:int}
-                //},
+                //}],
                 //Extension : { }
               //}
             //},
             //Extension : { 
               //InterfaceType : { xs:int},
-              //Dot3 : { },
-              //Dot11 : { 
+              //Dot3 : [{ }],
+              //Dot11 : [{ 
                 //SSID : { xs:hexBinary},
                 //Mode : { xs:string},
                 //Alias : { xs:string},
@@ -898,10 +898,10 @@ exports.DeviceService = {
                   //Dot1X : { xs:string},
                   //Extension : { }
                 //}
-              //},
+              //}],
               //Extension : { }
             //}
-          //}
+          //}]
         //
         //};
         //return GetNetworkInterfacesResponse;
@@ -919,24 +919,24 @@ exports.DeviceService = {
           //MTU : { xs:int},
           //IPv4 : { 
             //Enabled : { xs:boolean},
-            //Manual : { 
+            //Manual : [{ 
               //Address : { xs:token},
               //PrefixLength : { xs:int}
-            //},
+            //}],
             //DHCP : { xs:boolean}
           //},
           //IPv6 : { 
             //Enabled : { xs:boolean},
             //AcceptRouterAdvert : { xs:boolean},
-            //Manual : { 
+            //Manual : [{ 
               //Address : { xs:token},
               //PrefixLength : { xs:int}
-            //},
+            //}],
             //DHCP : { xs:string}
           //},
           //Extension : { 
-            //Dot3 : { },
-            //Dot11 : { 
+            //Dot3 : [{ }],
+            //Dot11 : [{ 
               //SSID : { xs:hexBinary},
               //Mode : { xs:string},
               //Alias : { xs:string},
@@ -952,7 +952,7 @@ exports.DeviceService = {
                 //Dot1X : { xs:string},
                 //Extension : { }
               //}
-            //},
+            //}],
             //Extension : { }
           //}
         //}
@@ -961,7 +961,7 @@ exports.DeviceService = {
       SetNetworkInterfaces : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var SetNetworkInterfacesResponse = { 
-          //RebootNeeded : { xs:boolean}
+          //RebootNeeded : [{ xs:boolean}]
         //
         //};
         //return SetNetworkInterfacesResponse;
@@ -971,24 +971,24 @@ exports.DeviceService = {
       GetNetworkProtocols : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetNetworkProtocolsResponse = { 
-          //NetworkProtocols : { 
+          //NetworkProtocols : [{ 
             //Name : { xs:string},
             //Enabled : { xs:boolean},
             //Port : { xs:int},
             //Extension : { }
-          //}
+          //}]
         //
         //};
         //return GetNetworkProtocolsResponse;
       },
 
       //var SetNetworkProtocols = { 
-        //NetworkProtocols : { 
+        //NetworkProtocols : [{ 
           //Name : { xs:string},
           //Enabled : { xs:boolean},
           //Port : { xs:int},
           //Extension : { }
-        //}
+        //}]
       //
       //};
       SetNetworkProtocols : function(args /*, cb, headers*/) {
@@ -1002,8 +1002,8 @@ exports.DeviceService = {
         throw NOT_IMPLEMENTED;
         //var GetNetworkDefaultGatewayResponse = { 
           //NetworkGateway : { 
-            //IPv4Address : { xs:token},
-            //IPv6Address : { xs:token}
+            //IPv4Address : [{ xs:token}],
+            //IPv6Address : [{ xs:token}]
           //}
         //
         //};
@@ -1011,8 +1011,8 @@ exports.DeviceService = {
       },
 
       //var SetNetworkDefaultGateway = { 
-        //IPv4Address : { xs:token},
-        //IPv6Address : { xs:token}
+        //IPv4Address : [{ xs:token}],
+        //IPv6Address : [{ xs:token}]
       //
       //};
       SetNetworkDefaultGateway : function(args /*, cb, headers*/) {
@@ -1028,7 +1028,7 @@ exports.DeviceService = {
           //ZeroConfiguration : { 
             //InterfaceToken : { xs:string},
             //Enabled : { xs:boolean},
-            //Addresses : { xs:token}
+            //Addresses : [{ xs:token}]
           //}
         //
         //};
@@ -1052,14 +1052,14 @@ exports.DeviceService = {
         //var GetIPAddressFilterResponse = { 
           //IPAddressFilter : { 
             //Type : { xs:string},
-            //IPv4Address : { 
+            //IPv4Address : [{ 
               //Address : { xs:token},
               //PrefixLength : { xs:int}
-            //},
-            //IPv6Address : { 
+            //}],
+            //IPv6Address : [{ 
               //Address : { xs:token},
               //PrefixLength : { xs:int}
-            //},
+            //}],
             //Extension : { }
           //}
         //
@@ -1070,14 +1070,14 @@ exports.DeviceService = {
       //var SetIPAddressFilter = { 
         //IPAddressFilter : { 
           //Type : { xs:string},
-          //IPv4Address : { 
+          //IPv4Address : [{ 
             //Address : { xs:token},
             //PrefixLength : { xs:int}
-          //},
-          //IPv6Address : { 
+          //}],
+          //IPv6Address : [{ 
             //Address : { xs:token},
             //PrefixLength : { xs:int}
-          //},
+          //}],
           //Extension : { }
         //}
       //
@@ -1091,14 +1091,14 @@ exports.DeviceService = {
       //var AddIPAddressFilter = { 
         //IPAddressFilter : { 
           //Type : { xs:string},
-          //IPv4Address : { 
+          //IPv4Address : [{ 
             //Address : { xs:token},
             //PrefixLength : { xs:int}
-          //},
-          //IPv6Address : { 
+          //}],
+          //IPv6Address : [{ 
             //Address : { xs:token},
             //PrefixLength : { xs:int}
-          //},
+          //}],
           //Extension : { }
         //}
       //
@@ -1112,14 +1112,14 @@ exports.DeviceService = {
       //var RemoveIPAddressFilter = { 
         //IPAddressFilter : { 
           //Type : { xs:string},
-          //IPv4Address : { 
+          //IPv4Address : [{ 
             //Address : { xs:token},
             //PrefixLength : { xs:int}
-          //},
-          //IPv6Address : { 
+          //}],
+          //IPv6Address : [{ 
             //Address : { xs:token},
             //PrefixLength : { xs:int}
-          //},
+          //}],
           //Extension : { }
         //}
       //
@@ -1188,7 +1188,7 @@ exports.DeviceService = {
       GetCertificates : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCertificatesResponse = { 
-          //NvtCertificate : { 
+          //NvtCertificate : [{ 
             //CertificateID : { xs:token},
             //Certificate : { 
               //attributes : {
@@ -1196,7 +1196,7 @@ exports.DeviceService = {
               //},
               //Data : { xs:base64Binary}
             //}
-          //}
+          //}]
         //
         //};
         //return GetCertificatesResponse;
@@ -1206,20 +1206,20 @@ exports.DeviceService = {
       GetCertificatesStatus : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCertificatesStatusResponse = { 
-          //CertificateStatus : { 
+          //CertificateStatus : [{ 
             //CertificateID : { xs:token},
             //Status : { xs:boolean}
-          //}
+          //}]
         //
         //};
         //return GetCertificatesStatusResponse;
       },
 
       //var SetCertificatesStatus = { 
-        //CertificateStatus : { 
+        //CertificateStatus : [{ 
           //CertificateID : { xs:token},
           //Status : { xs:boolean}
-        //}
+        //}]
       //
       //};
       SetCertificatesStatus : function(args /*, cb, headers*/) {
@@ -1229,7 +1229,7 @@ exports.DeviceService = {
       },
 
       //var DeleteCertificates = { 
-        //CertificateID : { xs:token}
+        //CertificateID : [{ xs:token}]
       //
       //};
       DeleteCertificates : function(args /*, cb, headers*/) {
@@ -1264,7 +1264,7 @@ exports.DeviceService = {
       },
 
       //var LoadCertificates = { 
-        //NVTCertificate : { 
+        //NVTCertificate : [{ 
           //CertificateID : { xs:token},
           //Certificate : { 
             //attributes : {
@@ -1272,7 +1272,7 @@ exports.DeviceService = {
             //},
             //Data : { xs:base64Binary}
           //}
-        //}
+        //}]
       //
       //};
       LoadCertificates : function(args /*, cb, headers*/) {
@@ -1305,7 +1305,7 @@ exports.DeviceService = {
       GetRelayOutputs : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetRelayOutputsResponse = { 
-          //RelayOutputs : { 
+          //RelayOutputs : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //}
@@ -1315,7 +1315,7 @@ exports.DeviceService = {
               //DelayTime : { xs:duration},
               //IdleState : { xs:string}
             //}
-          //}
+          //}]
         //
         //};
         //return GetRelayOutputsResponse;
@@ -1337,8 +1337,8 @@ exports.DeviceService = {
       },
 
       //var SetRelayOutputState = { 
-        //RelayOutputToken : { xs:string},
-        //LogicalState : { xs:string}
+        //RelayOutputToken : [{ xs:string}],
+        //LogicalState : [{ xs:string}]
       //
       //};
       SetRelayOutputState : function(args /*, cb, headers*/) {
@@ -1348,13 +1348,13 @@ exports.DeviceService = {
       },
 
       //var SendAuxiliaryCommand = { 
-        //AuxiliaryCommand : { xs:string}
+        //AuxiliaryCommand : [{ xs:string}]
       //
       //};
       SendAuxiliaryCommand : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var SendAuxiliaryCommandResponse = { 
-          //AuxiliaryCommandResponse : { xs:string}
+          //AuxiliaryCommandResponse : [{ xs:string}]
         //
         //};
         //return SendAuxiliaryCommandResponse;
@@ -1364,7 +1364,7 @@ exports.DeviceService = {
       GetCACertificates : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCACertificatesResponse = { 
-          //CACertificate : { 
+          //CACertificate : [{ 
             //CertificateID : { xs:token},
             //Certificate : { 
               //attributes : {
@@ -1372,14 +1372,14 @@ exports.DeviceService = {
               //},
               //Data : { xs:base64Binary}
             //}
-          //}
+          //}]
         //
         //};
         //return GetCACertificatesResponse;
       },
 
       //var LoadCertificateWithPrivateKey = { 
-        //CertificateWithPrivateKey : { 
+        //CertificateWithPrivateKey : [{ 
           //CertificateID : { xs:token},
           //Certificate : { 
             //attributes : {
@@ -1393,7 +1393,7 @@ exports.DeviceService = {
             //},
             //Data : { xs:base64Binary}
           //}
-        //}
+        //}]
       //
       //};
       LoadCertificateWithPrivateKey : function(args /*, cb, headers*/) {
@@ -1403,13 +1403,13 @@ exports.DeviceService = {
       },
 
       //var GetCertificateInformation = { 
-        //CertificateID : { xs:token}
+        //CertificateID : [{ xs:token}]
       //
       //};
       GetCertificateInformation : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCertificateInformationResponse = { 
-          //CertificateInformation : { 
+          //CertificateInformation : [{ 
             //CertificateID : { xs:token},
             //IssuerDN : { xs:string},
             //SubjectDN : { xs:string},
@@ -1436,14 +1436,14 @@ exports.DeviceService = {
               //Until : { xs:dateTime}
             //},
             //Extension : { }
-          //}
+          //}]
         //
         //};
         //return GetCertificateInformationResponse;
       },
 
       //var LoadCACertificates = { 
-        //CACertificate : { 
+        //CACertificate : [{ 
           //CertificateID : { xs:token},
           //Certificate : { 
             //attributes : {
@@ -1451,7 +1451,7 @@ exports.DeviceService = {
             //},
             //Data : { xs:base64Binary}
           //}
-        //}
+        //}]
       //
       //};
       LoadCACertificates : function(args /*, cb, headers*/) {
@@ -1461,12 +1461,12 @@ exports.DeviceService = {
       },
 
       //var CreateDot1XConfiguration = { 
-        //Dot1XConfiguration : { 
+        //Dot1XConfiguration : [{ 
           //Dot1XConfigurationToken : { xs:string},
           //Identity : { xs:string},
           //AnonymousID : { xs:string},
           //EAPMethod : { xs:int},
-          //CACertificateID : { xs:token},
+          //CACertificateID : [{ xs:token}],
           //EAPMethodConfiguration : { 
             //TLSConfiguration : { 
               //CertificateID : { xs:token}
@@ -1475,7 +1475,7 @@ exports.DeviceService = {
             //Extension : { }
           //},
           //Extension : { }
-        //}
+        //}]
       //
       //};
       CreateDot1XConfiguration : function(args /*, cb, headers*/) {
@@ -1485,12 +1485,12 @@ exports.DeviceService = {
       },
 
       //var SetDot1XConfiguration = { 
-        //Dot1XConfiguration : { 
+        //Dot1XConfiguration : [{ 
           //Dot1XConfigurationToken : { xs:string},
           //Identity : { xs:string},
           //AnonymousID : { xs:string},
           //EAPMethod : { xs:int},
-          //CACertificateID : { xs:token},
+          //CACertificateID : [{ xs:token}],
           //EAPMethodConfiguration : { 
             //TLSConfiguration : { 
               //CertificateID : { xs:token}
@@ -1499,7 +1499,7 @@ exports.DeviceService = {
             //Extension : { }
           //},
           //Extension : { }
-        //}
+        //}]
       //
       //};
       SetDot1XConfiguration : function(args /*, cb, headers*/) {
@@ -1509,18 +1509,18 @@ exports.DeviceService = {
       },
 
       //var GetDot1XConfiguration = { 
-        //Dot1XConfigurationToken : { xs:string}
+        //Dot1XConfigurationToken : [{ xs:string}]
       //
       //};
       GetDot1XConfiguration : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetDot1XConfigurationResponse = { 
-          //Dot1XConfiguration : { 
+          //Dot1XConfiguration : [{ 
             //Dot1XConfigurationToken : { xs:string},
             //Identity : { xs:string},
             //AnonymousID : { xs:string},
             //EAPMethod : { xs:int},
-            //CACertificateID : { xs:token},
+            //CACertificateID : [{ xs:token}],
             //EAPMethodConfiguration : { 
               //TLSConfiguration : { 
                 //CertificateID : { xs:token}
@@ -1529,7 +1529,7 @@ exports.DeviceService = {
               //Extension : { }
             //},
             //Extension : { }
-          //}
+          //}]
         //
         //};
         //return GetDot1XConfigurationResponse;
@@ -1539,12 +1539,12 @@ exports.DeviceService = {
       GetDot1XConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetDot1XConfigurationsResponse = { 
-          //Dot1XConfiguration : { 
+          //Dot1XConfiguration : [{ 
             //Dot1XConfigurationToken : { xs:string},
             //Identity : { xs:string},
             //AnonymousID : { xs:string},
             //EAPMethod : { xs:int},
-            //CACertificateID : { xs:token},
+            //CACertificateID : [{ xs:token}],
             //EAPMethodConfiguration : { 
               //TLSConfiguration : { 
                 //CertificateID : { xs:token}
@@ -1553,14 +1553,14 @@ exports.DeviceService = {
               //Extension : { }
             //},
             //Extension : { }
-          //}
+          //}]
         //
         //};
         //return GetDot1XConfigurationsResponse;
       },
 
       //var DeleteDot1XConfiguration = { 
-        //Dot1XConfigurationToken : { xs:string}
+        //Dot1XConfigurationToken : [{ xs:string}]
       //
       //};
       DeleteDot1XConfiguration : function(args /*, cb, headers*/) {
@@ -1612,15 +1612,15 @@ exports.DeviceService = {
       ScanAvailableDot11Networks : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var ScanAvailableDot11NetworksResponse = { 
-          //Networks : { 
+          //Networks : [{ 
             //SSID : { xs:hexBinary},
             //BSSID : { xs:string},
-            //AuthAndMangementSuite : { xs:string},
-            //PairCipher : { xs:string},
-            //GroupCipher : { xs:string},
+            //AuthAndMangementSuite : [{ xs:string}],
+            //PairCipher : [{ xs:string}],
+            //GroupCipher : [{ xs:string}],
             //SignalStrength : { xs:string},
             //Extension : { }
-          //}
+          //}]
         //
         //};
         //return ScanAvailableDot11NetworksResponse;
@@ -1630,14 +1630,14 @@ exports.DeviceService = {
       GetSystemUris : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetSystemUrisResponse = { 
-          //SystemLogUris : { 
-            //SystemLog : { 
+          //SystemLogUris : [{ 
+            //SystemLog : [{ 
               //Type : { xs:string},
               //Uri : { xs:anyURI}
-            //}
-          //},
-          //SupportInfoUri : { xs:anyURI},
-          //SystemBackupUri : { xs:anyURI},
+            //}]
+          //}],
+          //SupportInfoUri : [{ xs:anyURI}],
+          //SystemBackupUri : [{ xs:anyURI}],
           //Extension : { }
         //
         //};
@@ -1671,7 +1671,7 @@ exports.DeviceService = {
       GetStorageConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetStorageConfigurationsResponse = { 
-          //StorageConfigurations : { 
+          //StorageConfigurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //}
@@ -1689,7 +1689,7 @@ exports.DeviceService = {
               //},
               //Extension : { }
             //}
-          //}
+          //}]
         //
         //};
         //return GetStorageConfigurationsResponse;

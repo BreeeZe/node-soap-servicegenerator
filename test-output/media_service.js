@@ -51,7 +51,7 @@ exports.MediaService = {
       GetVideoSources : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetVideoSourcesResponse = { 
-          //VideoSources : { 
+          //VideoSources : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //}
@@ -165,12 +165,12 @@ exports.MediaService = {
                     //Extension : { }
                   //},
                   //Extension : { 
-                    //IrCutFilterAutoAdjustment : { 
+                    //IrCutFilterAutoAdjustment : [{ 
                       //BoundaryType : { xs:string},
                       //BoundaryOffset : { xs:float},
                       //ResponseTime : { xs:duration},
                       //Extension : { }
-                    //},
+                    //}],
                     //Extension : { 
                       //ToneCompensation : { 
                         //Mode : { xs:string},
@@ -192,7 +192,7 @@ exports.MediaService = {
               //},
               //Extension : { }
             //}
-          //}
+          //}]
         //
         //};
         //return GetVideoSourcesResponse;
@@ -202,13 +202,13 @@ exports.MediaService = {
       GetAudioSources : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetAudioSourcesResponse = { 
-          //AudioSources : { 
+          //AudioSources : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //}
           //
             //Channels : { xs:int}
-          //}
+          //}]
         //
         //};
         //return GetAudioSourcesResponse;
@@ -218,11 +218,11 @@ exports.MediaService = {
       GetAudioOutputs : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetAudioOutputsResponse = { 
-          //AudioOutputs : { 
+          //AudioOutputs : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //}
-          //}
+          //}]
         //
         //};
         //return GetAudioOutputsResponse;
@@ -344,31 +344,31 @@ exports.MediaService = {
               //UseCount : { xs:int}
             //
               //AnalyticsEngineConfiguration : { 
-                //AnalyticsModule : { 
+                //AnalyticsModule : [{ 
                   //attributes : {
                     //Name : {xs:string},
                     //Type : {xs:QName}
                   //},
                   //Parameters : { 
-                    //SimpleItem : { },
-                    //ElementItem : { },
+                    //SimpleItem : [{ }],
+                    //ElementItem : [{ }],
                     //Extension : { }
                   //}
-                //},
+                //}],
                 //Extension : { }
               //},
               //RuleEngineConfiguration : { 
-                //Rule : { 
+                //Rule : [{ 
                   //attributes : {
                     //Name : {xs:string},
                     //Type : {xs:QName}
                   //},
                   //Parameters : { 
-                    //SimpleItem : { },
-                    //ElementItem : { },
+                    //SimpleItem : [{ }],
+                    //ElementItem : [{ }],
                     //Extension : { }
                   //}
-                //},
+                //}],
                 //Extension : { }
               //}
             //},
@@ -473,17 +473,17 @@ exports.MediaService = {
               //},
               //SessionTimeout : { xs:duration},
               //AnalyticsEngineConfiguration : { 
-                //AnalyticsModule : { 
+                //AnalyticsModule : [{ 
                   //attributes : {
                     //Name : {xs:string},
                     //Type : {xs:QName}
                   //},
                   //Parameters : { 
-                    //SimpleItem : { },
-                    //ElementItem : { },
+                    //SimpleItem : [{ }],
+                    //ElementItem : [{ }],
                     //Extension : { }
                   //}
-                //},
+                //}],
                 //Extension : { }
               //},
               //Extension : { }
@@ -630,31 +630,31 @@ exports.MediaService = {
               //UseCount : { xs:int}
             //
               //AnalyticsEngineConfiguration : { 
-                //AnalyticsModule : { 
+                //AnalyticsModule : [{ 
                   //attributes : {
                     //Name : {xs:string},
                     //Type : {xs:QName}
                   //},
                   //Parameters : { 
-                    //SimpleItem : { },
-                    //ElementItem : { },
+                    //SimpleItem : [{ }],
+                    //ElementItem : [{ }],
                     //Extension : { }
                   //}
-                //},
+                //}],
                 //Extension : { }
               //},
               //RuleEngineConfiguration : { 
-                //Rule : { 
+                //Rule : [{ 
                   //attributes : {
                     //Name : {xs:string},
                     //Type : {xs:QName}
                   //},
                   //Parameters : { 
-                    //SimpleItem : { },
-                    //ElementItem : { },
+                    //SimpleItem : [{ }],
+                    //ElementItem : [{ }],
                     //Extension : { }
                   //}
-                //},
+                //}],
                 //Extension : { }
               //}
             //},
@@ -759,17 +759,17 @@ exports.MediaService = {
               //},
               //SessionTimeout : { xs:duration},
               //AnalyticsEngineConfiguration : { 
-                //AnalyticsModule : { 
+                //AnalyticsModule : [{ 
                   //attributes : {
                     //Name : {xs:string},
                     //Type : {xs:QName}
                   //},
                   //Parameters : { 
-                    //SimpleItem : { },
-                    //ElementItem : { },
+                    //SimpleItem : [{ }],
+                    //ElementItem : [{ }],
                     //Extension : { }
                   //}
-                //},
+                //}],
                 //Extension : { }
               //},
               //Extension : { }
@@ -805,7 +805,7 @@ exports.MediaService = {
       GetProfiles : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetProfilesResponse = { 
-          //Profiles : { 
+          //Profiles : [{ 
             //attributes : {
               //token : {tt:ReferenceToken},
               //fixed : {xs:boolean}
@@ -913,31 +913,31 @@ exports.MediaService = {
               //UseCount : { xs:int}
             //
               //AnalyticsEngineConfiguration : { 
-                //AnalyticsModule : { 
+                //AnalyticsModule : [{ 
                   //attributes : {
                     //Name : {xs:string},
                     //Type : {xs:QName}
                   //},
                   //Parameters : { 
-                    //SimpleItem : { },
-                    //ElementItem : { },
+                    //SimpleItem : [{ }],
+                    //ElementItem : [{ }],
                     //Extension : { }
                   //}
-                //},
+                //}],
                 //Extension : { }
               //},
               //RuleEngineConfiguration : { 
-                //Rule : { 
+                //Rule : [{ 
                   //attributes : {
                     //Name : {xs:string},
                     //Type : {xs:QName}
                   //},
                   //Parameters : { 
-                    //SimpleItem : { },
-                    //ElementItem : { },
+                    //SimpleItem : [{ }],
+                    //ElementItem : [{ }],
                     //Extension : { }
                   //}
-                //},
+                //}],
                 //Extension : { }
               //}
             //},
@@ -1042,17 +1042,17 @@ exports.MediaService = {
               //},
               //SessionTimeout : { xs:duration},
               //AnalyticsEngineConfiguration : { 
-                //AnalyticsModule : { 
+                //AnalyticsModule : [{ 
                   //attributes : {
                     //Name : {xs:string},
                     //Type : {xs:QName}
                   //},
                   //Parameters : { 
-                    //SimpleItem : { },
-                    //ElementItem : { },
+                    //SimpleItem : [{ }],
+                    //ElementItem : [{ }],
                     //Extension : { }
                   //}
-                //},
+                //}],
                 //Extension : { }
               //},
               //Extension : { }
@@ -1078,7 +1078,7 @@ exports.MediaService = {
               //},
               //Extension : { }
             //}
-          //}
+          //}]
         //
         //};
         //return GetProfilesResponse;
@@ -1287,7 +1287,7 @@ exports.MediaService = {
       GetVideoSourceConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetVideoSourceConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1311,7 +1311,7 @@ exports.MediaService = {
               //},
               //Extension : { }
             //}
-          //}
+          //}]
         //
         //};
         //return GetVideoSourceConfigurationsResponse;
@@ -1321,7 +1321,7 @@ exports.MediaService = {
       GetVideoEncoderConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetVideoEncoderConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1358,7 +1358,7 @@ exports.MediaService = {
               //AutoStart : { xs:boolean}
             //},
             //SessionTimeout : { xs:duration}
-          //}
+          //}]
         //
         //};
         //return GetVideoEncoderConfigurationsResponse;
@@ -1368,7 +1368,7 @@ exports.MediaService = {
       GetAudioSourceConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetAudioSourceConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1376,7 +1376,7 @@ exports.MediaService = {
             //UseCount : { xs:int}
           //
             //SourceToken : { xs:string}
-          //}
+          //}]
         //
         //};
         //return GetAudioSourceConfigurationsResponse;
@@ -1386,7 +1386,7 @@ exports.MediaService = {
       GetAudioEncoderConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetAudioEncoderConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1407,7 +1407,7 @@ exports.MediaService = {
               //AutoStart : { xs:boolean}
             //},
             //SessionTimeout : { xs:duration}
-          //}
+          //}]
         //
         //};
         //return GetAudioEncoderConfigurationsResponse;
@@ -1417,7 +1417,7 @@ exports.MediaService = {
       GetVideoAnalyticsConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetVideoAnalyticsConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1425,34 +1425,34 @@ exports.MediaService = {
             //UseCount : { xs:int}
           //
             //AnalyticsEngineConfiguration : { 
-              //AnalyticsModule : { 
+              //AnalyticsModule : [{ 
                 //attributes : {
                   //Name : {xs:string},
                   //Type : {xs:QName}
                 //},
                 //Parameters : { 
-                  //SimpleItem : { },
-                  //ElementItem : { },
+                  //SimpleItem : [{ }],
+                  //ElementItem : [{ }],
                   //Extension : { }
                 //}
-              //},
+              //}],
               //Extension : { }
             //},
             //RuleEngineConfiguration : { 
-              //Rule : { 
+              //Rule : [{ 
                 //attributes : {
                   //Name : {xs:string},
                   //Type : {xs:QName}
                 //},
                 //Parameters : { 
-                  //SimpleItem : { },
-                  //ElementItem : { },
+                  //SimpleItem : [{ }],
+                  //ElementItem : [{ }],
                   //Extension : { }
                 //}
-              //},
+              //}],
               //Extension : { }
             //}
-          //}
+          //}]
         //
         //};
         //return GetVideoAnalyticsConfigurationsResponse;
@@ -1462,7 +1462,7 @@ exports.MediaService = {
       GetMetadataConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetMetadataConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1493,21 +1493,21 @@ exports.MediaService = {
             //},
             //SessionTimeout : { xs:duration},
             //AnalyticsEngineConfiguration : { 
-              //AnalyticsModule : { 
+              //AnalyticsModule : [{ 
                 //attributes : {
                   //Name : {xs:string},
                   //Type : {xs:QName}
                 //},
                 //Parameters : { 
-                  //SimpleItem : { },
-                  //ElementItem : { },
+                  //SimpleItem : [{ }],
+                  //ElementItem : [{ }],
                   //Extension : { }
                 //}
-              //},
+              //}],
               //Extension : { }
             //},
             //Extension : { }
-          //}
+          //}]
         //
         //};
         //return GetMetadataConfigurationsResponse;
@@ -1517,7 +1517,7 @@ exports.MediaService = {
       GetAudioOutputConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetAudioOutputConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1527,7 +1527,7 @@ exports.MediaService = {
             //OutputToken : { xs:string},
             //SendPrimacy : { xs:anyURI},
             //OutputLevel : { xs:int}
-          //}
+          //}]
         //
         //};
         //return GetAudioOutputConfigurationsResponse;
@@ -1537,13 +1537,13 @@ exports.MediaService = {
       GetAudioDecoderConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetAudioDecoderConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
-          //}
+          //}]
         //
         //};
         //return GetAudioDecoderConfigurationsResponse;
@@ -1706,31 +1706,31 @@ exports.MediaService = {
             //UseCount : { xs:int}
           //
             //AnalyticsEngineConfiguration : { 
-              //AnalyticsModule : { 
+              //AnalyticsModule : [{ 
                 //attributes : {
                   //Name : {xs:string},
                   //Type : {xs:QName}
                 //},
                 //Parameters : { 
-                  //SimpleItem : { },
-                  //ElementItem : { },
+                  //SimpleItem : [{ }],
+                  //ElementItem : [{ }],
                   //Extension : { }
                 //}
-              //},
+              //}],
               //Extension : { }
             //},
             //RuleEngineConfiguration : { 
-              //Rule : { 
+              //Rule : [{ 
                 //attributes : {
                   //Name : {xs:string},
                   //Type : {xs:QName}
                 //},
                 //Parameters : { 
-                  //SimpleItem : { },
-                  //ElementItem : { },
+                  //SimpleItem : [{ }],
+                  //ElementItem : [{ }],
                   //Extension : { }
                 //}
-              //},
+              //}],
               //Extension : { }
             //}
           //}
@@ -1777,17 +1777,17 @@ exports.MediaService = {
             //},
             //SessionTimeout : { xs:duration},
             //AnalyticsEngineConfiguration : { 
-              //AnalyticsModule : { 
+              //AnalyticsModule : [{ 
                 //attributes : {
                   //Name : {xs:string},
                   //Type : {xs:QName}
                 //},
                 //Parameters : { 
-                  //SimpleItem : { },
-                  //ElementItem : { },
+                  //SimpleItem : [{ }],
+                  //ElementItem : [{ }],
                   //Extension : { }
                 //}
-              //},
+              //}],
               //Extension : { }
             //},
             //Extension : { }
@@ -1846,7 +1846,7 @@ exports.MediaService = {
       GetCompatibleVideoEncoderConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleVideoEncoderConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1883,7 +1883,7 @@ exports.MediaService = {
               //AutoStart : { xs:boolean}
             //},
             //SessionTimeout : { xs:duration}
-          //}
+          //}]
         //
         //};
         //return GetCompatibleVideoEncoderConfigurationsResponse;
@@ -1896,7 +1896,7 @@ exports.MediaService = {
       GetCompatibleVideoSourceConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleVideoSourceConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1920,7 +1920,7 @@ exports.MediaService = {
               //},
               //Extension : { }
             //}
-          //}
+          //}]
         //
         //};
         //return GetCompatibleVideoSourceConfigurationsResponse;
@@ -1933,7 +1933,7 @@ exports.MediaService = {
       GetCompatibleAudioEncoderConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleAudioEncoderConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1954,7 +1954,7 @@ exports.MediaService = {
               //AutoStart : { xs:boolean}
             //},
             //SessionTimeout : { xs:duration}
-          //}
+          //}]
         //
         //};
         //return GetCompatibleAudioEncoderConfigurationsResponse;
@@ -1967,7 +1967,7 @@ exports.MediaService = {
       GetCompatibleAudioSourceConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleAudioSourceConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1975,7 +1975,7 @@ exports.MediaService = {
             //UseCount : { xs:int}
           //
             //SourceToken : { xs:string}
-          //}
+          //}]
         //
         //};
         //return GetCompatibleAudioSourceConfigurationsResponse;
@@ -1988,7 +1988,7 @@ exports.MediaService = {
       GetCompatibleVideoAnalyticsConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleVideoAnalyticsConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -1996,34 +1996,34 @@ exports.MediaService = {
             //UseCount : { xs:int}
           //
             //AnalyticsEngineConfiguration : { 
-              //AnalyticsModule : { 
+              //AnalyticsModule : [{ 
                 //attributes : {
                   //Name : {xs:string},
                   //Type : {xs:QName}
                 //},
                 //Parameters : { 
-                  //SimpleItem : { },
-                  //ElementItem : { },
+                  //SimpleItem : [{ }],
+                  //ElementItem : [{ }],
                   //Extension : { }
                 //}
-              //},
+              //}],
               //Extension : { }
             //},
             //RuleEngineConfiguration : { 
-              //Rule : { 
+              //Rule : [{ 
                 //attributes : {
                   //Name : {xs:string},
                   //Type : {xs:QName}
                 //},
                 //Parameters : { 
-                  //SimpleItem : { },
-                  //ElementItem : { },
+                  //SimpleItem : [{ }],
+                  //ElementItem : [{ }],
                   //Extension : { }
                 //}
-              //},
+              //}],
               //Extension : { }
             //}
-          //}
+          //}]
         //
         //};
         //return GetCompatibleVideoAnalyticsConfigurationsResponse;
@@ -2036,7 +2036,7 @@ exports.MediaService = {
       GetCompatibleMetadataConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleMetadataConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -2067,21 +2067,21 @@ exports.MediaService = {
             //},
             //SessionTimeout : { xs:duration},
             //AnalyticsEngineConfiguration : { 
-              //AnalyticsModule : { 
+              //AnalyticsModule : [{ 
                 //attributes : {
                   //Name : {xs:string},
                   //Type : {xs:QName}
                 //},
                 //Parameters : { 
-                  //SimpleItem : { },
-                  //ElementItem : { },
+                  //SimpleItem : [{ }],
+                  //ElementItem : [{ }],
                   //Extension : { }
                 //}
-              //},
+              //}],
               //Extension : { }
             //},
             //Extension : { }
-          //}
+          //}]
         //
         //};
         //return GetCompatibleMetadataConfigurationsResponse;
@@ -2094,7 +2094,7 @@ exports.MediaService = {
       GetCompatibleAudioOutputConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleAudioOutputConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
@@ -2104,7 +2104,7 @@ exports.MediaService = {
             //OutputToken : { xs:string},
             //SendPrimacy : { xs:anyURI},
             //OutputLevel : { xs:int}
-          //}
+          //}]
         //
         //};
         //return GetCompatibleAudioOutputConfigurationsResponse;
@@ -2117,13 +2117,13 @@ exports.MediaService = {
       GetCompatibleAudioDecoderConfigurations : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetCompatibleAudioDecoderConfigurationsResponse = { 
-          //Configurations : { 
+          //Configurations : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //},
             //Name : { xs:string},
             //UseCount : { xs:int}
-          //}
+          //}]
         //
         //};
         //return GetCompatibleAudioDecoderConfigurationsResponse;
@@ -2272,31 +2272,31 @@ exports.MediaService = {
           //UseCount : { xs:int}
         //
           //AnalyticsEngineConfiguration : { 
-            //AnalyticsModule : { 
+            //AnalyticsModule : [{ 
               //attributes : {
                 //Name : {xs:string},
                 //Type : {xs:QName}
               //},
               //Parameters : { 
-                //SimpleItem : { },
-                //ElementItem : { },
+                //SimpleItem : [{ }],
+                //ElementItem : [{ }],
                 //Extension : { }
               //}
-            //},
+            //}],
             //Extension : { }
           //},
           //RuleEngineConfiguration : { 
-            //Rule : { 
+            //Rule : [{ 
               //attributes : {
                 //Name : {xs:string},
                 //Type : {xs:QName}
               //},
               //Parameters : { 
-                //SimpleItem : { },
-                //ElementItem : { },
+                //SimpleItem : [{ }],
+                //ElementItem : [{ }],
                 //Extension : { }
               //}
-            //},
+            //}],
             //Extension : { }
           //}
         //},
@@ -2341,17 +2341,17 @@ exports.MediaService = {
           //},
           //SessionTimeout : { xs:duration},
           //AnalyticsEngineConfiguration : { 
-            //AnalyticsModule : { 
+            //AnalyticsModule : [{ 
               //attributes : {
                 //Name : {xs:string},
                 //Type : {xs:QName}
               //},
               //Parameters : { 
-                //SimpleItem : { },
-                //ElementItem : { },
+                //SimpleItem : [{ }],
+                //ElementItem : [{ }],
                 //Extension : { }
               //}
-            //},
+            //}],
             //Extension : { }
           //},
           //Extension : { }
@@ -2435,7 +2435,7 @@ exports.MediaService = {
               //Rotate : { 
                 //Mode : { xs:string},
                 //DegreeList : { 
-                  //Items : { xs:int}
+                  //Items : [{ xs:int}]
                 //},
                 //Extension : { }
               //},
@@ -2614,15 +2614,15 @@ exports.MediaService = {
         throw NOT_IMPLEMENTED;
         //var GetAudioEncoderConfigurationOptionsResponse = { 
           //Options : { 
-            //Options : { 
+            //Options : [{ 
               //Encoding : { xs:string},
               //BitrateList : { 
-                //Items : { xs:int}
+                //Items : [{ xs:int}]
               //},
               //SampleRateList : { 
-                //Items : { xs:int}
+                //Items : [{ xs:int}]
               //}
-            //}
+            //}]
           //}
         //
         //};
@@ -2646,7 +2646,7 @@ exports.MediaService = {
               //Extension : { }
             //},
             //Extension : { 
-              //CompressionType : { xs:string},
+              //CompressionType : [{ xs:string}],
               //Extension : { }
             //}
           //}
@@ -2665,7 +2665,7 @@ exports.MediaService = {
         //var GetAudioOutputConfigurationOptionsResponse = { 
           //Options : { 
             //OutputTokensAvailable : { xs:string},
-            //SendPrimacyOptions : { xs:anyURI},
+            //SendPrimacyOptions : [{ xs:anyURI}],
             //OutputLevelRange : { 
               //Min : { xs:int},
               //Max : { xs:int}
@@ -2687,26 +2687,26 @@ exports.MediaService = {
           //Options : { 
             //AACDecOptions : { 
               //Bitrate : { 
-                //Items : { xs:int}
+                //Items : [{ xs:int}]
               //},
               //SampleRateRange : { 
-                //Items : { xs:int}
+                //Items : [{ xs:int}]
               //}
             //},
             //G711DecOptions : { 
               //Bitrate : { 
-                //Items : { xs:int}
+                //Items : [{ xs:int}]
               //},
               //SampleRateRange : { 
-                //Items : { xs:int}
+                //Items : [{ xs:int}]
               //}
             //},
             //G726DecOptions : { 
               //Bitrate : { 
-                //Items : { xs:int}
+                //Items : [{ xs:int}]
               //},
               //SampleRateRange : { 
-                //Items : { xs:int}
+                //Items : [{ xs:int}]
               //}
             //},
             //Extension : { }
@@ -2843,13 +2843,13 @@ exports.MediaService = {
       },
 
       //var GetOSDs = { 
-        //ConfigurationToken : { xs:string}
+        //ConfigurationToken : [{ xs:string}]
       //
       //};
       GetOSDs : function(args /*, cb, headers*/) {
         throw NOT_IMPLEMENTED;
         //var GetOSDsResponse = { 
-          //OSDs : { 
+          //OSDs : [{ 
             //attributes : {
               //token : {tt:ReferenceToken}
             //}
@@ -2907,7 +2907,7 @@ xs:string
               //Extension : { }
             //},
             //Extension : { }
-          //}
+          //}]
         //
         //};
         //return GetOSDsResponse;
@@ -3010,8 +3010,8 @@ xs:string
                 //Min : { xs:int},
                 //Max : { xs:int}
               //},
-              //DateFormat : { xs:string},
-              //TimeFormat : { xs:string},
+              //DateFormat : [{ xs:string}],
+              //TimeFormat : [{ xs:string}],
               //FontColor : { 
                 //Color : { },
                 //Transparent : { 

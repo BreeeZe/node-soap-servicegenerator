@@ -3,8 +3,8 @@ var soap = require("soap");
 var util = require("util");
 
 var options = {
-  wsdl : "./test-wsdl/media_service.wsdl",
-  output : "./test-output/media_service.js",
+  wsdl : "./test-wsdl/device_service.wsdl",
+  output : "./test-output/device_service.js",
   ignoredTypes : "[NetworkZeroConfigurationExtension,Transport]",
   tab : "  ",
   lineEnd : "\n",
@@ -276,6 +276,7 @@ var generateSimpleType = function (object, indent, depth) {
 };
 
 var generateElement = function (object, indent, depth) {
+  var org = object;
   depth++;
   if (object.$type && ignoredTypes.indexOf(object.$type.split(':')[1]) > -1)
     return "";
@@ -308,9 +309,11 @@ var generateElement = function (object, indent, depth) {
   }
   if (name) {
     var r = util.format(
-      [indent, "%s : { %s}"].join(''), 
+      [indent, "%s : %s{ %s}%s"].join(''), 
         name,
-        (res? res : "")
+        (org.$minOccurs && org.$maxOccurs ? "[" : ""),
+        (res? res : ""),
+        (org.$minOccurs && org.$maxOccurs ? "]" : "")
     );
     return r;
   }
